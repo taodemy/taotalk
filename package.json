@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test": "jest --coverage --colors",
     "coverage": "jest --coverage",
-    "pre-commit": "npm run lint"
+    "prettier": "prettier --write .",
+    "pre-commit": "npm run prettier && npm run lint && npm run test"
   },
   "engineStrict": true,
   "engines": {
@@ -36,6 +37,8 @@
     "jest-environment-jsdom": "^29.5.0",
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
-    "husky": "^8.0.3"
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.8"
   }
 }
