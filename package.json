@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --coverage --colors --config jest.config.mjs",
+    "test": "jest --coverage --colors",
     "coverage": "jest --coverage"
   },
   "engineStrict": true,
