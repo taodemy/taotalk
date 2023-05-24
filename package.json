@@ -8,6 +8,7 @@
     "prepare": "husky install",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write .",
     "pre-commit": "npm run lint"
   },
   "engineStrict": true,
@@ -30,6 +31,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
-    "husky": "^8.0.3"
+    "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.8"
   }
 }
