@@ -10,8 +10,9 @@
     "lint": "next lint",
     "test": "jest --coverage --colors",
     "coverage": "jest --coverage",
-    "prettier": "prettier --write .",
-    "pre-commit": "npm run prettier && npm run lint && npm run test"
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "pre-commit": "npm run prettier:fix && npm run lint && npm run test"
   },
   "engineStrict": true,
   "engines": {
