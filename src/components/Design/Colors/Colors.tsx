@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../Design/design.module.scss'
+import styles from '../../Design/design.module.scss';
 
 export interface StyledColorProps {
   children: string;
@@ -9,7 +9,7 @@ export interface StyledColorProps {
 
 const Colors: React.FC<StyledColorProps> = ({ children, colorValue }) => {
   return (
-    <p className={styles.fontBasestyle} style={{color:colorValue}}>
+    <p className={styles.fontBasestyle} style={{ color: colorValue }}>
       {children}
     </p>
   );

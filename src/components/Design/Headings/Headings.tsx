@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../Design/design.module.scss'
+import styles from '../../Design/design.module.scss';
 
 export interface StyledHeadingsProps {
   headingsize: string;
@@ -17,7 +17,7 @@ const Headings = () => (
   <div>
     <h2>---Heading---</h2>
     {Object.entries(fontSize).map(([headingName, headingSize]) => (
-      <p key={headingName} className={styles.HeadingBasestyle} style={{fontSize:headingSize}}>
+      <p key={headingName} className={styles.HeadingBasestyle} style={{ fontSize: headingSize }}>
         {headingName}
       </p>
     ))}
