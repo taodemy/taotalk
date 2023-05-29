@@ -1,20 +1,19 @@
 .designContainer {
   display: flex;
+  gap: 100px;
 }
-.fontBasestyle {
+.fontBaseStyle {
   font-family: 'Dela Gothic One';
   font-style: normal;
-  font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 120%;
   font-size: 32px;
 }
 
-.HeadingBasestyle {
-  font-family: Dela Gothic One;
+.headingBaseStyle {
+  font-family: 'Dela Gothic One';
   font-style: normal;
-  font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 120%;
-  color: '#000000';
+  color: #000000;
 }

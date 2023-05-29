@@ -1,11 +1,11 @@
 import React from 'react';
 
-import styles from './design.module.scss';
+import styles from './DesignPage.module.scss';
 import Headings from './Headings';
 import PrimaryColors from './Colors/Primary';
 import SecondaryColor from './Colors/Secondary/SecondaryColor';
 
-const Design = () => {
+const DesignPage = () => {
   return (
     <div className={styles.designContainer}>
       <Headings />
@@ -15,4 +15,4 @@ const Design = () => {
   );
 };
 
-export default Design;
+export default DesignPage;
