@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './design.module.scss';
+import styles from './Design.module.scss';
 import Headings from './Headings';
 import PrimaryColors from './Colors/Primary';
 import SecondaryColor from './Colors/Secondary/SecondaryColor';

@@ -1,6 +1,6 @@
 import React from 'react';
-import DesignPage from '../components/DesignPage';
+import Design from '../components/Design';
 
-export default function design() {
-  return <DesignPage />;
+export default function DesignPage() {
+  return <Design />;
 }

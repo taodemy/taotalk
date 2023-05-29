@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Colors from '../../Colors';
+import Colors from '..';
 
 const secondaryColor = {
-  Cyan: '#5996A5',
-  Green: '#639B6D',
-  Pink: '#A15993',
-  Red: '#A95151',
-  Yellow: '#C4A24C',
-  Orange: '#CB5B43',
+  cyan: '#5996A5',
+  green: '#639B6D',
+  pink: '#A15993',
+  red: '#A95151',
+  yellow: '#C4A24C',
+  orange: '#CB5B43',
 };
 
 const SecondaryColor = () => {
@@ -17,7 +17,7 @@ const SecondaryColor = () => {
       <h2>---Secondary Color---</h2>
       {Object.entries(secondaryColor).map(([colorName, colorValue]) => (
         <Colors key={colorName} colorValue={colorValue}>
-          {colorName}
+          {colorName.charAt(0).toUpperCase() + colorName.slice(1)}
         </Colors>
       ))}
     </div>

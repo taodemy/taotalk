@@ -1,24 +1,20 @@
 import React from 'react';
 
-import styles from '../../Design/design.module.scss';
-
-export interface StyledHeadingsProps {
-  headingsize: string;
-}
+import styles from '../../Design/Design.module.scss';
 
 const fontSize = {
-  Heading1: '56px',
-  Heading2: '48px',
-  Heading3: '32px',
-  Heading4: '26px',
+  heading1: '56px',
+  heading2: '48px',
+  heading3: '32px',
+  heading4: '26px',
 };
 
 const Headings = () => (
   <div>
     <h2>---Heading---</h2>
     {Object.entries(fontSize).map(([headingName, headingSize]) => (
-      <p key={headingName} className={styles.HeadingBasestyle} style={{ fontSize: headingSize }}>
-        {headingName}
+      <p key={headingName} className={styles.HeadingBaseStyle} style={{ fontSize: headingSize }}>
+        {headingName.charAt(0).toUpperCase() + headingName.slice(1)}
       </p>
     ))}
   </div>
