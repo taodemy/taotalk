@@ -1,0 +1,62 @@
+html,
+body {
+  background-color: #f6f5f4;
+}
+
+.centre {
+  margin: auto;
+}
+
+.flex-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.width-page {
+  width: 1920px;
+}
+
+.height-header {
+  height: 88px;
+}
+.height-footer {
+  height: 160px;
+}
+
+.padding-main-home {
+  padding: 24px 370px;
+}
+.padding-main-sprintGame {
+  padding: 100px 528px;
+}
+.padding-main-audioGame {
+  padding: 100px 528px;
+}
+.padding-main-textbook {
+  padding: 100px 528px;
+}
+.padding-main-statistics {
+  padding: 40px 528px 100px 528px;
+}
+.padding-main-about {
+  padding: 100px 528px;
+}
+
+.padding-header {
+  padding: 24px 370px;
+}
+.padding-footer {
+  padding: 40px 370px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+.gap-40 {
+  gap: 40px;
+}
+
+.box-shadow-header {
+  box-shadow: inset 0px -1px 0px #e0e0e0;
+}
