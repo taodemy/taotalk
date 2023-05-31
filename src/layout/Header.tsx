@@ -2,8 +2,8 @@ import Head from 'next/head';
 
 const Header = () => {
   return (
-    <div className="centre height-header padding-header box-shadow-header">
-      <h1>TaoTalk</h1>
+    <div className="centre height-88 padding-y-24 padding-x-370 box-shadow-header">
+      TaoTalk
       <Head>
         <title>TaoTalk</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

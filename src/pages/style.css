@@ -13,41 +13,50 @@ body {
   align-items: flex-start;
 }
 
-.width-page {
+.width-1920 {
   width: 1920px;
 }
 
-.height-header {
+.height-88 {
   height: 88px;
 }
-.height-footer {
+.height-160 {
   height: 160px;
 }
-
-.padding-main-home {
-  padding: 24px 370px;
+.height-500 {
+  height: 500px;
 }
-.padding-main-sprintGame {
-  padding: 100px 528px;
+.height-600 {
+  height: 600px;
 }
-.padding-main-audioGame {
-  padding: 100px 528px;
-}
-.padding-main-textbook {
-  padding: 100px 528px;
-}
-.padding-main-statistics {
-  padding: 40px 528px 100px 528px;
-}
-.padding-main-about {
-  padding: 100px 528px;
+.height-740 {
+  height: 740px;
 }
 
-.padding-header {
-  padding: 24px 370px;
+.padding-y-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-.padding-footer {
-  padding: 40px 370px;
+.padding-y-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.padding-y-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.padding-t-40-b-100 {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+
+.padding-x-370 {
+  padding-left: 370px;
+  padding-right: 370px;
+}
+.padding-x-528 {
+  padding-left: 528px;
+  padding-right: 528px;
 }
 
 .gap-10 {

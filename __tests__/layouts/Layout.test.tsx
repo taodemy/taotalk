@@ -11,7 +11,7 @@ describe('Layout', () => {
         <Home />
       </Layout>
     );
-    const homePageText = screen.getByText('Hello, this is TaoTalk');
+    const homePageText = screen.getByText('Learning and teaching online, made easy.');
     expect(homePageText).toBeInTheDocument();
   });
 });
