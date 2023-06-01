@@ -15,8 +15,8 @@ const primaryColors = [
 ];
 const secondaryColors = ['cyan', 'green', 'pink', 'red', 'yellow', 'orange'];
 
-export interface ItemProps {
-  items: string[];
+export interface HeadingProps {
+  headings: string[];
 }
 
 export interface ColorProps {
@@ -38,10 +38,10 @@ const TagComponent = <T extends keyof JSX.IntrinsicElements>({
   return <Tag className={className}>{children}</Tag>;
 };
 
-const HeadingMapping = ({ items }: ItemProps) => {
+const HeadingMapping = ({ headings }: HeadingProps) => {
   return (
     <div className={styles.headingColumn}>
-      {items.map((value, index) => {
+      {headings.map((value, index) => {
         return (
           <TagComponent
             tag={value as keyof JSX.IntrinsicElements}
@@ -80,7 +80,7 @@ const ColorMapping = ({ colors, colorType }: ColorProps) => {
 const DesignSystem = () => {
   return (
     <div className={styles.designContainer}>
-      <HeadingMapping items={headings} />
+      <HeadingMapping headings={headings} />
       <ColorMapping colors={primaryColors} colorType="primary" />
       <ColorMapping colors={secondaryColors} colorType="secondary" />
     </div>
