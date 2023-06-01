@@ -4,11 +4,11 @@ import Footer from './Footer';
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default Layout;
