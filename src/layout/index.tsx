@@ -4,9 +4,9 @@ import Footer from './Footer';
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div className="flex-page width-1920">
+    <div>
       <Header />
-      <main className="centre">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
