@@ -1,92 +1,12 @@
-@import './color-theme.module.scss';
+@import '../../styles/font-color.module.scss';
+@import '../../styles/heading.module.scss';
 
-@mixin headingBaseStyle {
-  font-family: 'Dela Gothic One';
-  font-style: normal;
-  letter-spacing: -0.04em;
-  color: #000000;
+.designContainer {
+  display: flex;
+  gap: 100px;
 }
 
-.heading--h1 {
-  @include headingBaseStyle;
-  font-size: 56px;
-  line-height: 120%;
-}
-
-.heading--h2 {
-  @include headingBaseStyle;
-  font-size: 48px;
-  line-height: 100%;
-}
-
-.heading--h3 {
-  @include headingBaseStyle;
-  font-size: 32px;
-  line-height: 100%;
-}
-
-.heading--h4 {
-  @include headingBaseStyle;
-  font-size: 26px;
-  line-height: 100%;
-}
-
-.fontPrimaryColor--cyanDark {
-  color: $cyanDark;
-}
-
-.fontPrimaryColor--cyanLight {
-  color: $cyanLight;
-}
-
-.fontPrimaryColor--pinkDark {
-  color: $pinkDark;
-}
-
-.fontPrimaryColor--pinkLight {
-  color: $pinkLight;
-}
-
-.fontPrimaryColor--black {
-  color: $black;
-}
-
-.fontPrimaryColor--greyLight {
-  color: $greyLight;
-}
-
-.fontPrimaryColor--greyMedium {
-  color: $greyMedium;
-}
-
-.fontPrimaryColor--greyIcon {
-  color: $greyIcon;
-}
-
-.fontPrimaryColor--greyDark {
-  color: $greyDark;
-}
-
-.fontSecondaryColor--cyan {
-  color: $cyan;
-}
-
-.fontSecondaryColor--green {
-  color: $green;
-}
-
-.fontSecondaryColor--pink {
-  color: $pink;
-}
-
-.fontSecondaryColor--red {
-  color: $red;
-}
-
-.fontSecondaryColor--yellow {
-  color: $yellow;
-}
-
-.fontSecondaryColor--orange {
-  color: $orange;
+.headingColumn {
+  display: flex;
+  flex-direction: column;
 }
