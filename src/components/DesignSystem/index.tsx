@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import styles from './DesignSystem.module.scss';
-import showCaseStyles from './DesignShowCase.module.scss';
+import styles from './design-system.module.scss';
+import showCaseStyles from './design-showcase.module.scss';
 
 const headings = ['h1', 'h2', 'h3', 'h4'];
 const primaryColors = [
