@@ -6,7 +6,7 @@ describe('Home', () => {
   it('renders welcome text within home page', () => {
     render(<Home />);
 
-    const welcomeText = screen.getByText('Hello, this is TaoTalk');
+    const welcomeText = screen.getByText('Learning and teaching online, made easy.');
 
     expect(welcomeText).toBeInTheDocument();
   });
