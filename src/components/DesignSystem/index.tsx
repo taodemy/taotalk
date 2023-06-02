@@ -24,17 +24,17 @@ export interface ColorProps {
   colorType: string;
 }
 
-type TagComponentProps<T extends keyof JSX.IntrinsicElements> = {
-  tag: T;
+type TagComponentProps<T extends React.ElementType> = {
+  tag?: T;
   children: ReactNode;
-} & JSX.IntrinsicElements[T];
+} & React.ComponentPropsWithoutRef<T>;
 
-const TagComponent = <T extends keyof JSX.IntrinsicElements>({
+const TagComponent = <T extends React.ElementType>({
   tag,
   children,
   className,
 }: TagComponentProps<T>) => {
-  const Tag = tag as keyof JSX.IntrinsicElements;
+  const Tag = tag || 'h2';
   return <Tag className={className}>{children}</Tag>;
 };
 
