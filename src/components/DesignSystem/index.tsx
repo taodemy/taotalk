@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import styles from './design-system.module.scss';
-import showCaseStyles from './design-showcase.module.scss';
 
 const headings = ['h1', 'h2', 'h3', 'h4'];
 const primaryColors = [
@@ -41,7 +40,7 @@ const TagComponent = <T extends keyof JSX.IntrinsicElements>({
 
 const HeadingMapping = ({ headings }: HeadingProps) => {
   return (
-    <div className={showCaseStyles.headingColumn}>
+    <div className={styles.headingColumn}>
       {headings.map((value, index) => {
         return (
           <TagComponent
@@ -80,7 +79,7 @@ const ColorMapping = ({ colors, colorType }: ColorProps) => {
 
 const DesignSystem = () => {
   return (
-    <div className={showCaseStyles.designContainer}>
+    <div className={styles.designContainer}>
       <HeadingMapping headings={headings} />
       <ColorMapping colors={primaryColors} colorType="primary" />
       <ColorMapping colors={secondaryColors} colorType="secondary" />
