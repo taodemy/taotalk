@@ -1,7 +1,11 @@
+import styles from './Header.module.scss';
+
 export default function Title({ content, isActive }) {
   if (isActive) {
-    return <div>{content}</div>;
+    return <div className={styles.nav__title}>{content}</div>;
   } else {
-    return <div style={{ color: '#757575' }}>{content}</div>;
+    return (
+      <div className={[styles.nav__title, styles['nav__title--inactive']].join(' ')}>{content}</div>
+    );
   }
 }

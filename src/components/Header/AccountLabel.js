@@ -1,20 +1,13 @@
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 
 export default function AccountLabel({ userName }) {
   return (
-    <>
-      <div
-        style={{
-          borderRadius: '120px',
-          padding: '40px',
-          backgroundColor: '#C3DCE3',
-          color: '#2B788B',
-        }}
-      >
-        {userName.charAt(0).toUpperCase()}
+    <div className={styles.account_label}>
+      <div className={styles.account_label__user_name_div}>
+        <div className={styles.account_label__first_letter}>{userName.charAt(0).toUpperCase()}</div>
+        <div className={styles.account_label__user_name}> {userName}</div>
       </div>
-      <div> {userName}</div>
-      <div>Sign Out &rarr; </div>
-    </>
+      <div className={styles.account_label__sign_out}>Sign Out →</div>
+    </div>
   );
 }

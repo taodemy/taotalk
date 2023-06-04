@@ -1,21 +1,25 @@
-import React from 'react';
-import styles from './Header.module.css';
+import styles from './Header.module.scss';
 import Title from './Title';
 import AccountLabel from './AccountLabel';
 
 const Header = () => (
-  <div className={styles.header}>
-    <div className={styles.frame4}>
-      <div className={styles.frame9}>TaoTalk </div>
-      <div>|</div>
-      <Title content={'Home'} isActive={true} />
-      <Title content={'Textbook'} isActive={false} />
-      <Title content={'Statistics'} isActive={false} />
-      <select style={{ borderWidth: 0, backgroundColor: '#F6F5F4' }}>
-        <option value="Game">Game</option>
-      </select>
+  <header className={styles.header}>
+    <div className={styles.content}>
+      <div className={styles.nav}>
+        <div className={styles.nav__heading}>TaoTalk</div>
+        <div className={styles.nav__divide}>|</div>
+        <Title content={'Home'} isActive={true} />
+        <Title content={'Textbook'} isActive={false} />
+        <Title content={'Statistics'} isActive={false} />
+        <select
+          className={[styles.nav__title_select, styles['nav__title_select--inactive']].join(' ')}
+        >
+          <option value="Game">Game</option>
+        </select>
+      </div>
       <AccountLabel userName={'Alex'} />
     </div>
-  </div>
+  </header>
 );
+
 export default Header;
