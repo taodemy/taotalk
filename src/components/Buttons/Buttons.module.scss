@@ -1,0 +1,32 @@
+.button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 14px 22px;
+    border-radius: 100px;
+    letter-spacing: -0.04em;
+}
+
+.buttonPrimaryColor{
+    color: #FFFFFF;
+    background:#2B788B;
+    border:none;
+    transition: box-shadow 0.3s;
+    &:hover{
+        color:#2B788B;
+        background-color: #FFFFFF;
+        box-shadow: inset 0px 0px 0px 3px #2B788B;
+    }
+}
+
+.buttonLightColor{
+    color: #2B788B;
+    background:#C3DCE3;
+    border:none;
+    &:hover{
+        color:#FFFFFF;
+        background-color: #2B788B;
+    }
+}
