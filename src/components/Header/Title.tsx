@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 
-export default function Title({ content, isActive }) {
+export default function Title({ content, isActive }: { content: string; isActive: boolean }) {
   if (isActive) {
     return <div className={styles.nav__title}>{content}</div>;
   } else {

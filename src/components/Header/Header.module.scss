@@ -1,93 +1,84 @@
+@import '../../styles/color.scss';
+
 .header {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 24px 370px;
-
+    padding: 24px 0px;
     position: relative;
     width: 1920px;
-    height: 88px;
-    
     /* Primaty/Grey Light */
-    background: #F6F5F4;
+    background: $greyLight;
   }
   
 .content {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    width: 1180px;
-    height: 40px;
+    min-width: 1180px;
 }
 
 .nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
   gap: 30px;
-
   width: 508px;
   height: 22px;
 
   &__heading {
-    font: 'Dela Gothic One';
-    font-weight: 400;
+    font-family: 'Dela Gothic One';
     font-size: 20px;
+    letter-spacing: -0.02em;
   }
 
   &__divide {
-    color: #E0E0E0;
+    /* Primaty/Grey Medium */
+    color: $greyMedium;
   }
 
   &__title {
-    font: 'Montserrat';
+    font-family: 'Montserrat';
     font-weight: 600;
-
+    line-height: 140%;
+    letter-spacing: -0.04em;
     &--inactive {
-      color: #757575;
+      /* Primaty/Grey Dark */
+      color: $greyDark;
     }
   }
 
   &__title_select {
     border-width: 0;
-    background-color: #F6F5F4;
+    /* Primaty/Grey Light */
+    background-color: $greyLight;
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 600;
-
+    line-height: 140%;
+    letter-spacing: -0.04em;
     &--inactive {
-      color: #757575;
+      /* Primaty/Grey Dark */
+      color: $greyDark;
     }
   }
 }
 
 .account_label {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 0px;
   gap: 30px;
-
   height: 40px;
 
   &__user_name_div {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
     gap: 10px;
-  
-    height: 40px;
   }
 
   &__first_letter {
     border-radius: 50%;
-    background-color: #C3DCE3;
-    color: #2B788B;
+    /* Primaty/Cyan Light */
+    background-color: $cyanLight;
+    /* Primaty/Cyan Dark */
+    color: $cyanDark;
     width: 40px;
     height: 40px;
     font-family: 'Montserrat';
@@ -98,10 +89,13 @@
 
   &__user_name {
     font-family: 'Montserrat';
+    line-height: 140%;
+    letter-spacing: -0.04em;
   }
 
   &__sign_out {
     font-family: 'Montserrat';
     font-weight: 700;
+    letter-spacing: -0.04em;
   }
 }
