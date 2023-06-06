@@ -1,8 +1,10 @@
+@import './color.scss';
+
 @mixin headingBaseStyle {
     font-family: 'Dela Gothic One';
     font-style: normal;
     letter-spacing: -0.04em;
-    color: #000000;
+    color: $black;
   }
   
   .heading--h1 {
