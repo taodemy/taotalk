@@ -3,3 +3,72 @@
 @import './heading.scss';
 @import './paragraph.scss';
 @import './color.scss';
+
+.verticalCentered {
+  margin: auto 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0;
+}
+/*** Grid Layout***/
+.grid-t {
+  display: grid;
+}
+
+.grid-t-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.m-x-50 {
+  margin: 0 50px;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-t-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .md\:p-x-370 {
+    margin: 0 370px;
+  }
+}
+
+/***     HomePage      ***/
+.bgColor--GreyLight {
+  background-color: $greyLight;
+}
+
+.languageSectionContainer {
+  gap: 120px;
+  .p-y-77\.5 {
+    padding: 77.5px 0;
+  }
+  .languageButtonsGap {
+    display: flex;
+    gap: 21.1px;
+  }
+}
+
+.vocabularySectionContainer {
+  .p-t-26\.03 {
+    padding-top: 26.03px;
+  }
+}
+
+.statisticsSectionContainer {
+  gap: 110px;
+  .p-y-95\.37 {
+    padding: 95.37px 0;
+  }
+}
+
+.ImgInContainer--full {
+  width: 100%;
+  height: auto;
+}

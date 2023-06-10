@@ -1,10 +1,19 @@
 import React from 'react';
 
-const HeadingDescription = () => {
+interface HeadingDescriptionProps {
+  headingContent: string;
+  descriptionContent: string;
+}
+
+const HeadingDescription = ({ headingContent, descriptionContent }: HeadingDescriptionProps) => {
   return (
-    <div>
-      <h2>Learn a language in a playful way</h2>
-      <p>Make learning words more fun with mini-games</p>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <h2 className="heading--h2" style={{ width: '90%' }}>
+        {headingContent}
+      </h2>
+      <p className="paragraph--p1" style={{ width: '75%', margin: '30px 0' }}>
+        {descriptionContent}
+      </p>
     </div>
   );
 };
