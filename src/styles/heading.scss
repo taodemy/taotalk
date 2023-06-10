@@ -1,32 +1,33 @@
 @import './color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One:wght@400&display=swap"');
 
 @mixin headingBaseStyle {
-    font-family: 'Dela Gothic One';
-    font-style: normal;
-    letter-spacing: -0.04em;
-    color: $black;
-  }
-  
-  .heading--h1 {
-    @include headingBaseStyle;
-    font-size: 56px;
-    line-height: 120%;
-  }
-  
-  .heading--h2 {
-    @include headingBaseStyle;
-    font-size: 48px;
-    line-height: 100%;
-  }
-  
-  .heading--h3 {
-    @include headingBaseStyle;
-    font-size: 32px;
-    line-height: 100%;
-  }
-  
-  .heading--h4 {
-    @include headingBaseStyle;
-    font-size: 26px;
-    line-height: 100%;
-  }
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  letter-spacing: -0.04em;
+  color: $black;
+}
+
+.heading--h1 {
+  @include headingBaseStyle;
+  font-size: 56px;
+  line-height: 120%;
+}
+
+.heading--h2 {
+  @include headingBaseStyle;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.heading--h3 {
+  @include headingBaseStyle;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.heading--h4 {
+  @include headingBaseStyle;
+  font-size: 26px;
+  line-height: 100%;
+}

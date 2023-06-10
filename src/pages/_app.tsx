@@ -2,7 +2,7 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Layout from '../layout';
-import '../../src/normalize.scss';
+import '../styles/global.scss';
 
 const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
   return (

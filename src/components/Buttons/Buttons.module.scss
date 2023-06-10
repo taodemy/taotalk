@@ -1,32 +1,90 @@
-.button{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
+@import '../../styles/color.scss';
+
+@mixin setButtonSize($size) {
+  @if $size == 'tiny' {
+    padding: 1px 4px;
+  } @else if $size == 'small' {
+    padding: 3px 8px;
+  } @else if $size == 'normal' {
+    padding: 6px 12px;
+  } @else if $size == 'large' {
     padding: 14px 22px;
-    border-radius: 100px;
-    letter-spacing: -0.04em;
+  } @else {
+    // Default case
+    padding: 6px 12px;
+  }
 }
 
-.buttonPrimaryColor{
-    color: #FFFFFF;
-    background:#2B788B;
-    border:none;
-    transition: box-shadow 0.3s;
-    &:hover{
-        color:#2B788B;
-        background-color: #FFFFFF;
-        box-shadow: inset 0px 0px 0px 3px #2B788B;
-    }
+.largeButton {
+  @include setButtonSize('large');
 }
 
-.buttonLightColor{
-    color: #2B788B;
-    background:#C3DCE3;
-    border:none;
-    &:hover{
-        color:#FFFFFF;
-        background-color: #2B788B;
+.normalButton {
+  @include setButtonSize('normal');
+}
+
+.smallButton {
+  @include setButtonSize('small');
+}
+
+.tinyButton {
+  @include setButtonSize('tiny');
+}
+
+.button {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  border-radius: 100px;
+  letter-spacing: -0.04em;
+}
+
+/*** Normal Button ***/
+.buttonPrimaryColor {
+  background: $cyanDark;
+  color: $white;
+  border: none;
+  transition: box-shadow 0.3s;
+  &:hover {
+    color: $cyanDark;
+    background-color: $white;
+    box-shadow: inset 0px 0px 0px 3px $cyanDark;
+  }
+}
+
+@mixin colorSwap($Color--positive, $Color--negative) {
+  background: $Color--positive;
+  color: $Color--negative;
+  border: none;
+  &:hover {
+    color: $white;
+    background-color: $Color--negative;
+  }
+}
+
+.buttonLightColor {
+  @include colorSwap($cyanLight, $cyanDark);
+}
+
+.buttonPinkColor {
+  @include colorSwap($pinkLight, $pinkDark);
+}
+
+/*** BouncingImageButton ***/
+.buttonPopup {
+  border-radius: 14px;
+  padding: 0 0;
+  margin-top: 40px;
+  div {
+    position: relative;
+    margin-top: -40px;
+  }
+  &:hover {
+    img {
+      margin-bottom: 5px;
+      margin-top: -5px;
     }
+  }
 }

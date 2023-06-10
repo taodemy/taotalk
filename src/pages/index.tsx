@@ -11,53 +11,60 @@ export default function Home() {
       <section>
         <h1>Learning and teaching online, made easy.</h1>
       </section>
-      <section style={{ width: '100%' }}>
-        <section
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            backgroundColor: '#FFFFF',
-            position: 'relative',
-          }}
-        >
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-            <div style={{ width: '380px', border: '3px solid red' }}>
-              <Image src={LanguageImage} width={280} alt="Language" />
-            </div>
-            <div style={{ width: '380px', border: '3px solid red' }}>
-              <HeadingDescription />
-            </div>
+      <section>
+        <section className="grid-t grid-t-cols-1 m-x-50 md:grid-t-cols-2 md:p-x-370 languageSectionContainer">
+          <div className="p-y-77.5">
+            <Image src={LanguageImage} alt="Language" className="ImgInContainer--full" />
           </div>
-          {/* <h2>Learn a language in a playful way</h2> */}
-        </section>
-        <section style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#F6F5F4' }}>
-          {/* <h2>Increase your vocabulary</h2> */}
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-            <div style={{ width: '380px', border: '3px solid red' }}>
-              <HeadingDescription />
-              <Button color="light" label="Textbook->" />
-            </div>
-            <div style={{ width: '380px', border: '3px solid red', position: 'relative' }}>
-              <Image
-                src={VocabularyImage}
-                width={280}
-                alt="Vocabulary"
-                style={{ marginLeft: '-50px' }}
+          <div className="verticalCentered">
+            <HeadingDescription
+              headingContent="Learn a language in a playful way"
+              descriptionContent="Make learning words more fun with mini-games"
+            />
+            <div className="languageButtonsGap">
+              <Button
+                variant="bouncing"
+                color="pink"
+                label="Sprint →"
+                src="/sprint.svg"
+                alt="sprint"
+              />
+              <Button
+                variant="bouncing"
+                color="light"
+                label="Audio-call →"
+                src="/audio-call.svg"
+                alt="video call"
+                buttonWidthIncrease={76}
               />
             </div>
           </div>
         </section>
-        <section style={{ display: 'flex', justifyContent: 'center', backgroundColor: '#FFFFF' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-            <div style={{ width: '380px', border: '3px solid red' }}>
-              <Image src={ProgressImage} height={230} alt="Language" />
+        <div className="bgColor--GreyLight">
+          <section className="grid-t grid-t-cols-1 bgColor--GreyLight m-x-50 md:grid-t-cols-2 md:p-x-370 vocabularySectionContainer">
+            <div className="verticalCentered" style={{ marginLeft: '80px' }}>
+              <HeadingDescription
+                headingContent="Increase your vocabulary"
+                descriptionContent="Traditional and new effective approaches to word study"
+              />
+              <Button color="light" label="Textbook →" />
             </div>
-            <div style={{ width: '380px', border: '3px solid red' }}>
-              <HeadingDescription />
-              <Button color="light" label="Statistics->" />
+            <div className="p-t-26.03">
+              <Image src={VocabularyImage} alt="Vocabulary" className="ImgInContainer--full" />
             </div>
+          </section>
+        </div>
+        <section className="grid-t grid-t-cols-1 m-x-50 md:grid-t-cols-2 md:p-x-370 statisticsSectionContainer">
+          <div className="p-y-95.37">
+            <Image src={ProgressImage} alt="Language" className="ImgInContainer--full" />
           </div>
-          {/* <h2>Watch your progress everyday</h2> */}
+          <div className="verticalCentered">
+            <HeadingDescription
+              headingContent="Watch your progress every day"
+              descriptionContent="Save statistics on your achievements, words learned, and mistakes"
+            />
+            <Button color="light" label="Statistics →" />
+          </div>
         </section>
       </section>
     </>
