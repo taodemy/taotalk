@@ -14,7 +14,7 @@ h4 {
 }
 
 /*** Grid Layout***/
-@mixin sectionGridLayout{
+@mixin sectionGridLayout {
   display: grid;
   grid-template-columns: 1fr;
 
@@ -28,7 +28,8 @@ h4 {
   @include sectionGridLayout;
   gap: 120px;
   padding: 77.5px 50px;
-  img, div:first-child {
+  img,
+  div:first-child {
     @include verticalCentered;
   }
   .languageButtonsGap {
@@ -45,11 +46,11 @@ h4 {
   @include sectionGridLayout;
   background-color: $greyLight;
   padding: 26.03px 50px 0 50px;
-  div:first-child{
+  div:first-child {
     @include verticalCentered;
     margin-left: 35px;
   }
-  button{
+  button {
     margin-left: 35px;
   }
   @media (min-width: 1920px) {
@@ -61,7 +62,8 @@ h4 {
   @include sectionGridLayout;
   gap: 120px;
   padding: 95.37px 50px;
-  img, div:first-child  {
+  img,
+  div:first-child {
     @include verticalCentered;
   }
   @media (min-width: 1920px) {
@@ -75,11 +77,11 @@ h4 {
   margin: auto;
 }
 
-.headingDescriptionContainer{
-  h2{
+.headingDescriptionContainer {
+  h2 {
     width: 90%;
   }
-  p{
+  p {
     width: 75%;
     margin: 30px 0;
   }
