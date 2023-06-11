@@ -1,23 +1,49 @@
 import styles from './Header.module.scss';
-import Title from './Title';
-import AccountLabel from './AccountLabel';
+import LogInButton from './LogInButton';
 
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.content}>
-      <div className={styles.nav}>
-        <div className={styles.nav__heading}>TaoTalk</div>
+      <nav className={styles.nav}>
+        <h1 className={styles.nav__heading}>TaoTalk</h1>
         <div className={styles.nav__divide}>|</div>
-        <Title content={'Home'} isActive={true} />
-        <Title content={'Textbook'} isActive={false} />
-        <Title content={'Statistics'} isActive={false} />
-        <select
-          className={[styles.nav__title_select, styles['nav__title_select--inactive']].join(' ')}
-        >
-          <option value="Game">Game</option>
-        </select>
-      </div>
-      <AccountLabel userName={'Alex'} />
+        <ul className={styles.nav__list}>
+          <li>
+            <a title="Home" href="#" className={styles.nav__list_item}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              title="Textbook"
+              href="#"
+              className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
+            >
+              Textbook
+            </a>
+          </li>
+          <li>
+            <a
+              title="Statistics"
+              href="#"
+              className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
+            >
+              Statistics
+            </a>
+          </li>
+          <li>
+            <a
+              title="Game"
+              href="#"
+              className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
+            >
+              Game
+              <img src="/down_arrow.svg" alt="down array"></img>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <LogInButton userName={'Alex'} />
     </div>
   </header>
 );

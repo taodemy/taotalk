@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 
-export default function AccountLabel({ userName }: { userName: string }) {
+export default function LogInButton({ userName }: { userName: string }) {
   return (
     <div className={styles.account_label}>
       <div className={styles.account_label__user_name_div}>

@@ -20,8 +20,9 @@
 .nav {
   display: flex;
   gap: 30px;
-  width: 508px;
   height: 22px;
+  display: flex;
+  align-items: center;
 
   &__heading {
     font-family: 'Dela Gothic One';
@@ -34,11 +35,20 @@
     color: $greyMedium;
   }
 
-  &__title {
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list_item {
     font-family: 'Montserrat';
-    font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.04em;
+    padding: 30px;
+    text-decoration: none;
+    color: $black;
+
     &--inactive {
       /* Primaty/Grey Dark */
       color: $greyDark;
@@ -54,6 +64,7 @@
     font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.04em;
+
     &--inactive {
       /* Primaty/Grey Dark */
       color: $greyDark;
@@ -99,3 +110,4 @@
     letter-spacing: -0.04em;
   }
 }
+
