@@ -18,7 +18,6 @@ const Button = ({
   size = 'large',
   onClick,
   label = 'button',
-  isActive,
   src,
   buttonWidthIncrease,
   ...otherProps

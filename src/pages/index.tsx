@@ -1,7 +1,3 @@
-import Image from 'next/image';
-import LanguageImage from '../../public/language.svg';
-import VocabularyImage from '../../public/vocabulary.svg';
-import ProgressImage from '../../public/progress.svg';
 import HeadingDescription from '../components/HeadingDescription';
 import Button from '../components/Shared/Buttons';
 
@@ -12,11 +8,9 @@ export default function Home() {
         <h1>Learning and teaching online, made easy.</h1>
       </section>
       <section>
-        <section className="grid-t grid-t-cols-1 m-x-50 md:grid-t-cols-2 md:p-x-370 languageSectionContainer">
-          <div className="p-y-77.5">
-            <Image src={LanguageImage} alt="Language" className="ImgInContainer--full" />
-          </div>
-          <div className="verticalCentered">
+        <section className="languageSectionContainer">
+          <img src="/language.svg" alt="Language" className="imgContainer--full" />
+          <div>
             <HeadingDescription
               headingContent="Learn a language in a playful way"
               descriptionContent="Make learning words more fun with mini-games"
@@ -40,25 +34,19 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="bgColor--GreyLight">
-          <section className="grid-t grid-t-cols-1 bgColor--GreyLight m-x-50 md:grid-t-cols-2 md:p-x-370 vocabularySectionContainer">
-            <div className="verticalCentered" style={{ marginLeft: '80px' }}>
-              <HeadingDescription
-                headingContent="Increase your vocabulary"
-                descriptionContent="Traditional and new effective approaches to word study"
-              />
-              <Button color="light" label="Textbook →" />
-            </div>
-            <div className="p-t-26.03">
-              <Image src={VocabularyImage} alt="Vocabulary" className="ImgInContainer--full" />
-            </div>
-          </section>
-        </div>
-        <section className="grid-t grid-t-cols-1 m-x-50 md:grid-t-cols-2 md:p-x-370 statisticsSectionContainer">
-          <div className="p-y-95.37">
-            <Image src={ProgressImage} alt="Language" className="ImgInContainer--full" />
+        <section className="vocabularySectionContainer">
+          <div>
+            <HeadingDescription
+              headingContent="Increase your vocabulary"
+              descriptionContent="Traditional and new effective approaches to word study"
+            />
+            <Button color="light" label="Textbook →" />
           </div>
-          <div className="verticalCentered">
+          <img src="./vocabulary.svg" alt="Vocabulary" className="imgContainer--full" />
+        </section>
+        <section className="statisticsSectionContainer">
+          <img src="./progress.svg" alt="Statistics" className="imgContainer--full" />
+          <div>
             <HeadingDescription
               headingContent="Watch your progress every day"
               descriptionContent="Save statistics on your achievements, words learned, and mistakes"
