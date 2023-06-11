@@ -18,22 +18,20 @@ const BouncingImageButton = ({
 }: BouncingImageButtonProps) => {
   return (
     <button className={`${getButtonClass(color)} ${btn} ${styles.buttonPopup}`} {...otherProps}>
-      <div>
-        <img src={src} alt={alt} />
-        <p
-          style={
-            buttonWidthIncrease
-              ? {
-                  marginTop: '9px',
-                  marginLeft: `${buttonWidthIncrease / 2}px`,
-                  marginRight: `${buttonWidthIncrease / 2}px`,
-                }
-              : { marginTop: '9px' }
-          }
-        >
-          {label}
-        </p>
-      </div>
+      <img src={src} alt={alt} />
+      <p
+        style={
+          buttonWidthIncrease
+            ? {
+                marginTop: '9px',
+                marginLeft: `${buttonWidthIncrease / 2}px`,
+                marginRight: `${buttonWidthIncrease / 2}px`,
+              }
+            : { marginTop: '9px' }
+        }
+      >
+        {label}
+      </p>
     </button>
   );
 };

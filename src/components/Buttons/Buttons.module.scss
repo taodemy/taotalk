@@ -76,15 +76,12 @@
 .buttonPopup {
   border-radius: 14px;
   padding: 0 0;
-  margin-top: 40px;
-  div {
-    position: relative;
-    margin-top: -40px;
+  img{
+    margin-top: -35px;
   }
   &:hover {
-    img {
-      margin-bottom: 5px;
-      margin-top: -5px;
+    img{
+      transform: translateY(-5px);
     }
   }
 }
