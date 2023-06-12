@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One:wght@400&display=swap"');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import './heading.scss';
-@import './paragraph.scss';
-@import './color.scss';
+@import '../styles/heading.scss';
+@import '../styles/paragraph.scss';
+@import '../styles/color.scss';
 
 h1,
 h2,
@@ -31,7 +31,7 @@ h4 {
   gap: 120px;
   padding: 77.5px 50px;
   img,
-  div:first-child {
+  div:first-of-type {
     @include verticalCentered;
   }
   .languageButtonsGap {
@@ -48,7 +48,7 @@ h4 {
   @include sectionGridLayout;
   background-color: $greyLight;
   padding: 26.03px 50px 0 50px;
-  div:first-child {
+  div:first-of-type {
     @include verticalCentered;
     margin-left: 35px;
   }
@@ -65,7 +65,7 @@ h4 {
   gap: 120px;
   padding: 95.37px 50px;
   img,
-  div:first-child {
+  div:first-of-type {
     @include verticalCentered;
   }
   @media (min-width: 1920px) {
@@ -75,8 +75,6 @@ h4 {
 
 .imgContainer--full {
   width: 100%;
-  height: auto;
-  margin: auto;
 }
 
 .headingDescriptionContainer {
