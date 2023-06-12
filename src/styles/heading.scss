@@ -1,9 +1,9 @@
 @import './color.scss';
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One:wght@400&display=swap"');
 
 @mixin headingBaseStyle {
   font-family: 'Dela Gothic One';
   font-style: normal;
+  font-weight: 400;
   letter-spacing: -0.04em;
   color: $black;
 }
