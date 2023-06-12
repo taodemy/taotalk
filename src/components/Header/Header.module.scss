@@ -26,8 +26,9 @@
 
   &__heading {
     font-family: 'Dela Gothic One';
-    font-size: 20px;
+    font-size: 21px;
     letter-spacing: -0.02em;
+    line-height: 100%;
   }
 
   &__divide {
@@ -39,13 +40,16 @@
     list-style-type: none;
     display: flex;
     align-items: center;
+    padding-left: 0px;
   }
 
   &__list_item {
     font-family: 'Montserrat';
+    font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.04em;
-    padding: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
     text-decoration: none;
     color: $black;
 
@@ -100,8 +104,11 @@
 
   &__user_name {
     font-family: 'Montserrat';
+    font-weight: 600;
     line-height: 140%;
     letter-spacing: -0.04em;
+    /* Primaty/Grey Dark */
+    color: $greyDark;
   }
 
   &__sign_out {

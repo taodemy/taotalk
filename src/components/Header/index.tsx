@@ -33,11 +33,11 @@ const Header = () => (
           </li>
           <li>
             <a
-              title="Game"
+              title="Games"
               href="#"
               className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
             >
-              Game
+              Games
               <img src="/down_arrow.svg" alt="down array"></img>
             </a>
           </li>
