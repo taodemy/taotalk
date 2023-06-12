@@ -1,0 +1,31 @@
+@import './color.scss';
+
+@mixin paragraphBaseStyle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 140%;
+  color: $greyDark;
+}
+
+.paragraph--p1 {
+  @include paragraphBaseStyle;
+  font-size: 18px;
+}
+
+.paragraph--p2 {
+  @include paragraphBaseStyle;
+  font-size: 16px;
+  margin: 0 0;
+}
+
+.paragraph--p3 {
+  @include paragraphBaseStyle;
+  font-size: 14px;
+}
+
+.paragraph--p4 {
+  @include paragraphBaseStyle;
+  font-size: 12px;
+}
