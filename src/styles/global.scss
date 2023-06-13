@@ -1,5 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
-@import './heading.scss';
-@import './paragraph.scss';
-@import './color.scss';
+@import '../styles/heading.scss';
+@import '../styles/paragraph.scss';
+@import '../styles/color.scss';
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0;
+}
+
+@mixin verticalCentered {
+  margin: auto 0;
+}
+
+/*** Grid Layout***/
+@mixin sectionGridLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/***     HomePage      ***/
+.languageSectionContainer {
+  @include sectionGridLayout;
+  gap: 120px;
+  padding: 77.5px 50px;
+  img,
+  div:first-of-type {
+    @include verticalCentered;
+  }
+  .languageButtonsGap {
+    display: flex;
+    gap: 21.1px;
+    padding-top: 25px;
+  }
+  @media (min-width: 1920px) {
+    padding: 77.5px 370px;
+  }
+}
+
+.vocabularySectionContainer {
+  @include sectionGridLayout;
+  background-color: $greyLight;
+  padding: 26.03px 50px 0 50px;
+  div:first-of-type {
+    @include verticalCentered;
+    margin-left: 35px;
+  }
+  button {
+    margin-left: 35px;
+  }
+  @media (min-width: 1920px) {
+    padding: 26.03px 370px 0 370px;
+  }
+}
+
+.statisticsSectionContainer {
+  @include sectionGridLayout;
+  gap: 120px;
+  padding: 95.37px 50px;
+  img,
+  div:first-of-type {
+    @include verticalCentered;
+  }
+  @media (min-width: 1920px) {
+    padding: 95.37px 370px;
+  }
+}
+
+.imgContainer--full {
+  width: 100%;
+}
+
+.headingDescriptionContainer {
+  h2 {
+    width: 90%;
+  }
+  p {
+    width: 75%;
+    margin: 30px 0;
+  }
+}
