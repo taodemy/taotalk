@@ -6,7 +6,7 @@ import { PointsDash } from '../components/DashInfo';
 
 export default function SprintSummaryPage() {
   return (
-    <section className="sprintSummaryConatiner">
+    <section className="sprintSummaryContainer">
       <div style={{ backgroundColor: '#FFFFFF', borderRadius: '14px', padding: '60px 40px' }}>
         <div className="summaryDetails">
           <img src="./books.svg" alt="books" style={{ width: '100%', height: 'auto' }} />

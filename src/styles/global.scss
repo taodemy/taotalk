@@ -88,7 +88,7 @@ h4 {
 }
 
 /*** Sprint summary container ***/
-.sprintSummaryConatiner {
+.sprintSummaryContainer {
   background-color: $greyLight;
   width: auto;
   padding: 100px 314.5px;
@@ -99,15 +99,4 @@ h4 {
 .summaryDetails,
 .vocabularyList {
   @include sectionGridLayout;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #e0e0e0;
-  border-radius: 4px;
-  min-height: 5px; /* 设置滚动条滑块的最小高度 */
 }
