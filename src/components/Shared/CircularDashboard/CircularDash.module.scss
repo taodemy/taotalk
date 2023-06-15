@@ -1,0 +1,12 @@
+.circularDash {
+  position: relative;
+  .dashInfoContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

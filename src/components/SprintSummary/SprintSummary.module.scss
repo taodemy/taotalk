@@ -1,0 +1,77 @@
+@import '../../styles/color.scss';
+
+/*** Sprint summary ***/
+@mixin sectionGridLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sprintSummaryConatiner {
+  background-color: $greyLight;
+  padding: 100px 314.5px;
+  display: flex;
+  gap: 10px;
+  > div:first-of-type {
+    background-color: $white;
+    border-radius: 14px;
+    padding: 63px 40px;
+  }
+}
+
+.summaryDetails {
+  @include sectionGridLayout;
+  margin-bottom: 33px;
+  width: 540px;
+  height: 206px;
+  img {
+    width: 280px;
+    height: 200px;
+  }
+  .summaryComment {
+    margin: 12px 0 23px 0;
+  }
+  .summaryDashGroup {
+    display: flex;
+    gap: 23.05px;
+  }
+}
+
+.summaryButtonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button:first-of-type {
+    display: flex;
+    border: none;
+    background-color: $white;
+    p {
+      //upgrade to text Button
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 30px 0 10.44px;
+      margin-top: 0;
+    }
+  }
+}
+
+.vocabularyListContainer {
+  background-color: $white;
+  border-radius: 14px;
+  padding: 40px 40px;
+  > div:first-of-type {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.titleListContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 32px;
+}
