@@ -8,6 +8,7 @@ interface CircularDashboardProps {
   progressValue: number;
   maxValue: number;
   strokeWidth: number;
+  startPoint: number;
   DashInfoComponent: React.FC;
 }
 
@@ -18,6 +19,7 @@ const CircularDashboard: React.FC<CircularDashboardProps> = ({
   progressValue,
   maxValue,
   strokeWidth,
+  startPoint,
   DashInfoComponent,
 }) => {
   const circumference = 2 * Math.PI * radius;
@@ -48,6 +50,7 @@ const CircularDashboard: React.FC<CircularDashboardProps> = ({
           stroke={progressColor}
           strokeWidth={strokeWidth}
           strokeDasharray={`${progress} ${remaining}`}
+          transform={`rotate(${startPoint} ${radius} ${radius})`}
         />
       </svg>
       <div
