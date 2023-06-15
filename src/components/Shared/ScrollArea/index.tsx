@@ -30,13 +30,13 @@ const ScrollArea = () => {
         {items.map((item, index) => (
           <li key={index}>
             {index == 1 ? (
-              <img src="./activeplayer.svg" alt="activeplayer" />
+              <img src="./activeplayer.svg" alt="activePlayer" />
             ) : (
               <img src="./player.svg" alt="player" />
             )}
             <div>
-              <p>{item[0]}</p>
-              <p className="paragraph--p4">{item[1]}</p>
+              <p className={`paragraph--p2 ${styles.scrollFontBlack}`}>{item[0]}</p>
+              <p className="paragraph--p2">{item[1]}</p>
             </div>
           </li>
         ))}

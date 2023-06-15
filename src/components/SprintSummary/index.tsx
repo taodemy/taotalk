@@ -33,7 +33,7 @@ const TitleList: React.FC<TitleListProps> = ({
 
 const SprintSummary = () => {
   return (
-    <section className={styles.sprintSummaryConatiner}>
+    <section className={styles.sprintSummaryContainer}>
       <div>
         <div className={styles.summaryDetails}>
           <img src="./books.svg" alt="books" />
@@ -74,13 +74,15 @@ const SprintSummary = () => {
       </div>
 
       <div className={styles.vocabularyListContainer}>
-        <div>
+        <div className="knowList">
           <TitleList
             titleName="I know"
             labelName="15 words"
             labelColor="#2B788B"
             labelBgColor="#C3DCE3"
           />
+        </div>
+        <div className="unKnowList">
           <TitleList
             titleName="I don't know"
             labelName="15 words"

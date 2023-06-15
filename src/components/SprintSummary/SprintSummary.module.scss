@@ -10,7 +10,7 @@
   }
 }
 
-.sprintSummaryConatiner {
+.sprintSummaryContainer {
   background-color: $greyLight;
   padding: 100px 314.5px;
   display: flex;
@@ -19,11 +19,12 @@
     background-color: $white;
     border-radius: 14px;
     padding: 63px 40px;
+    width: 620px;
   }
 }
 
 .summaryDetails {
-  @include sectionGridLayout;
+  display: flex;
   margin-bottom: 33px;
   width: 540px;
   height: 206px;
@@ -69,9 +70,14 @@
   background-color: $white;
   border-radius: 14px;
   padding: 40px 40px;
-  > div:first-of-type {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 18px;
+  width: 661px;
+  .knowList{
+    width:254px;
+  }
+  .unKnowList{
+    width:288px;
   }
 }
 

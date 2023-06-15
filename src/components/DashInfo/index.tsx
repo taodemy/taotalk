@@ -33,13 +33,13 @@ export const LearningDash: React.FC<DashProps> = () => {
   };
   return (
     <div>
-      <div className={styles.learngDashTop}>
+      <div className={styles.learningDashTop}>
         <div className={styles.divider}></div>
-        <div className={styles.dividerSider}>
+        <div className={styles.sideDivider}>
           <p>x2</p>
           <p className="paragraph--p2">multiplier</p>
         </div>
-        <div className={styles.dividerSider}>
+        <div className={styles.sideDivider}>
           <p>30</p>
           <p className="paragraph--p2">points</p>
         </div>
