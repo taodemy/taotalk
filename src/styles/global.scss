@@ -26,62 +26,6 @@ h4 {
 }
 
 /***     HomePage      ***/
-.heroSection {
-  @include sectionGridLayout;
-  padding:94px 0px 30px 90px;
-  background-color: $greyLight;
-  div:first-of-type {
-    @include verticalCentered;
-  }
-  .hero__subheading{
-    letter-spacing: 0.14em;
-    line-height: 16px;
-    font-weight: 700;
-    color: $cyanDark;
-    padding-bottom: 24px;
-    text-transform: uppercase;
-  }
-  .paragraph--p1{
-    margin: 30px 0 32px 0;
-  }
-  .hero__figure{
-    display: flex;
-    align-items: center;
-    padding-top: 48.78px;
-    .heading--h3{
-      font-size: 40px;
-    }
-    span{
-      color: $cyanDark;
-    }
-    .hero__figure_left{
-      padding-right: 48.78px;
-      img{
-        padding-right: 10px;
-      }
-    }
-    .divider{
-      width: 1.22px;
-      height: 48.78px;
-      background-color: #E0E0E0;
-    }
-    .hero__figure_right{
-      padding-left: 48.78px;
-      img{
-        padding-right: 13px;
-      }
-    }
-    p{
-      padding: 3px;
-      color: #585858;
-      text-align: center;
-    }
-  }
-  
-  @media (min-width: 1920px) {
-    padding: 95px 117px 30px 350px;
-  }
-}
 .languageSectionContainer {
   @include sectionGridLayout;
   gap: 120px;
