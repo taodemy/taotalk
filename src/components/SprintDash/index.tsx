@@ -7,7 +7,7 @@ const SprintDash = () => {
   return (
     <section className={styles.sprintDashContainer}>
       <CircularDashboard
-        radius={300}
+        radius={250}
         progressValue={65}
         progressColor={'#2b788b'}
         maxValue={100}
