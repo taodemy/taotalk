@@ -44,7 +44,7 @@
       .divider{
         width: 1.22px;
         height: 48.78px;
-        background-color: #E0E0E0;
+        background-color: $greyMedium;
       }
       &_right{
         div{
@@ -57,7 +57,7 @@
       }
       p{
         padding: 3px;
-        color: #585858;
+        color: $Zambezi;
         text-align: center;
       }
     }
