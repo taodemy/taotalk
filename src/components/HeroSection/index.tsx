@@ -2,8 +2,8 @@ import Button from '../Shared/Buttons';
 import Styles from './Hero.module.scss';
 const Hero = () => {
   return (
-    <section className={Styles.heroSection}>
-      <div>
+    <article className={Styles.heroSection}>
+      <section>
         <p className={`paragraph--p2 ${Styles.hero__subheading}`}>AI-powered chatting PLATFORM</p>
         <h1 className="heading--h1">Learning and teaching online, made easy.</h1>
         <p className={`paragraph--p1 ${Styles.hero__content}`}>
@@ -34,9 +34,9 @@ const Hero = () => {
             <p className="paragraph--p2">Mini-games</p>
           </div>
         </div>
-      </div>
+      </section>
       <img src="/heroBoy.svg" alt="heroBoy image" />
-    </section>
+    </article>
   );
 };
 
