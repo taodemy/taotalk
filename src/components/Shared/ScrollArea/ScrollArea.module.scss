@@ -1,0 +1,28 @@
+.scrollArea {
+  overflow-y: scroll;
+  height: 256px;
+  width: 100%;
+  ul {
+    padding: 0 0;
+    margin: 0 0;
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      div {
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        p:first-of-type {
+          font-weight: 600;
+          font-size: 16px;
+        }
+        p {
+          padding: 0 0;
+          margin: 0 0;
+        }
+      }
+    }
+  }
+}

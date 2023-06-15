@@ -1,0 +1,81 @@
+@import '../../styles/color.scss';
+/*** Two Dashes info for sprint summary page ***/
+.summaryDash {
+  display: flex;
+  flex-direction: column;
+  p:first-of-type {
+    margin: 0 auto;
+    color: $black;
+  }
+  h3 {
+    margin: 0 auto;
+    padding-bottom: 4px;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+/*** Learning Dash info for sprint dash page ***/
+/*** Learning Dash Top***/
+.learngDashTop {
+  display: flex;
+  gap: 106.55px;
+  align-items: center;
+  position: relative;
+}
+
+.divider {
+  border: 1px solid $greyMedium;
+  position: absolute;
+  left: 50%;
+  height: 80%;
+  z-index: 999;
+}
+
+@mixin siderTitle {
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: $black;
+}
+.dividerSider {
+  @include siderTitle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p:first-of-type {
+    padding-bottom: 3px;
+    margin: 0 auto;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
+/*** Learning Dash Bottom ***/
+.learningDashBottom {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  img {
+    margin-bottom: 10px;
+    width: 99px;
+    height: 33px;
+    margin: 0 auto;
+  }
+  h2:first-of-type {
+    margin: 10px auto;
+  }
+  .translation {
+    color: #2b788b;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+  div {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+}

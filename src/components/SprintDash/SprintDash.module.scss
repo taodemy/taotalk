@@ -1,0 +1,28 @@
+@import '../../styles/color.scss';
+
+/*** Sprint Dash ***/
+.sprintDashContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 710px;
+  background-color: $greyLight;
+  .directionInstruction {
+    display: flex;
+    align-items: center;
+    margin-top: 44.22px;
+    div {
+      background-color: $white;
+      box-shadow: 0px 343.472px 343.472px rgba(52, 41, 39, 0.08),
+        0px 183.185px 183.185px rgba(52, 41, 39, 0.12),
+        0px 91.5925px 91.5925px rgba(52, 41, 39, 0.04),
+        0px 68.6944px 68.6944px rgba(52, 41, 39, 0.04),
+        0px 11.4491px 68.6944px rgba(52, 41, 39, 0.04),
+        0px 11.4491px 11.4491px rgba(52, 41, 39, 0.04);
+      border-radius: 5px;
+      padding: 4px 8px;
+      margin: 0 4px;
+    }
+  }
+}

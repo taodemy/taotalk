@@ -1,32 +1,43 @@
 import React from 'react';
+import styles from './CircularDash.module.scss';
 
 interface CircularDashboardProps {
+  radius: number;
+  progressColor: string;
+  maxColor: string;
   progressValue: number;
   maxValue: number;
+  strokeWidth: number;
   DashInfoComponent: React.FC;
 }
 
 const CircularDashboard: React.FC<CircularDashboardProps> = ({
+  radius,
+  progressColor,
+  maxColor,
   progressValue,
   maxValue,
+  strokeWidth,
   DashInfoComponent,
 }) => {
-  const radius = 55;
-  const strokeWidth = 5;
   const circumference = 2 * Math.PI * radius;
   const percentage = (progressValue / maxValue) * 100;
   const progress = (circumference * (percentage / 102)).toFixed(2);
   const remaining = (circumference - parseFloat(progress)).toFixed(2);
+  const diameter = radius * 2;
 
   return (
-    <div style={{ position: 'relative', width: `${radius * 2}px`, height: `${radius * 2}px` }}>
+    <div
+      className={styles.circularDash}
+      style={{ width: `${diameter}px`, height: `${diameter}px` }}
+    >
       <svg width={radius * 2} height={radius * 2}>
         <circle
           cx={radius}
           cy={radius}
           r={radius - strokeWidth / 2}
           fill="none"
-          stroke="#c3dce3"
+          stroke={maxColor}
           strokeWidth={strokeWidth}
         />
         <circle
@@ -34,27 +45,16 @@ const CircularDashboard: React.FC<CircularDashboardProps> = ({
           cy={radius}
           r={radius - strokeWidth / 2}
           fill="none"
-          stroke="#2b788b"
+          stroke={progressColor}
           strokeWidth={strokeWidth}
           strokeDasharray={`${progress} ${remaining}`}
         />
       </svg>
       <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: `${radius * 2}px`,
-          height: `${radius * 2}px`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
+        className={styles.dashInfoContainer}
+        style={{ width: `${diameter}px`, height: `${diameter}px` }}
       >
-        <div style={{ padding: '5px 11px' }}>
-          <DashInfoComponent />
-        </div>
+        <DashInfoComponent />
       </div>
     </div>
   );
