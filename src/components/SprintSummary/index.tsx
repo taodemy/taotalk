@@ -45,18 +45,20 @@ const SprintSummary = () => {
                 radius={60}
                 progressValue={240}
                 progressColor={'#2b788b'}
-                maxValue={500}
+                maxValue={320}
                 maxColor={'#c3dce3'}
                 strokeWidth={5}
-                DashInfoComponent={() => <PointsDash progressValue={65} />}
+                startPoint={-90}
+                DashInfoComponent={() => <PointsDash progressValue={240} />}
               />
               <CircularDashboard
                 radius={60}
-                progressValue={30}
+                progressValue={30 + 10}
                 progressColor={'#639B6D'}
                 maxValue={40}
                 maxColor={'#c3dce3'}
                 strokeWidth={5}
+                startPoint={-90}
                 DashInfoComponent={() => <WordsDash progressValue={30} maxValue={40} />}
               />
             </div>

@@ -29,7 +29,11 @@ const ScrollArea = () => {
       <ul>
         {items.map((item, index) => (
           <li key={index}>
-            <img src="./player.svg" alt="player" />
+            {index == 1 ? (
+              <img src="./activeplayer.svg" alt="activeplayer" />
+            ) : (
+              <img src="./player.svg" alt="player" />
+            )}
             <div>
               <p>{item[0]}</p>
               <p className="paragraph--p4">{item[1]}</p>
