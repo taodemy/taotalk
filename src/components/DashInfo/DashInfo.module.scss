@@ -17,7 +17,7 @@
 }
 /*** Learning Dash info for sprint dash page ***/
 /*** Learning Dash Top***/
-.learngDashTop {
+.learningDashTop {
   display: flex;
   gap: 106.55px;
   align-items: center;
@@ -32,7 +32,7 @@
   z-index: 999;
 }
 
-@mixin siderTitle {
+@mixin sideTitle {
   font-family: 'Dela Gothic One';
   font-style: normal;
   font-weight: 400;
@@ -41,8 +41,9 @@
   letter-spacing: -0.02em;
   color: $black;
 }
-.dividerSider {
-  @include siderTitle;
+
+.sideDivider {
+  @include sideTitle;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +70,7 @@
     margin: 10px auto;
   }
   .translation {
-    color: #2b788b;
+    color: $cyanDark;
     padding-bottom: 40px;
     margin: 0 auto;
   }
