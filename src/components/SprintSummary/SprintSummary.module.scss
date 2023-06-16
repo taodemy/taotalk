@@ -14,12 +14,13 @@
   background-color: $greyLight;
   padding: 100px 314.5px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   > div:first-of-type {
     background-color: $white;
     border-radius: 14px;
     padding: 63px 40px;
     width: 620px;
+    box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
   }
 }
 
@@ -58,10 +59,10 @@
       bottom: 6.25%;
     }
     p {
-      font-size: 16px;
       font-weight: 700;
+      color: $black;
+      line-height: 100%;
       margin: 0 30px 0 10.44px;
-      margin-top: 0;
     }
   }
 }
@@ -73,6 +74,7 @@
   display: flex;
   gap: 18px;
   width: 661px;
+  box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
   .knowList {
     width: 254px;
   }

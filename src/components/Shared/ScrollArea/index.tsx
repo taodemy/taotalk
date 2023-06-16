@@ -36,7 +36,7 @@ const ScrollArea = () => {
             )}
             <div>
               <p className={`paragraph--p2 ${styles.scrollFontBlack}`}>{item[0]}</p>
-              <p className="paragraph--p2">{item[1]}</p>
+              <p className={`paragraph--p2 ${styles.translation}`}>{item[1]}</p>
             </div>
           </li>
         ))}

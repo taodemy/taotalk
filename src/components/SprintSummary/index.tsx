@@ -67,7 +67,7 @@ const SprintSummary = () => {
         <div className={styles.summaryButtonGroup}>
           <button>
             <img src="./refresh.svg" alt="refresh" />
-            <p>Play it again</p>
+            <p className="paragraph--p2">Play it again</p>
           </button>
           <Button color="light" label="Go to textbook" />
         </div>
