@@ -3,68 +3,68 @@
 @import '../../styles/color.scss';
 
 .heroSection {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding:94px 0px 30px 90px;
-    background-color: $greyLight;
-    div:first-of-type {
-        margin: auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 94px 0px 30px 90px;
+  background-color: $greyLight;
+  div:first-of-type {
+    margin: auto 0;
+  }
+  .hero__subheading {
+    letter-spacing: 0.14em;
+    line-height: 16px;
+    font-weight: 700;
+    color: $cyanDark;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero__content {
+    margin: 30px 0 32px 0;
+  }
+  .hero__figure {
+    display: flex;
+    align-items: center;
+    padding-top: 48.78px;
+    &_heading {
+      font-size: 40px;
+      letter-spacing: -0.02em;
     }
-    .hero__subheading{
-      letter-spacing: 0.14em;
-      line-height: 16px;
-      font-weight: 700;
+    span {
       color: $cyanDark;
-      padding-bottom: 24px;
-      text-transform: uppercase;
     }
-    .hero__content{
-        margin:30px 0 32px 0;
-    }
-    .hero__figure{
-      display: flex;
-      align-items: center;
-      padding-top: 48.78px;
-      &_heading{
-        font-size: 40px;
-        letter-spacing: -0.02em;
+    &_left {
+      div {
+        display: flex;
       }
-      span{
-        color: $cyanDark;
-      }
-      &_left{
-        div{
-            display: flex;
-        }
-        padding-right: 48.78px;
-        img{
-          padding-right: 10px;
-        }
-      }
-      .divider{
-        width: 1.22px;
-        height: 48.78px;
-        background-color: $greyMedium;
-      }
-      &_right{
-        div{
-            display: flex;
-        }
-        padding-left: 48.78px;
-        img{
-          padding-right: 13px;
-        }
-      }
-      p{
-        padding: 3px;
-        color: $Zambezi;
-        text-align: center;
+      padding-right: 48.78px;
+      img {
+        padding-right: 10px;
       }
     }
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
+    .divider {
+      width: 1.22px;
+      height: 48.78px;
+      background-color: $greyMedium;
+    }
+    &_right {
+      div {
+        display: flex;
       }
-    @media (min-width: 1920px) {
-      padding: 95px 117px 30px 350px;
+      padding-left: 48.78px;
+      img {
+        padding-right: 13px;
+      }
+    }
+    p {
+      padding: 3px;
+      color: $Zambezi;
+      text-align: center;
     }
   }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1920px) {
+    padding: 95px 117px 30px 350px;
+  }
+}
