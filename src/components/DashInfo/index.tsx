@@ -32,7 +32,7 @@ export const LearningDash: React.FC<DashProps> = () => {
     router.push('/sprint-summary');
   };
   return (
-    <div>
+    <>
       <div className={styles.learningDashTop}>
         <div className={styles.divider}></div>
         <div className={styles.sideDivider}>
@@ -53,6 +53,6 @@ export const LearningDash: React.FC<DashProps> = () => {
           <Button color="pink" label="Wrong" alt="Wrong" onClick={handleClick} />
         </div>
       </div>
-    </div>
+    </>
   );
 };

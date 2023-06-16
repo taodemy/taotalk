@@ -26,13 +26,9 @@ const CircularDashboard: React.FC<CircularDashboardProps> = ({
   const percentage = (progressValue / maxValue) * 100;
   const progress = (circumference * (percentage / 102)).toFixed(2);
   const remaining = (circumference - parseFloat(progress)).toFixed(2);
-  const diameter = radius * 2;
 
   return (
-    <div
-      className={styles.circularDash}
-      style={{ width: `${diameter}px`, height: `${diameter}px` }}
-    >
+    <div className={styles.circularDash}>
       <svg width={radius * 2} height={radius * 2}>
         <circle
           cx={radius}
@@ -53,10 +49,7 @@ const CircularDashboard: React.FC<CircularDashboardProps> = ({
           transform={`rotate(${startPoint} ${radius} ${radius})`}
         />
       </svg>
-      <div
-        className={styles.dashInfoContainer}
-        style={{ width: `${diameter}px`, height: `${diameter}px` }}
-      >
+      <div className={styles.dashInfoContainer}>
         <DashInfoComponent />
       </div>
     </div>

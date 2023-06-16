@@ -29,7 +29,6 @@
   position: absolute;
   left: 50%;
   height: 80%;
-  z-index: 999;
 }
 
 @mixin sideTitle {
@@ -55,6 +54,7 @@
     margin: 0 auto;
   }
 }
+
 /*** Learning Dash Bottom ***/
 .learningDashBottom {
   display: flex;

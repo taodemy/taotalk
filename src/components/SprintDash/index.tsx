@@ -12,7 +12,7 @@ const SprintDash = () => {
         progressColor={'#2b788b'}
         maxValue={100}
         maxColor={'#c3dce3'}
-        strokeWidth={10}
+        strokeWidth={8}
         startPoint={0}
         DashInfoComponent={() => <LearningDash progressValue={65} />}
       />
