@@ -25,6 +25,19 @@ export const WordsDash: React.FC<DashProps> = ({ progressValue, maxValue }) => {
   return <SummaryDash progressValue={progressValue} maxValue={maxValue} />;
 };
 
+export const LoveDash: React.FC<DashProps> = ({ progressValue }) => {
+  return (
+    <div className={styles.loveDash}>
+      <p className="paragraph--p3">remains</p>
+      <div>
+        <h3 className="heading--h3">♥</h3>
+        <h3 className="heading--h3">{progressValue}</h3>
+      </div>
+      <p className="paragraph--p2">lives</p>
+    </div>
+  );
+};
+
 export const LearningDash: React.FC<DashProps> = () => {
   const router = useRouter();
 
@@ -45,7 +58,7 @@ export const LearningDash: React.FC<DashProps> = () => {
         </div>
       </div>
       <div className={styles.learningDashBottom}>
-        <img src="./stars.svg" />
+        <img src="/stars.svg" alt="stars" />
         <h2 className="heading--h2">negative</h2>
         <h2 className={`heading--h2 ${styles.translation}`}>perdre</h2>
         <div>

@@ -39,10 +39,10 @@ const OtherSections = () => {
           />
           <Button color="primary" label="Textbook →" />
         </div>
-        <img src="./vocabulary.svg" alt="Vocabulary" className="imgContainer--full" />
+        <img src="/vocabulary.svg" alt="Vocabulary" className="imgContainer--full" />
       </section>
       <section className="statisticsSectionContainer">
-        <img src="./progress.svg" alt="Statistics" className="imgContainer--full" />
+        <img src="/progress.svg" alt="Statistics" className="imgContainer--full" />
         <div>
           <HeadingDescription
             headingContent="Watch your progress every day"
