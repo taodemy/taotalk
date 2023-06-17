@@ -86,3 +86,17 @@ h4 {
     margin: 30px 0;
   }
 }
+
+/*** Sprint summary container ***/
+.sprintSummaryContainer {
+  background-color: $greyLight;
+  width: auto;
+  padding: 100px 314.5px;
+  @include sectionGridLayout;
+  gap: 10px;
+}
+
+.summaryDetails,
+.vocabularyList {
+  @include sectionGridLayout;
+}
