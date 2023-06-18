@@ -87,10 +87,10 @@
 }
 
 /*** Outline Button ***/
-.buttonGreyColor{
+.buttonGreyColor {
   color: $greyIcon;
   border: 3px solid $greyIcon;
-  &:hover{
+  &:hover {
     color: $greyDark;
     border: 3px solid $greyDark;
   }
