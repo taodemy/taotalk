@@ -11,10 +11,10 @@ export type NormalButtonProps = {
 export const btn = styles.button;
 export const getButtonClass = (color: ButtonColor) => {
   switch (color) {
+    case 'secondary':
+      return styles.buttonSecondaryColor;
     case 'primary':
       return styles.buttonPrimaryColor;
-    case 'light':
-      return styles.buttonLightColor;
     case 'pink':
       return styles.buttonPinkColor;
   }

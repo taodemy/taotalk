@@ -9,7 +9,7 @@ const Hero = () => {
         <p className={`paragraph--p1 ${Styles.hero__content}`}>
           Practice your English and learn new things with the platform.
         </p>
-        <Button color="light" label="About Platform" />
+        <Button color="primary" label="About Platform" />
 
         <div className={Styles.hero__figure}>
           <div className={Styles.hero__figure_left}>

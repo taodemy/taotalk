@@ -49,7 +49,7 @@ export const LearningDash: React.FC<DashProps> = () => {
         <h2 className="heading--h2">negative</h2>
         <h2 className={`heading--h2 ${styles.translation}`}>perdre</h2>
         <div>
-          <Button color="light" label="Right" alt="Right" onClick={handleClick} />
+          <Button color="primary" label="Right" alt="Right" onClick={handleClick} />
           <Button color="pink" label="Wrong" alt="Wrong" onClick={handleClick} />
         </div>
       </div>

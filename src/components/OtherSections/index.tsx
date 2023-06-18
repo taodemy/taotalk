@@ -22,7 +22,7 @@ const OtherSections = () => {
             />
             <Button
               variant="bouncing"
-              color="light"
+              color="primary"
               label="Audio-call →"
               src="/audio-call.svg"
               alt="video call"
@@ -37,7 +37,7 @@ const OtherSections = () => {
             headingContent="Increase your vocabulary"
             descriptionContent="Traditional and new effective approaches to word study"
           />
-          <Button color="light" label="Textbook →" />
+          <Button color="primary" label="Textbook →" />
         </div>
         <img src="./vocabulary.svg" alt="Vocabulary" className="imgContainer--full" />
       </section>
@@ -48,7 +48,7 @@ const OtherSections = () => {
             headingContent="Watch your progress every day"
             descriptionContent="Save statistics on your achievements, words learned, and mistakes"
           />
-          <Button color="light" label="Statistics →" />
+          <Button color="primary" label="Statistics →" />
         </div>
       </section>
     </>
