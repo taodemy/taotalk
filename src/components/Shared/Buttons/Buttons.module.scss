@@ -42,7 +42,7 @@
 }
 
 /*** Normal Button ***/
-.buttonPrimaryColor {
+.buttonSecondaryColor {
   background: $cyanDark;
   color: $white;
   border: none;
@@ -64,7 +64,7 @@
   }
 }
 
-.buttonLightColor {
+.buttonPrimaryColor {
   @include colorSwap($cyanLight, $cyanDark);
 }
 

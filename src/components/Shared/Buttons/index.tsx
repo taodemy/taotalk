@@ -1,7 +1,7 @@
 import NormalButton, { NormalButtonProps } from './NormalButton';
-import BouncingImageButton, { BouncingImageButtonProps } from './BouncingImageButton';
+import BouncingImageButton from './BouncingImageButton';
 
-export type ButtonColor = 'primary' | 'light' | 'pink';
+export type ButtonColor = 'primary' | 'secondary' | 'pink' | 'grey';
 
 type ButtonProps = {
   variant?: 'normal' | 'bouncing';
@@ -14,7 +14,7 @@ type ButtonProps = {
 
 const Button = ({
   variant = 'normal',
-  color = 'primary',
+  color = 'secondary',
   size = 'large',
   onClick,
   label = 'button',
