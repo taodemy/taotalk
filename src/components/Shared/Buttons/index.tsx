@@ -1,10 +1,11 @@
 import NormalButton, { NormalButtonProps } from './NormalButton';
 import BouncingImageButton from './BouncingImageButton';
+import OutlineButton from './OutlineButton';
 
 export type ButtonColor = 'primary' | 'secondary' | 'pink' | 'grey';
 
 type ButtonProps = {
-  variant?: 'normal' | 'bouncing';
+  variant?: 'normal' | 'bouncing' | 'outline';
   isActive?: boolean;
   src?: string;
   alt?: string;
@@ -35,6 +36,9 @@ const Button = ({
         onClick={onClick}
         {...otherProps}
       />
+    ),
+    outline: (
+      <OutlineButton color={color} label={label} size={size} onClick={onClick} {...otherProps} />
     ),
   }[variant];
 };
