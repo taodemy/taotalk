@@ -1,0 +1,173 @@
+@import '../../styles/color.scss';
+
+.body_section {
+  display: flex;
+  padding: 100px 528px;
+  width: 1920px;
+  height: 640px;
+
+  /* Primaty/Grey Light */
+  background: #F6F5F4;
+}
+
+.sprint_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 30px;
+  width: 792px;
+  height: 440px;
+  background: #FFFFFF;
+  /* Shadow 2 */
+  box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+  border-radius: 14px;
+
+  &__imagedisplay {
+  width: 250px;
+  height: 400px;
+  }
+
+  &__main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  width: 452px;
+  height: 282px;
+  }
+}
+  
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 14px;
+  width: 460px;
+
+  &__heading {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  }
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  &__list {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  }
+}
+
+.level-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid;
+  border-radius: 22px;
+  width: 38px;
+  height: 38px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  &--green {
+    color: $green;
+    border-color: $green;
+
+    &--active {
+      background-color: $green;
+      border-color: $green;
+      color: $white;
+    }
+  }
+
+  &--yellow:hover {
+    background-color: scale-color($green, $alpha: -70%);
+  }
+
+  &--yellow {
+    color: $yellow;
+    border-color: $yellow;
+
+    &--active {
+      background-color: $yellow;
+      border-color: $yellow;
+      color: $white;
+    }
+  }
+
+  &--green:hover {
+    background-color: scale-color($green, $alpha: -70%);
+  }
+ 
+  &--orange {
+    color: $orange;
+    border-color: $orange;
+
+    &--active {
+      background-color: $orange;
+      border-color: $orange;
+      color: $white;
+    }
+  }
+
+  &--orange:hover {
+    background-color: scale-color($orange, $alpha: -70%);
+  }
+
+  &--red {
+    color: $red;
+    border-color: $red;
+
+    &--active {
+      background-color: $red;
+      border-color: $red;
+      color: $white;
+    }
+  }
+
+  &--red:hover {
+    background-color: scale-color($red, $alpha: -70%);
+  }
+
+  &--pink {
+    color: $pink;
+    border-color: $pink;
+
+    &--active {
+      background-color: $pink;
+      border-color: $pink;
+      color: $white;
+    }
+  }
+
+  &--pink:hover {
+    background-color: scale-color($pink, $alpha: -70%);
+  }
+
+  &--cyan {
+    color: $cyan;
+    border-color: $cyan;
+
+    &--active {
+      background-color: $cyan;
+      border-color: $cyan;
+      color: $white;
+    }
+  }
+
+  &--cyan:hover {
+    background-color: scale-color($cyan, $alpha: -70%);
+  }
+}
