@@ -1,0 +1,28 @@
+@import '../../../../styles/color.scss';
+
+.scrollRow {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  div:first-of-type {
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    .translation {
+      padding: 0 0;
+      margin: 0 0 0 4px;
+    }
+  }
+}
+
+.textContainer {
+  display: flex;
+  p {
+    white-space: nowrap;
+    font-size: 18px;
+  }
+  .scrollFontBlack {
+    color: $black;
+    padding-right: 4px;
+  }
+}

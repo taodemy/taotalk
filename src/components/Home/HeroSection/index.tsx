@@ -1,4 +1,4 @@
-import Button from '../Shared/Buttons';
+import Button from '../../Shared/Buttons';
 import Styles from './Hero.module.scss';
 const Hero = () => {
   return (

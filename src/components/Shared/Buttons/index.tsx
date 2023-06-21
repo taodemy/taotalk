@@ -1,15 +1,19 @@
 import NormalButton, { NormalButtonProps } from './NormalButton';
 import BouncingImageButton from './BouncingImageButton';
 import OutlineButton from './OutlineButton';
+import IconButton, { IconTypes } from './IconButton';
+import ImageButton from './ImageButton';
 
 export type ButtonColor = 'primary' | 'secondary' | 'pink' | 'grey';
 
 type ButtonProps = {
-  variant?: 'normal' | 'bouncing' | 'outline';
+  variant?: 'normal' | 'bouncing' | 'outline' | 'icon' | 'image';
   isActive?: boolean;
   src?: string;
+  iconTypes?: IconTypes;
   alt?: string;
   buttonWidthIncrease?: number;
+  InjectedComponent?: React.FC | null;
 } & React.ComponentProps<'button'> &
   NormalButtonProps;
 
@@ -20,7 +24,9 @@ const Button = ({
   onClick,
   label = 'button',
   src,
+  iconTypes = 'player',
   buttonWidthIncrease,
+  InjectedComponent,
   ...otherProps
 }: ButtonProps) => {
   return {
@@ -39,6 +45,15 @@ const Button = ({
     ),
     outline: (
       <OutlineButton color={color} label={label} size={size} onClick={onClick} {...otherProps} />
+    ),
+    icon: <IconButton iconTypes={iconTypes} onClick={onClick} {...otherProps} />,
+    image: (
+      <ImageButton
+        src={src}
+        InjectedComponent={InjectedComponent}
+        onClick={onClick}
+        {...otherProps}
+      />
     ),
   }[variant];
 };

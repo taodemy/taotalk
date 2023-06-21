@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './AudioCallSummary.module.scss';
-import SummaryFrame from '../Shared/SummaryFrame';
-import CircularDashboard from '../Shared/CircularDashboard';
-import { WordsDash, LoveDash } from '../DashInfo';
+import SummaryFrame from '../../Shared/SummaryFrame';
+import CircularDashboard from '../../Shared/CircularDashboard';
+import { WordsDash, LoveDash } from '../../DashInfo';
 
 const AudioCallSummary = () => {
   return (

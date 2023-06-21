@@ -1,4 +1,4 @@
-@import '../../styles/color.scss';
+@import '../../../styles/color.scss';
 
 /*** Sprint Dash ***/
 .sprintDashContainer {
@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 44.22px;
   padding: 100px 710px;
   background-color: $greyLight;
 }

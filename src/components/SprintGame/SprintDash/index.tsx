@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './SprintDash.module.scss';
-import CircularDashboard from '../../components/Shared/CircularDashboard';
-import { LearningDash } from '../../components/DashInfo';
-import DirectionGuide from '../Shared/DirectionGuide';
+import CircularDashboard from '../../Shared/CircularDashboard';
+import { LearningDash } from '../../DashInfo';
+import DirectionGuide from '../../Shared/DirectionGuide';
 
 const SprintDash = () => {
   return (
@@ -17,7 +17,7 @@ const SprintDash = () => {
         startPoint={0}
         DashInfoComponent={() => <LearningDash progressValue={65} />}
       />
-      <DirectionGuide />
+      <DirectionGuide guideDetails="← →" />
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import HeadingDescription from '../HeadingDescription';
-import Button from '../Shared/Buttons';
+import HeadingDescription from './HeadingDescription';
+import Button from '../../Shared/Buttons';
 
 const OtherSections = () => {
   return (

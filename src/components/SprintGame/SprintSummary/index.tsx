@@ -1,8 +1,8 @@
 import React from 'react';
-import CircularDashboard from '../../components/Shared/CircularDashboard';
-import { PointsDash, WordsDash } from '../../components/DashInfo';
+import CircularDashboard from '../../Shared/CircularDashboard';
+import { PointsDash, WordsDash } from '../../DashInfo';
 import styles from './SprintSummary.module.scss';
-import SummaryFrame from '../Shared/SummaryFrame';
+import SummaryFrame from '../../Shared/SummaryFrame';
 
 const SprintSummary = () => {
   return (

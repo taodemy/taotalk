@@ -1,0 +1,25 @@
+@import '../../styles/color.scss';
+
+.audioCall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px auto 100px auto;
+  background-color: $greyLight;
+  .passedInComponent {
+    padding: 10px 20px;
+    box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+    border-radius: 88px;
+  }
+  > img {
+    margin: 39px auto 40px auto;
+  }
+  .wordListButton {
+    display: flex;
+    gap: 10px;
+  }
+  > button {
+    margin: 50px auto 45px auto;
+  }
+}
