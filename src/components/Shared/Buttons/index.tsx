@@ -1,14 +1,14 @@
 import NormalButton, { NormalButtonProps } from './NormalButton';
 import BouncingImageButton from './BouncingImageButton';
-import OutlineButton from './OutlineButton';
 import IconButton, { IconTypes } from './IconButton';
 import ImageButton from './ImageButton';
 
-export type ButtonColor = 'primary' | 'secondary' | 'pink' | 'grey';
+export type ButtonColor = 'cyanLight' | 'cyanDark' | 'pinkLight' | 'pinkDark' | 'greyIcon';
 
 type ButtonProps = {
-  variant?: 'normal' | 'bouncing' | 'outline' | 'icon' | 'image';
+  variant?: 'normal' | 'bouncing' | 'icon' | 'image';
   isActive?: boolean;
+  outline?: boolean;
   src?: string;
   iconTypes?: IconTypes;
   alt?: string;
@@ -19,8 +19,9 @@ type ButtonProps = {
 
 const Button = ({
   variant = 'normal',
-  color = 'secondary',
-  size = 'large',
+  color = 'cyanDark',
+  outline,
+  size = 'normal',
   onClick,
   label = 'button',
   src,
@@ -31,20 +32,25 @@ const Button = ({
 }: ButtonProps) => {
   return {
     normal: (
-      <NormalButton color={color} label={label} size={size} onClick={onClick} {...otherProps} />
+      <NormalButton
+        color={color}
+        outline={outline}
+        label={label}
+        size={size}
+        onClick={onClick}
+        {...otherProps}
+      />
     ),
     bouncing: (
       <BouncingImageButton
         color={color}
         label={label}
+        outline={outline}
         src={src}
         buttonWidthIncrease={buttonWidthIncrease}
         onClick={onClick}
         {...otherProps}
       />
-    ),
-    outline: (
-      <OutlineButton color={color} label={label} size={size} onClick={onClick} {...otherProps} />
     ),
     icon: <IconButton iconTypes={iconTypes} onClick={onClick} {...otherProps} />,
     image: (

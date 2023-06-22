@@ -25,9 +25,9 @@ export const WordsDash: React.FC<DashProps> = ({ progressValue, maxValue }) => {
   return <SummaryDash progressValue={progressValue} maxValue={maxValue} />;
 };
 
-export const LoveDash: React.FC<DashProps> = ({ progressValue }) => {
+export const LikeDash: React.FC<DashProps> = ({ progressValue }) => {
   return (
-    <div className={styles.loveDash}>
+    <div className={styles.likeDash}>
       <p className="paragraph--p3">remains</p>
       <div>
         <h3 className="heading--h3">♥</h3>
@@ -62,8 +62,8 @@ export const LearningDash: React.FC<DashProps> = () => {
         <h2 className="heading--h2">negative</h2>
         <h2 className={`heading--h2 ${styles.translation}`}>perdre</h2>
         <div>
-          <Button color="primary" label="Right" alt="Right" onClick={handleClick} />
-          <Button color="pink" label="Wrong" alt="Wrong" onClick={handleClick} />
+          <Button color="cyanLight" label="Right" alt="Right" onClick={handleClick} />
+          <Button color="pinkLight" label="Wrong" alt="Wrong" onClick={handleClick} />
         </div>
       </div>
     </>

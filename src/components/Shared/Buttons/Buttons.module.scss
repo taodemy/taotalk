@@ -6,17 +6,11 @@
   } @else if $size == 'small' {
     padding: 3px 8px;
   } @else if $size == 'normal' {
-    padding: 6px 12px;
-  } @else if $size == 'large' {
     padding: 14px 22px;
   } @else {
     // Default case
-    padding: 6px 12px;
+    padding: 14px 22px;
   }
-}
-
-.largeButton {
-  @include setButtonSize('large');
 }
 
 .normalButton {
@@ -42,7 +36,7 @@
 }
 
 /*** Normal Button ***/
-.buttonSecondaryColor {
+.buttonCyanLightColor {
   background: $cyanDark;
   color: $white;
   border: none;
@@ -64,11 +58,11 @@
   }
 }
 
-.buttonPrimaryColor {
+.buttonCyanDarkColor {
   @include colorSwap($cyanLight, $cyanDark);
 }
 
-.buttonPinkColor {
+.buttonPinkLightColor {
   @include colorSwap($pinkLight, $pinkDark);
 }
 
@@ -87,7 +81,7 @@
 }
 
 /*** Outline Button ***/
-.buttonGreyColor {
+.outlineButtonGreyIconColor {
   color: $greyIcon;
   border: 3px solid $greyIcon;
   &:hover {
@@ -95,9 +89,20 @@
     border: 3px solid $greyDark;
   }
 }
+
+.outlineButtonPinkDarkColor {
+  color: $pinkDark;
+  border: 3px solid $pinkDark;
+}
+
+.outlineButtonCyanDarkColor {
+  color: $cyanDark;
+  border: 3px solid $cyanDark;
+}
+
 /*** Icon Button ***/
 .playerWithLabel {
-  background-color: #f6f5f4;
+  background-color: $greyLight;
   width: 140px;
   height: 140px;
   border: 4px solid $cyanDark;
@@ -122,17 +127,16 @@
   }
   &:hover {
     background-color: $cyanDark;
-    color: #ffffff;
+    color: $white;
     div:first-of-type {
       p {
-        color: #ffffff;
+        color: $white;
       }
     }
   }
 }
 
 .player {
-  border: none;
   padding: 10.62px 9.2px 9.2px 11.6px;
   background-color: $greyLight;
   border-radius: 4px;
@@ -147,11 +151,16 @@
       color: $white;
     }
   }
-  &:active {
-    background-color: $cyanDark;
-    svg {
-      color: $white;
-    }
+}
+
+.playerActive {
+  padding: 10.62px 9.2px 9.2px 11.6px;
+  background-color: $cyanDark;
+  border-radius: 4px;
+  svg {
+    color: $white;
+    width: 19.2px;
+    height: 20.18px;
   }
 }
 

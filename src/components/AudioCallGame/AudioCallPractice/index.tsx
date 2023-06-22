@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Button from '../../Shared/Buttons';
 import DirectionGuide from '../../Shared/DirectionGuide';
 import styles from '../AudioCallGame.module.scss';
+import { wordList } from '../../../../mockData/mockData';
 
-const wordList = ['prêt hypothécaire', 'correct', 'selon laquelle', 'citer', 'nourriture'];
 const AudioCallPractice = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -18,17 +18,17 @@ const AudioCallPractice = () => {
   return (
     <div className={styles.audioCall}>
       <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Button variant="icon" size="large" iconTypes="playerWithLabel" />
+        <Button outline={false} variant="icon" size="normal" iconTypes="playerWithLabel" />
       </div>
       <img src="/fiveLikes.svg" alt="five likes" />
       <div className={styles.wordListButton}>
         {wordList.map((item, index) => (
           <div key={index}>
-            <Button variant="outline" label={item} color="grey" size="normal" />
+            <Button outline={true} label={item} color="greyIcon" size="normal" />
           </div>
         ))}
       </div>
-      <Button color="primary" label="I don't know" />
+      <Button outline={false} color="cyanLight" label="I don't know" />
       {isHovered && <DirectionGuide guideDetails="1 - 5" />}
     </div>
   );

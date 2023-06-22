@@ -4,8 +4,8 @@ import DirectionGuide from '../../../components/Shared/DirectionGuide';
 import CoverImage from '../../Shared/Buttons/ImageButton';
 import ScrollRow from '../../Shared/ScrollArea/ScrollRow';
 import styles from '../AudioCallGame.module.scss';
+import { wordList } from '../../../../mockData/mockData';
 
-const wordList = ['prêt hypothécaire', 'correct', 'selon laquelle', 'citer', 'nourriture'];
 const AudioCallQuiz = () => {
   return (
     <div className={styles.audioCall}>
@@ -21,11 +21,16 @@ const AudioCallQuiz = () => {
       <div className={styles.wordListButton}>
         {wordList.map((item, index) => (
           <div key={index}>
-            <Button variant="outline" label={item} color="grey" size="normal" />
+            <Button
+              outline={true}
+              label={item}
+              color={index === 2 ? 'pinkDark' : index === 4 ? 'cyanDark' : 'greyIcon'}
+              size="normal"
+            />
           </div>
         ))}
       </div>
-      <Button color="primary" label="Next" />
+      <Button outline={false} color="cyanLight" label="Next" />
       <DirectionGuide guideDetails="1 - 5" />
     </div>
   );

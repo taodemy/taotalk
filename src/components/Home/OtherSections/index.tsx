@@ -15,14 +15,14 @@ const OtherSections = () => {
           <div className="languageButtonsGap">
             <Button
               variant="bouncing"
-              color="pink"
+              color="pinkLight"
               label="Sprint →"
               src="/sprint.svg"
               alt="sprint"
             />
             <Button
               variant="bouncing"
-              color="primary"
+              color="cyanLight"
               label="Audio-call →"
               src="/audio-call.svg"
               alt="video call"
@@ -37,7 +37,7 @@ const OtherSections = () => {
             headingContent="Increase your vocabulary"
             descriptionContent="Traditional and new effective approaches to word study"
           />
-          <Button color="primary" label="Textbook →" />
+          <Button color="cyanLight" label="Textbook →" />
         </div>
         <img src="/vocabulary.svg" alt="Vocabulary" className="imgContainer--full" />
       </section>
@@ -48,7 +48,7 @@ const OtherSections = () => {
             headingContent="Watch your progress every day"
             descriptionContent="Save statistics on your achievements, words learned, and mistakes"
           />
-          <Button color="primary" label="Statistics →" />
+          <Button color="cyanLight" label="Statistics →" />
         </div>
       </section>
     </>

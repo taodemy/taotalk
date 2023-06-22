@@ -5,19 +5,24 @@ import styles from './Buttons.module.scss';
 export interface BouncingImageButtonProps extends NormalButtonProps {
   src?: string;
   alt?: string;
+  outline: boolean;
   buttonWidthIncrease?: number;
 }
 
 const BouncingImageButton = ({
-  color = 'primary',
+  color = 'cyanLight',
   label = 'button',
+  outline,
   src,
   alt,
   buttonWidthIncrease,
   ...otherProps
 }: BouncingImageButtonProps) => {
   return (
-    <button className={`${getButtonClass(color)} ${btn} ${styles.buttonPopup}`} {...otherProps}>
+    <button
+      className={`${getButtonClass(color, outline)} ${btn} ${styles.buttonPopup}`}
+      {...otherProps}
+    >
       <img src={src} alt={alt} />
       <p
         style={

@@ -3,25 +3,31 @@ import styles from './Buttons.module.scss';
 
 export type NormalButtonProps = {
   color?: ButtonColor;
-  size?: 'tiny' | 'small' | 'normal' | 'large';
+  size?: 'tiny' | 'small' | 'normal';
+  outline: boolean;
   label?: string;
   onClick?: () => void;
 } & React.ComponentProps<'button'>;
 
 export const btn = styles.button;
-export const getButtonClass = (color: ButtonColor) => {
+export const getButtonClass = (color: ButtonColor, outline: boolean) => {
   switch (color) {
-    case 'secondary':
-      return styles.buttonSecondaryColor;
-    case 'primary':
-      return styles.buttonPrimaryColor;
-    case 'pink':
-      return styles.buttonPinkColor;
+    case 'cyanLight':
+      return outline ? '' : styles.buttonCyanDarkColor;
+    case 'cyanDark':
+      return outline ? styles.outlineButtonCyanDarkColor : styles.buttonCyanLightColor;
+    case 'pinkLight':
+      return outline ? '' : styles.buttonPinkLightColor;
+    case 'pinkDark':
+      return outline ? styles.outlineButtonPinkDarkColor : '';
+    case 'greyIcon':
+      return outline ? styles.outlineButtonGreyIconColor : '';
   }
 };
 
 const NormalButton = ({
-  color = 'primary',
+  color = 'cyanLight',
+  outline,
   size = 'normal',
   onClick,
   label = 'button',
@@ -31,11 +37,10 @@ const NormalButton = ({
     tiny: styles.tinyButton,
     small: styles.smallButton,
     normal: styles.normalButton,
-    large: styles.largeButton,
   };
   return (
     <button
-      className={`${getButtonClass(color)} ${buttonSize[size]} ${btn}`}
+      className={`${getButtonClass(color, outline)} ${buttonSize[size]} ${btn}`}
       {...otherProps}
       onClick={onClick}
     >

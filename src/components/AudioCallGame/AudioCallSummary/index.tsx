@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './AudioCallSummary.module.scss';
 import SummaryFrame from '../../Shared/SummaryFrame';
 import CircularDashboard from '../../Shared/CircularDashboard';
-import { WordsDash, LoveDash } from '../../DashInfo';
+import { WordsDash, LikeDash } from '../../DashInfo';
 
 const AudioCallSummary = () => {
   return (
@@ -16,7 +16,7 @@ const AudioCallSummary = () => {
           maxColor={'#945069'}
           strokeWidth={5}
           startPoint={-90}
-          DashInfoComponent={() => <LoveDash progressValue={4} />}
+          DashInfoComponent={() => <LikeDash progressValue={4} />}
         />
         <CircularDashboard
           radius={60}
