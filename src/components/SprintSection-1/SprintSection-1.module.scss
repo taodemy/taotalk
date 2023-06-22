@@ -1,5 +1,10 @@
 @import '../../styles/color.scss';
 
+:export {
+  cyanDark: $cyanDark;
+  cyanLight: $cyanLight;
+}
+
 .body_section {
   display: flex;
   padding: 100px 528px;

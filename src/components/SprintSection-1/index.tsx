@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './SprintSection-1.module.scss';
 import Button from '../Shared/Buttons';
 import Lable from '../Shared/Label';
@@ -6,18 +7,29 @@ import LevelSelector from './LevelSelector';
 import Image from 'next/image';
 
 const SprintSection = () => {
+  const levels = [
+    { name: 'A1', color: 'green' },
+    { name: 'A2', color: 'yellow' },
+    { name: 'B1', color: 'orange' },
+    { name: 'B2', color: 'red' },
+    { name: 'C1', color: 'pink' },
+    { name: 'C2', color: 'cyan' },
+  ];
+
+  const [isActive, setIsActive] = useState(Array(levels.length).fill(false));
+
   return (
     <>
       <section className={styles.body_section}>
         <section className={styles.sprint_section}>
           <div className={styles.sprint_section__image_display}>
-            <Image src="./running.svg" alt="running figure" />
+            <Image src="./running.svg" alt="running figure" width={250} height={400} />
           </div>
           <div className={styles.sprint_section__main_section}>
             <div className={styles.description}>
               <div className={styles.description__heading}>
                 <h2 className="heading--h2">Sprint</h2>
-                <Lable fontColor="#2b788b" bgColor="#C3DCE3">
+                <Lable fontColor={styles.cyanDark} bgColor={styles.cyanLight}>
                   speed task
                 </Lable>
               </div>
@@ -29,12 +41,19 @@ const SprintSection = () => {
             <div className={styles.levels}>
               <p className="paragraph--p3">Choose a level:</p>
               <div className={styles.levels__list}>
-                <LevelSelector level="A1 " color="green" active={false} />
-                <LevelSelector level="A2" color="yellow" active={true} />
-                <LevelSelector level="B1" color="orange" active={false} />
-                <LevelSelector level="B2" color="red" active={false} />
-                <LevelSelector level="C1" color="pink" active={false} />
-                <LevelSelector level="C2" color="cyan" active={false} />
+                {levels.map((level, index) => (
+                  <LevelSelector
+                    key={index}
+                    level={level.name}
+                    color={level.color}
+                    active={isActive[index]}
+                    handleClick={() => {
+                      let newActives = Array(levels.length).fill(false);
+                      newActives[index] = true;
+                      setIsActive(newActives);
+                    }}
+                  />
+                ))}
               </div>
             </div>
             <Button color="secondary" label="Get started" />
