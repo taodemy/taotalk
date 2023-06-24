@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../../Shared/Buttons';
 import DirectionGuide from '../../Shared/DirectionGuide';
 import styles from '../AudioCallGame.module.scss';
+import Play from '../../../../public/play.svg';
 import { wordList } from '../../../../mockData/mockData';
 
 const AudioCallPractice = () => {
@@ -17,8 +18,15 @@ const AudioCallPractice = () => {
 
   return (
     <div className={styles.audioCall}>
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <Button outline={false} variant="icon" size="normal" iconTypes="playerWithLabel" />
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={styles.playerWithLabel}
+      >
+        <div>
+          <Play alt="play" />
+          <p className="paragraph--p1">Play</p>
+        </div>
       </div>
       <img src="/fiveLikes.svg" alt="five likes" />
       <div className={styles.wordListButton}>

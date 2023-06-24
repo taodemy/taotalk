@@ -1,11 +1,7 @@
 @import '../../../styles/color.scss';
 
 @mixin setButtonSize($size) {
-  @if $size == 'tiny' {
-    padding: 1px 4px;
-  } @else if $size == 'small' {
-    padding: 3px 8px;
-  } @else if $size == 'normal' {
+  @if $size == 'normal' {
     padding: 14px 22px;
   } @else {
     // Default case
@@ -15,14 +11,6 @@
 
 .normalButton {
   @include setButtonSize('normal');
-}
-
-.smallButton {
-  @include setButtonSize('small');
-}
-
-.tinyButton {
-  @include setButtonSize('tiny');
 }
 
 .button {
@@ -98,70 +86,6 @@
 .outlineButtonCyanDarkColor {
   color: $cyanDark;
   border: 3px solid $cyanDark;
-}
-
-/*** Icon Button ***/
-.playerWithLabel {
-  background-color: $greyLight;
-  width: 140px;
-  height: 140px;
-  border: 4px solid $cyanDark;
-  border-radius: 200px;
-  color: $cyanDark;
-  div:first-of-type {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    p {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 140%;
-      letter-spacing: -0.04em;
-      color: $cyanDark;
-      margin: 0 0;
-    }
-  }
-  &:hover {
-    background-color: $cyanDark;
-    color: $white;
-    div:first-of-type {
-      p {
-        color: $white;
-      }
-    }
-  }
-}
-
-.player {
-  padding: 10.62px 9.2px 9.2px 11.6px;
-  background-color: $greyLight;
-  border-radius: 4px;
-  svg {
-    color: $greyIcon;
-    width: 19.2px;
-    height: 20.18px;
-  }
-  &:hover {
-    background-color: $cyanDark;
-    svg {
-      color: $white;
-    }
-  }
-}
-
-.playerActive {
-  padding: 10.62px 9.2px 9.2px 11.6px;
-  background-color: $cyanDark;
-  border-radius: 4px;
-  svg {
-    color: $white;
-    width: 19.2px;
-    height: 20.18px;
-  }
 }
 
 /*** Image Button ***/

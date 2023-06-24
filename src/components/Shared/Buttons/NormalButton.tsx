@@ -3,7 +3,7 @@ import styles from './Buttons.module.scss';
 
 export type NormalButtonProps = {
   color?: ButtonColor;
-  size?: 'tiny' | 'small' | 'normal';
+  size?: 'normal';
   outline: boolean;
   label?: string;
   onClick?: () => void;

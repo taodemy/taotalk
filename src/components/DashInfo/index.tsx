@@ -62,8 +62,20 @@ export const LearningDash: React.FC<DashProps> = () => {
         <h2 className="heading--h2">negative</h2>
         <h2 className={`heading--h2 ${styles.translation}`}>perdre</h2>
         <div>
-          <Button color="cyanLight" label="Right" alt="Right" onClick={handleClick} />
-          <Button color="pinkLight" label="Wrong" alt="Wrong" onClick={handleClick} />
+          <Button
+            outline={false}
+            color="cyanLight"
+            label="Right"
+            alt="Right"
+            onClick={handleClick}
+          />
+          <Button
+            outline={false}
+            color="pinkLight"
+            label="Wrong"
+            alt="Wrong"
+            onClick={handleClick}
+          />
         </div>
       </div>
     </>

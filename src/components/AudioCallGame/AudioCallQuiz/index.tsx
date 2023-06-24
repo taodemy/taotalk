@@ -9,14 +9,12 @@ import { wordList } from '../../../../mockData/mockData';
 const AudioCallQuiz = () => {
   return (
     <div className={styles.audioCall}>
-      <CoverImage
-        src="/food.svg"
-        InjectedComponent={() => (
-          <div className={styles.passedInComponent}>
-            <ScrollRow itemOne="food" itemTwo="- nourriture" />
-          </div>
-        )}
-      />
+      <div className={styles.imgWithExplain}>
+        <CoverImage src="/food.svg" />
+        <div className={styles.scrollRow}>
+          <ScrollRow itemOne="food" itemTwo="- nourriture" />
+        </div>
+      </div>
       <img src="/fourLikes.svg" alt="four likes" />
       <div className={styles.wordListButton}>
         {wordList.map((item, index) => (
