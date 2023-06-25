@@ -18,25 +18,13 @@ const OtherSections = () => {
               <div>
                 <img className={styles.sprintImage} src="/sprint.svg" alt="sprint" />
               </div>
-              <Button
-                variant="normal"
-                outline={false}
-                color="pinkLight"
-                label="Sprint →"
-                style={{ width: '129px' }}
-              />
+              <Button variant="normal" outline={false} color="pinkLight" label="Sprint →" />
             </div>
             <div>
               <div>
                 <img className={styles.audioCallImage} src="/audio-call.svg" alt="video call" />
               </div>
-              <Button
-                variant="normal"
-                outline={false}
-                color="cyanLight"
-                label="Audio-call →"
-                style={{ width: '172px' }}
-              />
+              <Button variant="normal" outline={false} color="cyanLight" label="Audio-call →" />
             </div>
           </div>
         </div>
