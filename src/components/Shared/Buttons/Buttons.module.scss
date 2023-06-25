@@ -54,20 +54,6 @@
   @include colorSwap($pinkLight, $pinkDark);
 }
 
-/*** BouncingImageButton ***/
-.buttonPopup {
-  border-radius: 14px;
-  padding: 0 0;
-  img {
-    margin-top: -35px;
-  }
-  &:hover {
-    img {
-      transform: translateY(-5px);
-    }
-  }
-}
-
 /*** Outline Button ***/
 .outlineButtonGreyIconColor {
   color: $greyIcon;
@@ -89,26 +75,25 @@
 }
 
 /*** Image Button ***/
-.coverImage {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  > button {
-    border: none;
-    padding: 0 0;
+.profileButton {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
-    overflow: hidden;
-    img {
-      width: 100%; /* Make the image fill the container */
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  > div {
-    position: absolute;
-    top: 159px;
-    background-color: $white;
-  }
+}
+
+.avatarButton {
+  width: 40px;
+  height: 40px;
+}
+
+.objectCover{
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover;
+}
+
+.roundFull{
+  border: none;
+  padding: 0 0; 
+  border-radius: 100px;
+  overflow: hidden;
 }

@@ -6,7 +6,6 @@ export type NormalButtonProps = {
   size?: 'normal';
   outline: boolean;
   label?: string;
-  onClick?: () => void;
 } & React.ComponentProps<'button'>;
 
 export const btn = styles.button;
@@ -29,20 +28,16 @@ const NormalButton = ({
   color = 'cyanLight',
   outline,
   size = 'normal',
-  onClick,
   label = 'button',
   ...otherProps
 }: NormalButtonProps) => {
   const buttonSize = {
-    tiny: styles.tinyButton,
-    small: styles.smallButton,
     normal: styles.normalButton,
   };
   return (
     <button
       className={`${getButtonClass(color, outline)} ${buttonSize[size]} ${btn}`}
       {...otherProps}
-      onClick={onClick}
     >
       {label}
     </button>

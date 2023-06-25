@@ -8,10 +8,14 @@
   background-color: $greyLight;
   padding-top: 100px;
   padding-bottom: 100px;
-  position: relative;
   .imgWithExplain {
+    position: relative;
+    display: flex;
+    justify-content: center;
     margin-bottom: -40px;
     .scrollRow {
+      position: absolute;
+      top: 200px;
       padding: 10px 20px;
       background-color: $white;
       box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
@@ -34,7 +38,7 @@
   }
 }
 
-.playerWithLabel {
+.playWithLabel {
   background-color: $greyLight;
   width: 140px;
   height: 140px;

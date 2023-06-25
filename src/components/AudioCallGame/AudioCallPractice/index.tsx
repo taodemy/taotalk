@@ -21,7 +21,7 @@ const AudioCallPractice = () => {
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={styles.playerWithLabel}
+        className={styles.playWithLabel}
       >
         <div>
           <Play alt="play" />

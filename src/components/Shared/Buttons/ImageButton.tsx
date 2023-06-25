@@ -1,29 +1,24 @@
 import styles from './Buttons.module.scss';
 
-interface CoverImageProps {
-  imgType?: 'playerCover';
+export interface ImageButtonProps {
+  imgType: 'avatar' | 'profileCover';
   src?: string;
-  InjectedComponent?: React.FC | null;
-  onClick?: () => void;
 }
-const CoverImage = ({
-  imgType = 'playerCover',
-  src,
-  InjectedComponent,
-  onClick,
-}: CoverImageProps) => {
+const ImageButton = ({ imgType, src }: ImageButtonProps) => {
   const imageButton = {
-    playerCover: (
-      <div onClick={onClick} className={styles.coverImage}>
-        <button>
-          <img src={src} alt="player cover" />
-        </button>
-        {InjectedComponent && <InjectedComponent />}
-      </div>
+    avatar: (
+      <button className={`${styles.avatarButton} ${styles.roundFull}`}>
+        <img className={styles.objectCover} src={src} alt="avatar cover" />
+      </button>
+    ),
+    profileCover: (
+      <button className={`${styles.profileButton} ${styles.roundFull}`}>
+        <img className={styles.objectCover} src={src} alt="profile cover" />
+      </button>
     ),
   };
 
   return imageButton[imgType];
 };
 
-export default CoverImage;
+export default ImageButton;
