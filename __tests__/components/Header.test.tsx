@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Header from '../../src/components/Home/Header';
+import Header from '../../src/components/Header';
 import '@testing-library/jest-dom/extend-expect';
 
 describe('Header', () => {
