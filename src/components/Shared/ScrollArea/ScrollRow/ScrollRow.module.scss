@@ -23,13 +23,13 @@
 }
 
 .player {
-  padding: 10.62px 9.2px 9.2px 11.6px;
+  padding: 11px 9px 9px 12px;
   background-color: $greyLight;
   border-radius: 4px;
   svg {
     color: $greyIcon;
-    width: 19.2px;
-    height: 20.18px;
+    width: 19px;
+    height: 20px;
   }
   &:hover {
     background-color: $cyanDark;
@@ -40,12 +40,12 @@
 }
 
 .playerActive {
-  padding: 10.62px 9.2px 9.2px 11.6px;
+  padding: 101px 9px 9px 12px;
   background-color: $cyanDark;
   border-radius: 4px;
   svg {
     color: $white;
-    width: 19.2px;
-    height: 20.18px;
+    width: 19px;
+    height: 20px;
   }
 }

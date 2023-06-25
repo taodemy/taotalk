@@ -49,7 +49,7 @@ const SummaryFrame: React.FC<SummaryFrameProps> = ({ summaryHeader, children }) 
         <div className={styles.summaryButtonGroup}>
           <button>
             <img src="./refresh.svg" alt="refresh" />
-            <p className="paragraph--p2">Play it again</p>
+            <span className="paragraph--p2">Play it again</span>
           </button>
           <Button outline={false} color="cyanLight" label="Go to textbook" />
         </div>
