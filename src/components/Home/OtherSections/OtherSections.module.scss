@@ -18,7 +18,7 @@
 .sprintSummaryContainer {
   background-color: $greyLight;
   width: auto;
-  padding: 100px 314.5px;
+  padding: 100px 315px;
   @include sectionGridLayout;
   gap: 10px;
 }
@@ -31,14 +31,14 @@
 .languageSectionContainer {
   @include sectionGridLayout;
   gap: 120px;
-  padding: 77.5px 50px;
+  padding: 78px 50px;
   img,
   div:first-of-type {
     @include verticalCentered;
   }
   .languageButtonsGap {
     display: flex;
-    gap: 21.1px;
+    gap: 21px;
     div {
       display: flex;
       flex-direction: column;
@@ -67,14 +67,14 @@
     }
   }
   @media (min-width: 1920px) {
-    padding: 77.5px 370px;
+    padding: 78px 370px;
   }
 }
 
 .vocabularySectionContainer {
   @include sectionGridLayout;
   background-color: $greyLight;
-  padding: 26.03px 50px 0 50px;
+  padding: 26px 50px 0 50px;
   div:first-of-type {
     @include verticalCentered;
     margin-left: 35px;
@@ -83,20 +83,20 @@
     margin-left: 35px;
   }
   @media (min-width: 1920px) {
-    padding: 26.03px 370px 0 370px;
+    padding: 26px 370px 0 370px;
   }
 }
 
 .statisticsSectionContainer {
   @include sectionGridLayout;
   gap: 120px;
-  padding: 95.37px 50px;
+  padding: 95px 50px;
   img,
   div:first-of-type {
     @include verticalCentered;
   }
   @media (min-width: 1920px) {
-    padding: 95.37px 370px;
+    padding: 95px 370px;
   }
 }
 

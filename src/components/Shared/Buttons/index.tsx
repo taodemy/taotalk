@@ -1,20 +1,20 @@
-import NormalButton, { NormalButtonProps } from './NormalButton';
+import RegularButton, { RegularButtonProps } from './RegularButton';
 import ImageButton from './ImageButton';
 
 export type ButtonColor = 'cyanLight' | 'cyanDark' | 'pinkLight' | 'pinkDark' | 'greyIcon';
 
 type ButtonProps = {
-  variant?: 'normal' | 'image';
+  variant?: 'regular' | 'image';
   isActive?: boolean;
   outline?: boolean;
   src?: string;
   alt?: string;
   imgType?: 'avatar' | 'profileCover';
 } & React.ComponentProps<'button'> &
-  NormalButtonProps;
+  RegularButtonProps;
 
 const Button = ({
-  variant = 'normal',
+  variant = 'regular',
   color = 'cyanDark',
   outline,
   size = 'normal',
@@ -24,8 +24,8 @@ const Button = ({
   ...otherProps
 }: ButtonProps) => {
   return {
-    normal: (
-      <NormalButton color={color} outline={outline} label={label} size={size} {...otherProps} />
+    regular: (
+      <RegularButton color={color} outline={outline} label={label} size={size} {...otherProps} />
     ),
     image: src ? <ImageButton src={src} imgType={imgType} /> : <span>invalid img url</span>,
   }[variant];

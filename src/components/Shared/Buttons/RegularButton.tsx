@@ -1,7 +1,7 @@
 import { ButtonColor } from './index';
 import styles from './Buttons.module.scss';
 
-export type NormalButtonProps = {
+export type RegularButtonProps = {
   color?: ButtonColor;
   size?: 'normal';
   outline: boolean;
@@ -24,15 +24,15 @@ export const getButtonClass = (color: ButtonColor, outline: boolean) => {
   }
 };
 
-const NormalButton = ({
+const RegularButton = ({
   color = 'cyanLight',
   outline,
   size = 'normal',
   label = 'button',
   ...otherProps
-}: NormalButtonProps) => {
+}: RegularButtonProps) => {
   const buttonSize = {
-    normal: styles.normalButton,
+    normal: styles.regularButton,
   };
   return (
     <button
@@ -44,4 +44,4 @@ const NormalButton = ({
   );
 };
 
-export default NormalButton;
+export default RegularButton;
