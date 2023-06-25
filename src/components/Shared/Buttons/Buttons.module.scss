@@ -76,8 +76,8 @@
 
 /*** Image Button ***/
 .profileButton {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .avatarButton {
@@ -85,15 +85,15 @@
   height: 40px;
 }
 
-.objectCover{
+.objectCover {
   width: 100%; /* Make the image fill the container */
   height: 100%;
   object-fit: cover;
 }
 
-.roundFull{
+.roundFull {
   border: none;
-  padding: 0 0; 
+  padding: 0 0;
   border-radius: 100px;
   overflow: hidden;
 }
