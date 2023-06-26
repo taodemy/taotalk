@@ -5,6 +5,7 @@ import Button from '../Shared/Buttons';
 import Lable from '../Shared/Label';
 import LevelSelector from './LevelSelector';
 import Image from 'next/image';
+import runningPic from '../../../public/running.svg';
 
 const SprintSection = () => {
   const levels = [
@@ -23,7 +24,7 @@ const SprintSection = () => {
       <section className={styles.body_section}>
         <section className={styles.sprint_section}>
           <div className={styles.sprint_section__image_display}>
-            <Image src="./running.svg" alt="running figure" width={250} height={400} />
+            <Image src={runningPic} alt="running figure" />
           </div>
           <div className={styles.sprint_section__main_section}>
             <div className={styles.description}>
