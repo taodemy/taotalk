@@ -1,43 +1,15 @@
 import React from 'react';
+import ScrollRow from './ScrollRow';
 import styles from './ScrollArea.module.scss';
+import { scrollAreaItems } from '../../../../mockData/mockData';
 
 const ScrollArea = () => {
-  const items = [
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-    ['lone', '- solitaire'],
-    ['anniversary', '- anniversaire'],
-  ];
   return (
     <div className={styles.scrollArea}>
       <ul>
-        {items.map((item, index) => (
+        {scrollAreaItems.map((item, index) => (
           <li key={index}>
-            {index == 1 ? (
-              <img src="./activeplayer.svg" alt="activePlayer" />
-            ) : (
-              <img src="./player.svg" alt="player" />
-            )}
-            <div>
-              <p className={`paragraph--p2 ${styles.scrollFontBlack}`}>{item[0]}</p>
-              <p className={`paragraph--p2 ${styles.translation}`}>{item[1]}</p>
-            </div>
+            <ScrollRow itemOne={item[0]} itemTwo={item[1]} />
           </li>
         ))}
       </ul>

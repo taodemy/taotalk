@@ -1,0 +1,51 @@
+@import '../../../../styles/color.scss';
+
+.scrollRow {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  div:first-of-type {
+    display: flex;
+  }
+}
+
+.textContainer {
+  display: flex;
+  p {
+    white-space: nowrap;
+    font-size: 18px;
+  }
+  .scrollFontBlack {
+    color: $black;
+    padding-right: 4px;
+  }
+}
+
+.player {
+  padding: 11px 9px 9px 12px;
+  background-color: $greyLight;
+  border-radius: 4px;
+  svg {
+    color: $greyIcon;
+    width: 19px;
+    height: 20px;
+  }
+  &:hover {
+    background-color: $cyanDark;
+    svg {
+      color: $white;
+    }
+  }
+}
+
+.playerActive {
+  padding: 11px 9px 9px 12px;
+  background-color: $cyanDark;
+  border-radius: 4px;
+  svg {
+    color: $white;
+    width: 19px;
+    height: 20px;
+  }
+}

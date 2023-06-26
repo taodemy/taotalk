@@ -1,4 +1,4 @@
-@import '../../styles/color.scss';
+@import '../../../styles/color.scss';
 
 /*** Sprint summary ***/
 @mixin sectionGridLayout {
@@ -12,7 +12,7 @@
 
 .sprintSummaryContainer {
   background-color: $greyLight;
-  padding: 100px 314.5px;
+  padding: 100px 315px;
   display: flex;
   gap: 15px;
   > div:first-of-type {
@@ -20,25 +20,27 @@
     border-radius: 14px;
     padding: 63px 40px;
     width: 620px;
-    box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+    box-shadow: 0px 23px 46px -12px rgba(52, 41, 39, 0.08);
   }
 }
 
 .summaryDetails {
   display: flex;
   margin-bottom: 33px;
-  width: 540px;
   height: 206px;
   img {
     width: 280px;
     height: 200px;
   }
-  .summaryComment {
-    margin: 12px 0 23px 0;
-  }
-  .summaryDashGroup {
+  > div {
     display: flex;
-    gap: 23.05px;
+    flex-direction: column;
+    h3 {
+      white-space: nowrap;
+    }
+    .summaryComment {
+      margin: 12px 0 23px 0;
+    }
   }
 }
 
@@ -54,15 +56,15 @@
     background-color: $white;
     img {
       position: absolute;
-      left: -10.44px;
+      left: -11px;
       top: -5%;
       bottom: 6.25%;
     }
-    p {
+    span {
       font-weight: 700;
       color: $black;
       line-height: 100%;
-      margin: 0 30px 0 10.44px;
+      margin: 0 30px 0 11px;
     }
   }
 }
@@ -72,15 +74,8 @@
   border-radius: 14px;
   padding: 40px 40px;
   display: flex;
-  gap: 18px;
-  width: 661px;
-  box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
-  .knowList {
-    width: 254px;
-  }
-  .unKnowList {
-    width: 288px;
-  }
+  gap: 40px;
+  box-shadow: 0px 23px 46px -11px rgba(52, 41, 39, 0.08);
 }
 
 .titleListContainer {
@@ -89,4 +84,7 @@
   gap: 10px;
   align-items: center;
   margin-bottom: 32px;
+  > h3 {
+    white-space: nowrap;
+  }
 }

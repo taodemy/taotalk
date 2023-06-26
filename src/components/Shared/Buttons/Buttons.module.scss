@@ -1,34 +1,16 @@
 @import '../../../styles/color.scss';
 
 @mixin setButtonSize($size) {
-  @if $size == 'tiny' {
-    padding: 1px 4px;
-  } @else if $size == 'small' {
-    padding: 3px 8px;
-  } @else if $size == 'normal' {
-    padding: 6px 12px;
-  } @else if $size == 'large' {
+  @if $size == 'normal' {
     padding: 14px 22px;
   } @else {
     // Default case
-    padding: 6px 12px;
+    padding: 14px 22px;
   }
 }
 
-.largeButton {
-  @include setButtonSize('large');
-}
-
-.normalButton {
+.regularButton {
   @include setButtonSize('normal');
-}
-
-.smallButton {
-  @include setButtonSize('small');
-}
-
-.tinyButton {
-  @include setButtonSize('tiny');
 }
 
 .button {
@@ -42,7 +24,7 @@
 }
 
 /*** Normal Button ***/
-.buttonSecondaryColor {
+.buttonCyanLightColor {
   background: $cyanDark;
   color: $white;
   border: none;
@@ -64,24 +46,54 @@
   }
 }
 
-.buttonPrimaryColor {
+.buttonCyanDarkColor {
   @include colorSwap($cyanLight, $cyanDark);
 }
 
-.buttonPinkColor {
+.buttonPinkLightColor {
   @include colorSwap($pinkLight, $pinkDark);
 }
 
-/*** BouncingImageButton ***/
-.buttonPopup {
-  border-radius: 14px;
-  padding: 0 0;
-  img {
-    margin-top: -35px;
-  }
+/*** Outline Button ***/
+.outlineButtonGreyIconColor {
+  color: $greyIcon;
+  border: 3px solid $greyIcon;
   &:hover {
-    img {
-      transform: translateY(-5px);
-    }
+    color: $greyDark;
+    border: 3px solid $greyDark;
   }
+}
+
+.outlineButtonPinkDarkColor {
+  color: $pinkDark;
+  border: 3px solid $pinkDark;
+}
+
+.outlineButtonCyanDarkColor {
+  color: $cyanDark;
+  border: 3px solid $cyanDark;
+}
+
+/*** Image Button ***/
+.profileButton {
+  width: 200px;
+  height: 200px;
+}
+
+.avatarButton {
+  width: 40px;
+  height: 40px;
+}
+
+.objectCover {
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover;
+}
+
+.roundFull {
+  border: none;
+  padding: 0 0;
+  border-radius: 100px;
+  overflow: hidden;
 }

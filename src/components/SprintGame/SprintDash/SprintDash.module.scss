@@ -1,0 +1,12 @@
+@import '../../../styles/color.scss';
+
+/*** Sprint Dash ***/
+.sprintDashContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  padding: 100px 710px;
+  background-color: $greyLight;
+}

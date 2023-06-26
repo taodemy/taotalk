@@ -1,4 +1,4 @@
-import Button from '../Shared/Buttons';
+import Button from '../../Shared/Buttons';
 import Styles from './Hero.module.scss';
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
         <p className={`paragraph--p1 ${Styles.hero__content}`}>
           Practice your English and learn new things with the platform.
         </p>
-        <Button color="primary" label="About Platform" />
+        <Button outline={false} color="cyanLight" label="About Platform" />
 
         <div className={Styles.hero__figure}>
           <div className={Styles.hero__figure_left}>
