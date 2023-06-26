@@ -15,6 +15,26 @@
     margin: 0 auto;
   }
 }
+
+.likeDash {
+  display: flex;
+  flex-direction: column;
+  p:first-of-type {
+    margin: 0 auto;
+    color: $black;
+  }
+  div {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    h3:first-of-type {
+      color: $pinkDark;
+    }
+  }
+  p {
+    margin: 0 auto;
+  }
+}
 /*** Learning Dash info for sprint dash page ***/
 /*** Learning Dash Top***/
 .learningDashTop {
@@ -54,7 +74,6 @@
     margin: 0 auto;
   }
 }
-
 /*** Learning Dash Bottom ***/
 .learningDashBottom {
   display: flex;

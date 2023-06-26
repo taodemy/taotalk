@@ -1,41 +1,33 @@
-import NormalButton, { NormalButtonProps } from './NormalButton';
-import BouncingImageButton from './BouncingImageButton';
+import RegularButton, { RegularButtonProps } from './RegularButton';
+import ImageButton from './ImageButton';
 
-export type ButtonColor = 'primary' | 'secondary' | 'pink' | 'grey';
+export type ButtonColor = 'cyanLight' | 'cyanDark' | 'pinkLight' | 'pinkDark' | 'greyIcon';
 
 type ButtonProps = {
-  variant?: 'normal' | 'bouncing';
+  variant?: 'regular' | 'image';
   isActive?: boolean;
+  outline?: boolean;
   src?: string;
   alt?: string;
-  buttonWidthIncrease?: number;
+  imgType?: 'avatar' | 'profileCover';
 } & React.ComponentProps<'button'> &
-  NormalButtonProps;
+  RegularButtonProps;
 
 const Button = ({
-  variant = 'normal',
-  color = 'secondary',
-  size = 'large',
-  onClick,
+  variant = 'regular',
+  color = 'cyanDark',
+  outline,
+  size = 'normal',
   label = 'button',
   src,
-  buttonWidthIncrease,
+  imgType = 'avatar',
   ...otherProps
 }: ButtonProps) => {
   return {
-    normal: (
-      <NormalButton color={color} label={label} size={size} onClick={onClick} {...otherProps} />
+    regular: (
+      <RegularButton color={color} outline={outline} label={label} size={size} {...otherProps} />
     ),
-    bouncing: (
-      <BouncingImageButton
-        color={color}
-        label={label}
-        src={src}
-        buttonWidthIncrease={buttonWidthIncrease}
-        onClick={onClick}
-        {...otherProps}
-      />
-    ),
+    image: src ? <ImageButton src={src} imgType={imgType} /> : <span>invalid img url</span>,
   }[variant];
 };
 

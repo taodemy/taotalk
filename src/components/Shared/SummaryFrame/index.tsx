@@ -1,10 +1,8 @@
-import React from 'react';
-import Button from '../../components/Shared/Buttons';
-import ScrollArea from '../../components/Shared/ScrollArea';
-import Label from '../../components/Shared/Label';
-import CircularDashboard from '../../components/Shared/CircularDashboard';
-import { PointsDash, WordsDash } from '../../components/DashInfo';
-import styles from './SprintSummary.module.scss';
+import React, { ReactNode } from 'react';
+import Button from '../../../components/Shared/Buttons';
+import ScrollArea from '../../../components/Shared/ScrollArea';
+import Label from '../../../components/Shared/Label';
+import styles from './SummaryFrame.module.scss';
 
 interface TitleListProps {
   titleName: string;
@@ -31,45 +29,29 @@ const TitleList: React.FC<TitleListProps> = ({
   );
 };
 
-const SprintSummary = () => {
+interface SummaryFrameProps {
+  summaryHeader: string;
+  children: ReactNode;
+}
+
+const SummaryFrame: React.FC<SummaryFrameProps> = ({ summaryHeader, children }) => {
   return (
     <section className={styles.sprintSummaryContainer}>
       <div>
         <div className={styles.summaryDetails}>
           <img src="./books.svg" alt="books" />
           <div>
-            <h3 className="heading--h3">Your Sprint</h3>
+            <h3 className="heading--h3">{summaryHeader}</h3>
             <p className={`paragraph--p2 ${styles.summaryComment}`}>You did pretty good!</p>
-            <div className={styles.summaryDashGroup}>
-              <CircularDashboard
-                radius={60}
-                progressValue={240}
-                progressColor={'#2b788b'}
-                maxValue={320}
-                maxColor={'#c3dce3'}
-                strokeWidth={5}
-                startPoint={-90}
-                DashInfoComponent={() => <PointsDash progressValue={240} />}
-              />
-              <CircularDashboard
-                radius={60}
-                progressValue={30 + 10}
-                progressColor={'#639B6D'}
-                maxValue={40}
-                maxColor={'#c3dce3'}
-                strokeWidth={5}
-                startPoint={-90}
-                DashInfoComponent={() => <WordsDash progressValue={30} maxValue={40} />}
-              />
-            </div>
+            {children}
           </div>
         </div>
         <div className={styles.summaryButtonGroup}>
           <button>
             <img src="./refresh.svg" alt="refresh" />
-            <p className="paragraph--p2">Play it again</p>
+            <span className="paragraph--p2">Play it again</span>
           </button>
-          <Button color="primary" label="Go to textbook" />
+          <Button outline={false} color="cyanLight" label="Go to textbook" />
         </div>
       </div>
 
@@ -95,4 +77,4 @@ const SprintSummary = () => {
   );
 };
 
-export default SprintSummary;
+export default SummaryFrame;
