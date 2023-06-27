@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Layout from '../layout';
 import '../styles/global.scss';
+import '../styles/globals.css';
 
 const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
   return (
