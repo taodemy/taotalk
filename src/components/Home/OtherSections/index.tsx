@@ -30,8 +30,8 @@ const OtherSections = () => {
         </div>
       </section>
       <section className="bg-gray-100">
-        <div className="xs:px-[8px] xs:py-[16px] mx-auto grid md:max-w-[1216px] md:px-[32px] md:py-[40px] xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[26px] xl:pb-0 xl:pt-[26px]">
-          <div className="xs:ml-0 mx-0 my-auto flex flex-col xl:ml-[100px] xl:block">
+        <div className="mx-auto grid sm:px-[8px] sm:py-[16px] md:max-w-[1216px] md:px-[32px] md:py-[40px] xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[26px] xl:pb-0 xl:pt-[26px]">
+          <div className="mx-0 my-auto flex flex-col sm:ml-0 xl:ml-[100px] xl:block">
             <HeadingDescription
               headingContent="Increase your vocabulary"
               descriptionContent="Traditional and new effective approaches to word study"
@@ -41,7 +41,7 @@ const OtherSections = () => {
           <img src="/vocabulary.svg" alt="Vocabulary" className="mx-0 my-auto w-full" />
         </div>
       </section>
-      <section className="xs:px-[8px] xs:py-[16px] mx-auto grid md:max-w-[1216px] md:px-[32px] md:py-0 xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[20px] xl:py-[95px] ">
+      <section className="mx-auto grid sm:px-[8px] sm:py-[16px] md:max-w-[1216px] md:px-[32px] md:py-0 xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[20px] xl:py-[95px] ">
         <img src="/progress.svg" alt="Statistics" className="mx-0 my-auto w-full" />
         <div className="mx-0 my-auto flex flex-col xl:block">
           <HeadingDescription
