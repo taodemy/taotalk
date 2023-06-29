@@ -10,6 +10,7 @@ module.exports = {
   ],
   theme: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     screens: {
       sm: '320px',
       // => @media (min-width: 320px) { ... }
@@ -85,6 +86,9 @@ module.exports = {
 >>>>>>> 7434f95 (feat: audiocall page without buttons)
       },
     },
+=======
+    extend: {},
+>>>>>>> 54d2bde (feat: implement audicall category)
   },
   plugins: [],
 };
