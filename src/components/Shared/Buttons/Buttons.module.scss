@@ -3,14 +3,21 @@
 @mixin setButtonSize($size) {
   @if $size == 'normal' {
     padding: 14px 22px;
+  } @else if $size == 'round' {
+    width: 44px;
+    height: 44px;
   } @else {
     // Default case
     padding: 14px 22px;
   }
 }
 
-.regularButton {
+.normalButton {
   @include setButtonSize('normal');
+}
+
+.roundButton {
+  @include setButtonSize('round');
 }
 
 .button {
@@ -72,6 +79,38 @@
 .outlineButtonCyanDarkColor {
   color: $cyanDark;
   border: 3px solid $cyanDark;
+}
+
+.outlineButtonGreenColor {
+  color: $green;
+  border: 3px solid $green;
+}
+.outlineButtonYellowColor {
+  color: $yellow;
+  border: 3px solid $yellow;
+}
+.outlineButtonOrangeColor {
+  color: $orange;
+  border: 3px solid $orange;
+  &:hover {
+    background-color: rgba(203, 91, 67, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonRedColor {
+  color: $red;
+  border: 3px solid $red;
+}
+.outlineButtonPinkColor {
+  color: $pink;
+  border: 3px solid $pink;
+}
+.outlineButtonCyanColor {
+  color: $cyan;
+  border: 3px solid $cyan;
 }
 
 /*** Image Button ***/
