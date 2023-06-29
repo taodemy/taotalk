@@ -2,10 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './SprintSection-1.module.scss';
 import Button from '../Shared/Buttons';
-import Lable from '../Shared/Label';
+import Label from '../Shared/Label';
 import LevelSelector from './LevelSelector';
 import Image from 'next/image';
-import runningPic from '../../../public/running.svg';
 
 const SprintSection = () => {
   const levels = [
@@ -23,16 +22,15 @@ const SprintSection = () => {
     <>
       <section className={styles.body_section}>
         <section className={styles.sprint_section}>
-          <div className={styles.sprint_section__image_display}>
-            <Image src={runningPic} alt="running figure" />
-          </div>
+          <Image src="/running.svg" alt="running figure" width={250} height={400} />
+
           <div className={styles.sprint_section__main_section}>
             <div className={styles.description}>
               <div className={styles.description__heading}>
                 <h2 className="heading--h2">Sprint</h2>
-                <Lable fontColor={styles.cyanDark} bgColor={styles.cyanLight}>
+                <Label fontColor={styles.cyanDark} bgColor={styles.cyanLight}>
                   speed task
-                </Lable>
+                </Label>
               </div>
               <p className="paragraph--p2">
                 Trains the skill of fast translation. You have to choose if the translation
@@ -57,7 +55,7 @@ const SprintSection = () => {
                 ))}
               </div>
             </div>
-            <Button color="secondary" label="Get started" />
+            <Button color="cyanDark" label="Get started" outline={false} />
           </div>
         </section>
       </section>

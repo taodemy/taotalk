@@ -9,20 +9,14 @@ export default function LevelSelector({
   level: string;
   color: string;
   active: boolean;
-  handleClick?: (params: any) => any;
+  handleClick: () => void;
 }) {
-  if (active)
-    return (
-      <div
-        className={[styles['level-selector'], styles[`level-selector--${color}--active`]].join(' ')}
-        onClick={handleClick}
-      >
-        {level}
-      </div>
-    );
   return (
     <div
-      className={[styles['level-selector'], styles[`level-selector--${color}`]].join(' ')}
+      className={[
+        styles['level-selector'],
+        active ? styles[`level-selector--${color}--active`] : styles[`level-selector--${color}`],
+      ].join(' ')}
       onClick={handleClick}
     >
       {level}
