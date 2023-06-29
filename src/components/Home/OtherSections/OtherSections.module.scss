@@ -71,35 +71,6 @@
   }
 }
 
-// .vocabularySectionContainer {
-//   @include sectionGridLayout;
-//   background-color: $greyLight;
-//   padding: 26px 50px 0 50px;
-//   div:first-of-type {
-//     @include verticalCentered;
-//     margin-left: 35px;
-//   }
-//   button {
-//     margin-left: 35px;
-//   }
-//   @media (min-width: 1920px) {
-//     padding: 26px 370px 0 370px;
-//   }
-// }
-
-// .statisticsSectionContainer {
-//   @include sectionGridLayout;
-//   gap: 120px;
-//   padding: 95px 50px;
-//   img,
-//   div:first-of-type {
-//     @include verticalCentered;
-//   }
-//   @media (min-width: 1920px) {
-//     padding: 95px 370px;
-//   }
-// }
-
 .imgContainerfull {
   width: 100%;
 }
