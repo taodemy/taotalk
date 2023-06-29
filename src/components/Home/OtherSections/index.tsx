@@ -30,8 +30,8 @@ const OtherSections = () => {
         </div>
       </section>
       <section className="bg-gray-100">
-        <div className="mx-auto grid sm:px-[8px] sm:py-[16px] md:max-w-[1216px] md:px-[32px] md:py-[40px] xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[26px] xl:pb-0 xl:pt-[26px]">
-          <div className="mx-0 my-auto flex flex-col sm:ml-0 xl:ml-[100px] xl:block">
+        <div className="mx-auto grid sm:px-[8px] sm:py-[16px] md:px-[32px] md:py-[40px] lg:max-w-[1180px] lg:grid-cols-2 lg:px-[0] lg:pb-[0] lg:pt-[26px] xl:gap-[26px] xl:px-[0] xl:pb-0">
+          <div className="mx-0 flex flex-col sm:ml-0 sm:py-[16px] md:py-[60px] lg:my-auto lg:ml-[100px] lg:block">
             <HeadingDescription
               headingContent="Increase your vocabulary"
               descriptionContent="Traditional and new effective approaches to word study"
