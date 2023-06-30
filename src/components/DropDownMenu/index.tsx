@@ -5,9 +5,9 @@ interface DropDownMenuProps {
 }
 const DropDownMenu: React.FC<DropDownMenuProps> = ({ menuContent }) => {
   return (
-    <ul className="pl-[20px] pt-[20px]">
+    <ul className="pl-5 pt-5">
       {menuContent.map((item, index) => (
-        <li key={index} className="paragraph--p2 pb-[20px] hover:text-black">
+        <li key={index} className="p2 pb-5 text-[#828282] hover:text-[#333]">
           {item === 'Sprint →' ? (
             <a href="/sprint-summary">{item}</a>
           ) : (

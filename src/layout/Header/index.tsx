@@ -57,7 +57,7 @@ const Header = () => {
                 <img src="/down_arrow.svg" alt="down array"></img>
               </a>
               {isHovered && (
-                <div className=" shadow-[0_343px_343px_0_rgba(23, 64, 51, 0.08)] absolute top-[46px] w-[215px] rounded-[20px] bg-white ">
+                <div className=" absolute top-[46px] w-[215px] rounded-[14px] bg-white shadow-[0_343px_343px_0_rgba(23,64,51,0.08)] ">
                   <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
                 </div>
               )}
