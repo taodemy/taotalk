@@ -29,7 +29,7 @@ const OtherSections = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gray-100">
+      <section className="bg-tk_greyLight">
         <div className="mx-auto grid sm:px-2 sm:py-4 md:px-8 md:py-10 lg:max-w-[1180px] lg:grid-cols-2 lg:px-0 lg:pb-0 lg:pt-[26px] xl:gap-[26px] xl:px-0 xl:pb-0">
           <div className="mx-0 flex flex-col sm:ml-0 sm:py-4 md:py-[60px] lg:my-auto lg:ml-[100px] lg:block">
             <HeadingDescription
