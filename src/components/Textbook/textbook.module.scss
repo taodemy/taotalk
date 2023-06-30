@@ -1,0 +1,61 @@
+@import '../../styles/heading.scss';
+@import '../../styles/paragraph.scss';
+@import '../../styles/color.scss';
+
+@mixin btn {
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  border: none;
+  padding: 0;
+}
+
+.textbook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  background-color: $greyLight;
+
+  .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1180px;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 14px;;
+    .icon{
+      display: flex;
+      img{
+        padding-right: 12px;
+      }
+    }
+    .buttons{
+      display: flex;
+      gap:10px;
+      .shoe{
+        @include btn;
+        background-color: $pinkLight;
+        p{
+          padding-left: 9px;
+          padding-right: 45px;
+          color: $pinkDark;
+          line-height: 100%;
+          font-weight:700;
+        }
+      }
+      .speaker{
+        @include btn;
+        background-color: $cyanLight;
+        p{
+          padding-left: 16px;
+          padding-right: 37px;
+          color: $cyanDark;
+          line-height: 100%;
+          font-weight:700;
+        }
+      }
+    }
+  }
+}

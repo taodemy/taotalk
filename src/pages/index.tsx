@@ -6,6 +6,9 @@ export default function Home() {
     <>
       <HeroSection />
       <OtherSections />
+      {/* <Button label="test" color="green" />
+      <Button label="test" color="lightOrange" />
+      <Textbook /> */}
     </>
   );
 }
