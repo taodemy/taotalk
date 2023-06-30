@@ -6,7 +6,7 @@ import styles from './OtherSections.module.scss';
 const OtherSections = () => {
   return (
     <>
-      <section className={styles.languageSectionContainer}>
+      {/* <section className={styles.languageSectionContainer}>
         <img src="/language.svg" alt="Language" className={styles.imgContainerfull} />
         <div>
           <HeadingDescription
@@ -28,20 +28,22 @@ const OtherSections = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className={styles.vocabularySectionContainer}>
-        <div>
-          <HeadingDescription
-            headingContent="Increase your vocabulary"
-            descriptionContent="Traditional and new effective approaches to word study"
-          />
-          <Button outline={false} color="cyanLight" label="Textbook →" />
+      </section> */}
+      <section className="bg-gray-100">
+        <div className="xs:px-[8px] xs:py-[16px] mx-auto grid md:max-w-[1216px] md:px-[32px] md:py-[40px] xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[26px] xl:pb-0 xl:pt-[26px]">
+          <div className="xs:ml-0 mx-0 my-auto flex flex-col xl:ml-[100px] xl:flex-none">
+            <HeadingDescription
+              headingContent="Increase your vocabulary"
+              descriptionContent="Traditional and new effective approaches to word study"
+            />
+            <Button outline={false} color="cyanLight" label="Textbook →" />
+          </div>
+          <img src="/vocabulary.svg" alt="Vocabulary" className="mx-0 my-auto w-full" />
         </div>
-        <img src="/vocabulary.svg" alt="Vocabulary" className={styles.imgContainerfull} />
       </section>
-      <section className={styles.statisticsSectionContainer}>
-        <img src="/progress.svg" alt="Statistics" className={styles.imgContainerfull} />
-        <div>
+      <section className="xs:px-[8px] xs:py-[16px] mx-auto grid md:max-w-[1216px] md:px-[32px] md:py-0 xl:max-w-[1180px] xl:grid-cols-2 xl:gap-[20px] xl:py-[95px] ">
+        <img src="/progress.svg" alt="Statistics" className="mx-0 my-auto w-full" />
+        <div className="mx-0 my-auto flex flex-col xl:flex-none">
           <HeadingDescription
             headingContent="Watch your progress every day"
             descriptionContent="Save statistics on your achievements, words learned, and mistakes"
