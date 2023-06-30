@@ -3,19 +3,32 @@
 @tailwind base;
 @layer base {
   h1 {
-    @apply text-5xl;
+    @apply font-sans_Dela_Gothic_One text-tk56 font-normal leading-[1.2] tracking-[-0.04em];
   }
   h2 {
-    @apply text-4xl;
+    @apply font-sans_Dela_Gothic_One text-tk48 font-normal leading-none tracking-[-0.04em];
   }
   h3 {
-    @apply text-3xl;
+    @apply font-sans_Dela_Gothic_One text-tk32 font-normal leading-none tracking-[-0.04em];
   }
   h4 {
-    @apply text-2xl;
+    @apply font-sans_Dela_Gothic_One text-tk26 font-normal leading-none tracking-[-0.04em];
   }
-  p {
-    @apply text-xl;
+
+  .p1 {
+    @apply font-sans_Montserrat text-tk18 font-semibold leading-[1.4] tracking-[-0.04em] text-tk_greyDark;
+  }
+
+  .p2 {
+    @apply font-sans_Montserrat text-tk16 font-semibold leading-[1.4] tracking-[-0.04em] text-tk_greyDark;
+  }
+
+  .p3 {
+    @apply font-sans_Montserrat text-tk14 font-semibold leading-[1.4] tracking-[-0.04em] text-tk_greyDark;
+  }
+
+  .p4 {
+    @apply font-sans_Montserrat text-tk12 font-semibold leading-[1.4] tracking-[-0.04em] text-tk_greyDark;
   }
 }
 @tailwind components;
