@@ -24,8 +24,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans_Dela_Gothic_One: 'Dela Gothic One',
-        sans_Montserrat: 'Montserrat',
+        Dela_Gothic_One: 'Dela Gothic One',
+        Montserrat: 'Montserrat',
       },
       fontSize: {
         tk12: '0.75rem', //12px
@@ -47,7 +47,7 @@ module.exports = {
         tk_greyMedium: '#e0e0e0',
         tk_greyIcon: '#bababa',
         tk_greyDark: '#757575',
-        tk_Zambezi: '#585858',
+        tk_zambezi: '#585858',
 
         /* Secondary Color*/
         tk_cyan: '#5996a5',
