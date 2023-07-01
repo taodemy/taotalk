@@ -27,6 +27,8 @@ export const getButtonClass = (color: ButtonColor, outline: boolean) => {
       return outline ? '' : styles.buttonGreenColor;
     case 'yellowLight':
       return outline ? '' : styles.buttonYelloLightColor;
+    case 'yellow':
+      return outline ? '' : styles.buttonYellowColor;
     case 'orangeLight':
       return outline ? '' : styles.buttonOrangeLightColor;
     case 'orange':
