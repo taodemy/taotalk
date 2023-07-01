@@ -46,6 +46,16 @@
   }
 }
 
+@mixin colorSwapBack($Color--positive, $Color--negative) {
+  background: $Color--positive;
+  color: $white;
+  border: none;
+  &:hover {
+    color: $Color--positive;
+    background-color: $Color--negative;
+  }
+}
+
 .buttonCyanDarkColor {
   @include colorSwap($cyanLight, $cyanDark);
 }
@@ -53,15 +63,29 @@
 .buttonPinkLightColor {
   @include colorSwap($pinkLight, $pinkDark);
 }
+
 .buttonGreenLightColor {
   @include colorSwap($greenLight, $green);
-
 }
+
 .buttonYelloLightColor {
   @include colorSwap($yellowLight, $yellow);
 }
+
 .buttonOrangeLightColor {
   @include colorSwap($orangeLight, $orange);
+}
+
+.buttonGreenColor {
+  @include colorSwapBack($green, $greenLight)
+}
+
+.buttonYellowColor {
+  @include colorSwapBack($yellow, $yellowLight)
+}
+
+.buttonOrangeColor {
+  @include colorSwapBack($orange, $orangeLight)
 }
 /*** BouncingImageButton ***/
 .buttonPopup {

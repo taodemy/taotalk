@@ -8,8 +8,11 @@ export type ButtonColor =
   | 'pinkDark'
   | 'greyIcon'
   | 'greenLight'
+  | 'green'
   | 'yellowLight'
-  | 'orangeLight';
+  | 'yellow'
+  | 'orangeLight'
+  | 'orange';
 
 type ButtonProps = {
   variant?: 'regular' | 'image';

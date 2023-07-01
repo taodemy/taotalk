@@ -91,6 +91,8 @@
   // styles for subHeading
 
   .subheading{
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     gap:40px;
     .level{
@@ -103,7 +105,84 @@
       align-items: center;
       gap:12px
     }
+    button{
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: -0.48px;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
   }
   
-  // styles for word
+  // styles for word detail
+  .wordDetail{
+    display: flex;
+    border-radius: 14px;
+    background-color: $white;
+    margin-bottom: 40px;
+    width: 926px;
+    .leftImage {
+      position: relative;
+      .image{
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .buttonContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: absolute;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      top: 40px;
+      right: 0;
+      bottom:auto;
+      justify-content: flex-end;
+      padding: 8px;
+      background-color: #000000B2;
+      transition: opacity 0.3s ease;
+      color: $white;
+
+      
+      button{
+        display: flex;
+        img{
+          width: 16px;
+          height: 16px;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    .rightDetail{
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+      .word{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+        .wordName{
+        display: flex;
+        justify-content: space-between;
+      }}
+      .explain{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+      }
+      .buttons{
+        display: flex;
+        gap:20px;
+      }
+      
+    }
+  }
+
 }
