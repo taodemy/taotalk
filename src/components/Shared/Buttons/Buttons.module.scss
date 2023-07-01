@@ -53,7 +53,16 @@
 .buttonPinkLightColor {
   @include colorSwap($pinkLight, $pinkDark);
 }
+.buttonGreenLightColor {
+  @include colorSwap($greenLight, $green);
 
+}
+.buttonYelloLightColor {
+  @include colorSwap($yellowLight, $yellow);
+}
+.buttonOrangeLightColor {
+  @include colorSwap($orangeLight, $orange);
+}
 /*** BouncingImageButton ***/
 .buttonPopup {
   border-radius: 14px;

@@ -1,7 +1,15 @@
 import RegularButton, { RegularButtonProps } from './RegularButton';
 import ImageButton from './ImageButton';
 
-export type ButtonColor = 'cyanLight' | 'cyanDark' | 'pinkLight' | 'pinkDark' | 'greyIcon';
+export type ButtonColor =
+  | 'cyanLight'
+  | 'cyanDark'
+  | 'pinkLight'
+  | 'pinkDark'
+  | 'greyIcon'
+  | 'greenLight'
+  | 'yellowLight'
+  | 'orangeLight';
 
 type ButtonProps = {
   variant?: 'regular' | 'image';

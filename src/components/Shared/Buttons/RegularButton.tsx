@@ -21,6 +21,12 @@ export const getButtonClass = (color: ButtonColor, outline: boolean) => {
       return outline ? styles.outlineButtonPinkDarkColor : '';
     case 'greyIcon':
       return outline ? styles.outlineButtonGreyIconColor : '';
+    case 'greenLight':
+      return outline ? '' : styles.buttonGreenLightColor;
+    case 'yellowLight':
+      return outline ? '' : styles.buttonYelloLightColor;
+    case 'orangeLight':
+      return outline ? '' : styles.buttonOrangeLightColor;
   }
 };
 

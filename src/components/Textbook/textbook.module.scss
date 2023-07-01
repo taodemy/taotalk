@@ -8,6 +8,19 @@
   border-radius: 14px;
   border: none;
   padding: 0;
+  height: 44px;
+}
+@mixin btn-area {
+  display: flex;
+    div{
+      position: relative;
+      margin-right: -44px;
+      img{
+        width: 44px;
+        height: 44px;
+      }
+    }
+  
 }
 
 .textbook {
@@ -16,6 +29,8 @@
   justify-content: center; 
   align-items: center;
   background-color: $greyLight;
+
+  // styles for heading
 
   .heading{
     display: flex;
@@ -34,28 +49,61 @@
     .buttons{
       display: flex;
       gap:10px;
-      .shoe{
-        @include btn;
-        background-color: $pinkLight;
-        p{
-          padding-left: 9px;
+      .sprint {
+        @include btn-area;
+        button{
+          @include btn;
+          padding-left: 53px;
           padding-right: 45px;
-          color: $pinkDark;
-          line-height: 100%;
-          font-weight:700;
+          letter-spacing: -0.64px;
         }
       }
-      .speaker{
-        @include btn;
-        background-color: $cyanLight;
-        p{
-          padding-left: 16px;
+      .audio{
+        @include btn-area;
+        button{
+          @include btn;
+          padding-left: 59px;
           padding-right: 37px;
-          color: $cyanDark;
-          line-height: 100%;
-          font-weight:700;
+          letter-spacing: -0.64px;
         }
+      }
+      .setting{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        background-color: $greyLight;
+        border-radius: 4px;
+        svg {
+          margin: 0 auto; 
+          color: $greyIcon;
+        }
+        &:hover{
+          background-color: $cyanDark;
+          svg{
+            color:$white
+          }
+        } 
       }
     }
   }
+
+  // styles for subHeading
+
+  .subheading{
+    display: flex;
+    gap:40px;
+    .level{
+      display: flex;
+      align-items: center;
+      gap:12px;
+    }
+    .selectedLevel{
+      display: flex;
+      align-items: center;
+      gap:12px
+    }
+  }
+  
+  // styles for word
 }
