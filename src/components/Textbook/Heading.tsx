@@ -5,10 +5,15 @@ import Styles from './textbook.module.scss';
 import Button from '../Shared/Buttons';
 import Setting from '../../../public/setting.svg';
 
-const Heading = () => {
+interface HeadingProps {
+  handleDropdown: () => void;
+  isDropdownOpen: boolean;
+}
+
+const Heading = (props: HeadingProps) => {
   const router = useRouter();
   return (
-    <section className={Styles.textbook}>
+    <div>
       <div className={Styles.heading}>
         <div className={Styles.icon}>
           <img src="hat.svg" alt="hat icon" />
@@ -38,13 +43,38 @@ const Heading = () => {
               onClick={() => router.push('/audiocall-summary')}
             />
           </div>
-          <div className={Styles.setting}>
-            <Setting alt="setting icon" />
+          <div
+            className={Styles.icon}
+            onMouseEnter={props.handleDropdown}
+            onMouseLeave={props.handleDropdown}
+          >
+            <div className={Styles.setting}>
+              <Setting alt="setting icon" />
+            </div>
+
+            {props.isDropdownOpen && (
+              <div className={Styles.dropdownContainer}>
+                <ul>
+                  <li>
+                    <input type="checkbox" id="viewCheck" name="viewCheck" value="true" />
+                    <label className="paragraph--p2" htmlFor="viewCheck">
+                      Show words in a list
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="buttonCheck" name="buttonCheck" value="true" />
+                    <label className="paragraph--p2" htmlFor="buttonCheck">
+                      Display the &apos;Add&apos; and &apos;Remove&apos; buttons
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default heading;
+export default Heading;

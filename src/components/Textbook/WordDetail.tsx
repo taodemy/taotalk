@@ -17,6 +17,8 @@ interface wordDetailProps {
   encountered: number;
   learned: number;
   bestSeries: number;
+  handleLearnedToggle: (wordName: string) => void;
+  handleDictionaryToggle: (wordName: string) => void;
 }
 
 const WordDetail = (props: wordDetailProps) => {
@@ -71,11 +73,13 @@ const WordDetail = (props: wordDetailProps) => {
             outline={false}
             color={props.isLearnt ? 'greenLight' : 'green'}
             label={props.isLearnt ? 'Remove from learned' : 'Add to leanred'}
+            onClick={() => props.handleLearnedToggle(props.name)}
           />
           <Button
             outline={false}
             color={props.inDictionary ? 'orangeLight' : 'orange'}
             label={props.inDictionary ? 'Remove from dictionary' : 'Add to dictionary'}
+            onClick={() => props.handleDictionaryToggle(props.name)}
           />
         </div>
       </div>

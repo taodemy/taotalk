@@ -67,26 +67,84 @@
           letter-spacing: -0.64px;
         }
       }
-      .setting{
-        display: flex;
-        width: 40px;
-        height: 40px;
-        align-items: center;
-        background-color: $greyLight;
-        border-radius: 4px;
-        svg {
-          margin: 0 auto; 
-          color: $greyIcon;
-        }
-        &:hover{
-          background-color: $cyanDark;
-          svg{
-            color:$white
+      .icon {
+        position: relative;
+        .setting{
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          background-color: $greyLight;
+          border-radius: 4px;
+          svg {
+            margin: 0 auto; 
+            color: $greyIcon;
           }
-        } 
+          &:hover{
+            background-color: $cyanDark;
+            svg{
+              color:$white
+            }
+          } 
+        }
+        .dropdownContainer{
+          position: absolute;
+          width:max-content;
+          top:40px;
+          right: 0;
+          background-color: $white;
+          border-radius: 14px;
+          display: flex;
+          padding: 20px;
+          ul{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            li{
+              display: flex;
+              gap:10px;
+              
+            }
+
+            // clear default style
+            input[type="checkbox"] {
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+            }
+
+            // custom style
+            input[type="checkbox"] + label {
+              display: inline-flex;
+              align-items: center;
+              cursor: pointer;
+            }
+
+            input[type="checkbox"] + label::before {
+              content: "";
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border: 2px solid $greyIcon; 
+              border-radius: 4px;
+              margin-right: 8px;
+              vertical-align: middle;
+              background-color: $greyLight;
+            }
+            
+            input[type="checkbox"]:checked + label::before {
+              content: url("../../../public/tick.svg"); 
+              background-color: $cyanDark; 
+              border:none;
+            }
+          }
+        }
       }
     }
   }
+
+  
+
 
   // styles for subHeading
 
@@ -106,7 +164,7 @@
       align-items: center;
       padding-bottom: 14px;
       gap:12px;
-      border-bottom: solid 1px;
+      border-bottom: solid 2px;
     }
     button{
       font-size: 12px;
@@ -125,6 +183,7 @@
     background-color: $white;
     margin-bottom: 40px;
     width: 926px;
+    box-shadow: 0px 22.898128509521484px 45.79625701904297px -11.449064254760742px rgba(52, 41, 39, 0.08);
     .leftImage {
       position: relative;
       .image{
@@ -236,6 +295,8 @@
     padding:40px;
     background-color: $white;
     border-radius: 14px;
+    margin-bottom: 100px;
+    box-shadow: 0px 22.898128509521484px 45.79625701904297px -11.449064254760742px rgba(52, 41, 39, 0.08);
     .right{
       display: flex;
       flex-direction: column;

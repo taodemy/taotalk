@@ -21,11 +21,10 @@ const Dictionary = () => {
     bestSeries: number;
   }
   const [dictionaries, setDictionaries] = useState<{
-    [key: string]: { level: string; isSelected: boolean; dictionary: Word[] };
+    [key: string]: { level: string; dictionary: Word[] };
   }>({
     A1: {
       level: 'Easy',
-      isSelected: true,
       dictionary: [
         {
           name: 'remark',
@@ -59,40 +58,66 @@ const Dictionary = () => {
     },
     A2: {
       level: 'Easy',
-      isSelected: false,
       dictionary: [],
     },
     B1: {
       level: 'Medium',
-      isSelected: false,
       dictionary: [],
     },
     B2: {
       level: 'Medium',
-      isSelected: false,
       dictionary: [],
     },
     C1: {
       level: 'Hard',
-      isSelected: false,
       dictionary: [],
     },
     C2: {
       level: 'Hard',
-      isSelected: false,
       dictionary: [],
     },
   });
 
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
 
   const handleLevelSelect = (level: string) => {
     setSelectedLevel(level);
   };
 
+  const handleLearnedToggle = (wordName: string) => {
+    setDictionaries((prevDictionaries) => {
+      const updatedDictionaries = { ...prevDictionaries };
+      const dictionary = updatedDictionaries[selectedLevel].dictionary;
+      const wordIndex = dictionary.findIndex((word) => word.name === wordName);
+      if (wordIndex !== -1) {
+        dictionary[wordIndex].isLearnt = !dictionary[wordIndex].isLearnt;
+      }
+      return updatedDictionaries;
+    });
+  };
+
+  const handleDictionaryToggle = (wordName: string) => {
+    setDictionaries((prevDictionaries) => {
+      const updatedDictionaries = { ...prevDictionaries };
+      const dictionary = updatedDictionaries[selectedLevel].dictionary;
+      const wordIndex = dictionary.findIndex((word) => word.name === wordName);
+      if (wordIndex !== -1) {
+        dictionary[wordIndex].inDictionary = !dictionary[wordIndex].inDictionary;
+      }
+      return updatedDictionaries;
+    });
+  };
+
   return (
     <article className={Styles.textbook}>
-      <Heading />
+      <section>
+        <Heading handleDropdown={handleDropdownToggle} isDropdownOpen={isDropdownOpen} />
+      </section>
       <section className={Styles.subheading}>
         {Object.keys(dictionaries).map((key) => (
           <Subheading
@@ -120,6 +145,8 @@ const Dictionary = () => {
               encountered={word.encountered}
               learned={word.learned}
               bestSeries={word.bestSeries}
+              handleLearnedToggle={handleLearnedToggle}
+              handleDictionaryToggle={handleDictionaryToggle}
             />
           ))
         ) : (
