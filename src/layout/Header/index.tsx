@@ -21,14 +21,14 @@ const Header = () => {
           <div className={styles.nav__divide}>|</div>
           <ul className={styles.nav__list}>
             <li>
-              <a title="Home" href="#" className={styles.nav__list_item}>
+              <a title="Home" href="/" className={styles.nav__list_item}>
                 Home
               </a>
             </li>
             <li>
               <a
                 title="Textbook"
-                href="#"
+                href="/textbook"
                 className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
               >
                 Textbook

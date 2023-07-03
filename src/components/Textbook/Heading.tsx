@@ -1,10 +1,12 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import Styles from './textbook.module.scss';
 import Button from '../Shared/Buttons';
 import Setting from '../../../public/setting.svg';
 
-const heading = () => {
+const Heading = () => {
+  const router = useRouter();
   return (
     <section className={Styles.textbook}>
       <div className={Styles.heading}>
@@ -18,13 +20,23 @@ const heading = () => {
             <div>
               <img src="shoe.svg" alt="sprint icon" />
             </div>
-            <Button outline={false} color="pinkLight" label="Sprint"></Button>
+            <Button
+              outline={false}
+              color="pinkLight"
+              label="Sprint"
+              onClick={() => router.push('/sprint-summary')}
+            />
           </div>
           <div className={Styles.audio}>
             <div>
               <img src="speaker.svg" alt="sprint icon" />
             </div>
-            <Button outline={false} color="cyanLight" label="Audio-Call"></Button>
+            <Button
+              outline={false}
+              color="cyanLight"
+              label="Audio-Call"
+              onClick={() => router.push('/audiocall-summary')}
+            />
           </div>
           <div className={Styles.setting}>
             <Setting alt="setting icon" />
