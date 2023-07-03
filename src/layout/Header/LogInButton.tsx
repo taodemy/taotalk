@@ -1,13 +1,18 @@
 import styles from './Header.module.scss';
 
-export default function LogInButton({ userName }: { userName: string }) {
+export interface LogInButtonProps {
+  userName: string;
+  isSimplified: boolean;
+}
+
+export default function LogInButton({ userName, isSimplified }: LogInButtonProps) {
   return (
     <div className={styles.account_label}>
       <div className={styles.account_label__user_name_div}>
         <div className={styles.account_label__first_letter}>{getFirstCapLetter(userName)}</div>
-        <div className={styles.account_label__user_name}> {userName}</div>
+        {!isSimplified && <div className={styles.account_label__user_name}> {userName}</div>}
       </div>
-      <div className={styles.account_label__sign_out}>Sign Out →</div>
+      {!isSimplified && <div className={styles.account_label__sign_out}>Sign Out →</div>}
     </div>
   );
 }
@@ -15,3 +20,7 @@ export default function LogInButton({ userName }: { userName: string }) {
 function getFirstCapLetter(word: string): string {
   return word.charAt(0).toUpperCase();
 }
+
+LogInButton.defaultProps = {
+  isSimplified: false,
+};
