@@ -4,22 +4,34 @@ import Button from '../Shared/Buttons';
 interface subheadingProps {
   name: string;
   level: string;
-  isSelected: boolean;
+  selected: string;
+  onLevelSelect: (selectedLevel: string) => void;
 }
+
 const Subheading = (props: subheadingProps) => {
+  const handleLevelSelection = () => {
+    props.onLevelSelect(props.name);
+  };
+  const getColor = () => {
+    if (props.selected === props.name) {
+      return props.level === 'Easy' ? 'green' : props.level === 'Medium' ? 'yellow' : 'orange';
+    } else {
+      return props.level === 'Easy'
+        ? 'greenLight'
+        : props.level === 'Medium'
+        ? 'yellowLight'
+        : 'orangeLight';
+    }
+  };
+
   return (
-    <div className={props.isSelected ? Styles.selectedLevel : Styles.level}>
+    <div className={props.selected === props.name ? Styles.selectedLevel : Styles.level}>
       <h4 className="heading--h4">{props.name}</h4>
       <Button
         outline={false}
-        color={
-          props.level === 'Easy'
-            ? 'greenLight'
-            : props.level === 'Medium'
-            ? 'yellowLight'
-            : 'orangeLight'
-        }
+        color={getColor()}
         label={props.level}
+        onClick={handleLevelSelection}
       ></Button>
     </div>
   );

@@ -84,6 +84,12 @@ const Dictionary = () => {
     },
   });
 
+  const [selectedLevel, setSelectedLevel] = useState<string>('A1');
+
+  const handleLevelSelect = (level: string) => {
+    setSelectedLevel(level);
+  };
+
   return (
     <article className={Styles.textbook}>
       <Heading />
@@ -93,30 +99,32 @@ const Dictionary = () => {
             key={key}
             name={key}
             level={dictionaries[key].level}
-            isSelected={dictionaries[key].isSelected}
+            selected={selectedLevel}
+            onLevelSelect={handleLevelSelect}
           />
         ))}
       </section>
       <section>
-        {dictionaries.A1.dictionary.map((word, index) => (
-          <WordDetail
-            key={index}
-            name={word.name}
-            synonyms={word.synonyms}
-            phonetic={word.phonetic}
-            definition={word.definition}
-            example={word.example}
-            isLearnt={word.isLearnt}
-            inDictionary={word.inDictionary}
-            imgSrc={word.imgSrc}
-            encountered={word.encountered}
-            learned={word.learned}
-            bestSeries={word.bestSeries}
-          />
-        ))}
-      </section>
-      <section>
-        <Empty />
+        {dictionaries[selectedLevel].dictionary.length > 0 ? (
+          dictionaries[selectedLevel].dictionary.map((word, index) => (
+            <WordDetail
+              key={index}
+              name={word.name}
+              synonyms={word.synonyms}
+              phonetic={word.phonetic}
+              definition={word.definition}
+              example={word.example}
+              isLearnt={word.isLearnt}
+              inDictionary={word.inDictionary}
+              imgSrc={word.imgSrc}
+              encountered={word.encountered}
+              learned={word.learned}
+              bestSeries={word.bestSeries}
+            />
+          ))
+        ) : (
+          <Empty />
+        )}
       </section>
     </article>
   );

@@ -98,12 +98,15 @@
     .level{
       display: flex;
       align-items: center;
+      padding-bottom: 14px;
       gap:12px;
     }
     .selectedLevel{
       display: flex;
       align-items: center;
-      gap:12px
+      padding-bottom: 14px;
+      gap:12px;
+      border-bottom: solid 1px;
     }
     button{
       font-size: 12px;
