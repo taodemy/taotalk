@@ -5,6 +5,7 @@ import Heading from './Heading';
 import Button from '../Shared/Buttons';
 import Subheading from './Subheading';
 import WordDetail from './WordDetail';
+import Empty from './Empty';
 const Dictionary = () => {
   interface Word {
     name: string;
@@ -113,6 +114,9 @@ const Dictionary = () => {
             bestSeries={word.bestSeries}
           />
         ))}
+      </section>
+      <section>
+        <Empty />
       </section>
     </article>
   );

@@ -168,14 +168,54 @@
         display: flex;
         flex-direction: column;
         gap:12px;
+
         .wordName{
-        display: flex;
-        justify-content: space-between;
-      }}
+          display: flex;
+          justify-content: space-between;
+          h3{
+            display: flex;
+            gap:12px;
+          }
+          .synonyms{
+            color:$greyDark;
+          }
+          .play{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: $greyLight;
+            border-radius: 4px;
+            svg {
+              color: $greyIcon;
+              width: 24px;
+              height: 24px;
+            }
+            &:hover {
+              background-color: $cyanDark;
+              svg {
+                color: $white;
+              }
+            }
+          }
+        }
+        p {
+          letter-spacing: 0.04em;
+          color: $black;
+        }
+      }
       .explain{
         display: flex;
         flex-direction: column;
         gap:12px;
+        p{
+          font-weight: 500;
+          line-height: 150%;
+        }
+        .definition{
+          color:$black;
+        }
       }
       .buttons{
         display: flex;
@@ -183,6 +223,28 @@
       }
       
     }
+  }
+
+  // style for empty
+  .empty{
+    display: flex;
+    width: 800px;
+    gap:30px;
+    padding:40px;
+    background-color: $white;
+    border-radius: 14px;
+    .right{
+      display: flex;
+      flex-direction: column;
+      gap:40px;
+      justify-content: center;
+      .text{
+        display:flex;
+        flex-direction: column;
+        gap:14px;
+      }
+    }
+
   }
 
 }

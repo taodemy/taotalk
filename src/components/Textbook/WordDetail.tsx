@@ -46,20 +46,24 @@ const WordDetail = (props: wordDetailProps) => {
       <div className={Styles.rightDetail}>
         <div className={Styles.word}>
           <div className={Styles.wordName}>
-            <h3 className="heading-h3">
-              {props.name} / <span className={Styles.synonyms}>{props.synonyms}</span>
+            <h3 className="heading--h3">
+              {props.name}
+              <span>/</span>
+              <span className={Styles.synonyms}>{props.synonyms}</span>
             </h3>
-            <Play alt="play icon" />
+            <div className={Styles.play}>
+              <Play viewBox="0 0 40 40" alt="play icon" />
+            </div>
           </div>
-          <div className={Styles.phonetic}>
-            <p className="paragraph-p1">{props.phonetic}</p>
+          <div>
+            <p className="paragraph--p2">{props.phonetic}</p>
           </div>
         </div>
 
         <div className={Styles.explain}>
-          <p className="paragraph-p2">{props.definition}</p>
+          <p className={`paragraph--p2 ${Styles.definition}`}>{props.definition}</p>
           <hr />
-          <p className="paragraph-p2">{props.example}</p>
+          <p className="paragraph--p2">{props.example}</p>
         </div>
 
         <div className={Styles.buttons}>

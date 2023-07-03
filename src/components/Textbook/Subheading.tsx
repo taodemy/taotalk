@@ -9,7 +9,7 @@ interface subheadingProps {
 const Subheading = (props: subheadingProps) => {
   return (
     <div className={props.isSelected ? Styles.selectedLevel : Styles.level}>
-      <h4 className="heading-h4">{props.name}</h4>
+      <h4 className="heading--h4">{props.name}</h4>
       <Button
         outline={false}
         color={
