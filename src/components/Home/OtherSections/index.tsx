@@ -6,7 +6,7 @@ import styles from './OtherSections.module.scss';
 const OtherSections = () => {
   return (
     <>
-      <section className={styles.languageSectionContainer}>
+      {/* <section className={styles.languageSectionContainer}>
         <img src="/language.svg" alt="Language" className={styles.imgContainerfull} />
         <div>
           <HeadingDescription
@@ -28,7 +28,7 @@ const OtherSections = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="bg-tk_greyLight">
         <div className="mx-auto grid px-2 py-4 md:px-8 md:py-10 lg:max-w-[1180px] lg:grid-cols-2 lg:px-0 lg:pb-0 lg:pt-[26px]">
           <div className="mx-0 ml-0 flex flex-col py-4 md:py-[60px] lg:my-auto lg:ml-[100px] lg:block">
