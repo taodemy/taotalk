@@ -3,7 +3,7 @@ const Hero = () => {
   return (
     <article className="bg-tk_greyLight">
       <section className="sm:px-2 sm:pt-4 md:px-[32px] md:py-0 lg:pl-[calc(370px-(1920px-100%)*0.5)] lg:pr-[calc(117px-(1920px-100%)*0.5)]">
-        <div className="grid lg:grid-cols-[531px_minmax(900px,auto)] lg:overflow-hidden">
+        <div className="grid overflow-hidden lg:grid-cols-[531px_minmax(900px,auto)]">
           <div className="sm:mx-auto sm:flex sm:flex-col md:w-full lg:block lg:pt-[95px]">
             <p className="p2 text-tk_cyanDark sm:pb-[24px] sm:pt-[40px] sm:text-center sm:text-[12px] md:pt-[97px] lg:pb-[24px] lg:pt-0 lg:text-left lg:font-bold lg:uppercase lg:leading-[1rem] lg:tracking-[0.14em]">
               AI-powered chatting PLATFORM
@@ -37,8 +37,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-[933px] lg:pb-[30px] lg:pt-[109px]">
-            <img src="/heroBoy.svg" alt="heroBoy image" className="lg:h-[601px] lg:w-full" />
+          <div className="sm:w-[130%] lg:w-[933px] lg:pb-[30px] lg:pt-[109px]">
+            <img src="/heroBoy.svg" alt="heroBoy image" className="sm:w-full lg:h-[601px]" />
           </div>
         </div>
       </section>
