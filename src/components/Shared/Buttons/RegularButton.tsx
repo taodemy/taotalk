@@ -45,7 +45,7 @@ const RegularButton = ({
   ...otherProps
 }: RegularButtonProps) => {
   const buttonSize = {
-    normal: styles.normalButton,
+    normal: styles.regularButton,
     round: styles.roundButton,
   };
   return (
