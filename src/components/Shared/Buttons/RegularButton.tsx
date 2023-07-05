@@ -3,7 +3,7 @@ import styles from './Buttons.module.scss';
 
 export type RegularButtonProps = {
   color?: ButtonColor;
-  size?: 'normal';
+  size?: 'normal' | 'round';
   outline: boolean;
   label?: string;
 } & React.ComponentProps<'button'>;
@@ -21,6 +21,19 @@ export const getButtonClass = (color: ButtonColor, outline: boolean) => {
       return outline ? styles.outlineButtonPinkDarkColor : '';
     case 'greyIcon':
       return outline ? styles.outlineButtonGreyIconColor : '';
+
+    case 'cyan':
+      return outline ? styles.outlineButtonCyanColor : '';
+    case 'green':
+      return outline ? styles.outlineButtonGreenColor : '';
+    case 'pink':
+      return outline ? styles.outlineButtonPinkColor : '';
+    case 'red':
+      return outline ? styles.outlineButtonRedColor : '';
+    case 'yellow':
+      return outline ? styles.outlineButtonYellowColor : '';
+    case 'orange':
+      return outline ? styles.outlineButtonOrangeColor : '';
   }
 };
 
@@ -32,7 +45,8 @@ const RegularButton = ({
   ...otherProps
 }: RegularButtonProps) => {
   const buttonSize = {
-    normal: styles.regularButton,
+    normal: styles.normalButton,
+    round: styles.roundButton,
   };
   return (
     <button
