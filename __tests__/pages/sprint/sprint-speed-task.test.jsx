@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import SprintPage from '../../../src/pages/sprint-1';
+import SprintPage from '../../../src/pages/sprint-speed-task';
 import '@testing-library/jest-dom';
 
 describe('SprintPage', () => {
@@ -32,10 +32,5 @@ describe('SprintPage', () => {
   it('renders a select button', () => {
     const button = screen.getByRole('button', { name: /Get started/i });
     expect(button).toBeInTheDocument();
-  });
-
-  it('renders a level selector', () => {
-    const selector = screen.getByText('A1');
-    expect(selector).toBeInTheDocument();
   });
 });

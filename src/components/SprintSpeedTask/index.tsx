@@ -1,23 +1,10 @@
 import React from 'react';
-import { useState } from 'react';
-import styles from './SprintSection-1.module.scss';
+import styles from './SprintSpeedTask.module.scss';
 import Button from '../Shared/Buttons';
 import Label from '../Shared/Label';
-import LevelSelector from './LevelSelector';
 import Image from 'next/image';
 
-const SprintSection = () => {
-  const levels = [
-    { name: 'A1', color: 'green' },
-    { name: 'A2', color: 'yellow' },
-    { name: 'B1', color: 'orange' },
-    { name: 'B2', color: 'red' },
-    { name: 'C1', color: 'pink' },
-    { name: 'C2', color: 'cyan' },
-  ];
-
-  const [isActive, setIsActive] = useState(Array(levels.length).fill(false));
-
+const SprintSpeedTask = () => {
   return (
     <>
       <section className={styles.body_section}>
@@ -39,20 +26,13 @@ const SprintSection = () => {
             </div>
             <div className={styles.levels}>
               <p className="paragraph--p3">Choose a level:</p>
-              <div className={styles.levels__list}>
-                {levels.map((level, index) => (
-                  <LevelSelector
-                    key={index}
-                    level={level.name}
-                    color={level.color}
-                    active={isActive[index]}
-                    handleClick={() => {
-                      let newActives = Array(levels.length).fill(false);
-                      newActives[index] = true;
-                      setIsActive(newActives);
-                    }}
-                  />
-                ))}
+              <div className="flex gap-[24px]">
+                <Button color="green" outline={true} size="round" label="A1" />
+                <Button color="yellow" outline={true} size="round" label="A2" />
+                <Button color="orange" outline={true} size="round" label="B1" />
+                <Button color="red" outline={true} size="round" label="B2" />
+                <Button color="pink" outline={true} size="round" label="C1" />
+                <Button color="cyan" outline={true} size="round" label="C2" />
               </div>
             </div>
             <Button color="cyanDark" label="Get started" outline={false} />
@@ -63,4 +43,4 @@ const SprintSection = () => {
   );
 };
 
-export default SprintSection;
+export default SprintSpeedTask;
