@@ -3,14 +3,21 @@
 @mixin setButtonSize($size) {
   @if $size == 'normal' {
     padding: 14px 22px;
+  } @else if $size == 'round' {
+    width: 44px;
+    height: 44px;
   } @else {
     // Default case
     padding: 14px 22px;
   }
 }
 
-.regularButton {
+.normalButton {
   @include setButtonSize('normal');
+}
+
+.roundButton {
+  @include setButtonSize('round');
 }
 
 .button {
@@ -108,6 +115,73 @@
 .outlineButtonCyanDarkColor {
   color: $cyanDark;
   border: 3px solid $cyanDark;
+}
+
+.outlineButtonGreenColor {
+  color: $green;
+  border: 3px solid $green;
+  &:hover {
+    background-color: rgba(99, 155, 109, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonYellowColor {
+  color: $yellow;
+  border: 3px solid $yellow;
+  &:hover {
+    background-color: rgba(196, 162, 76, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonOrangeColor {
+  color: $orange;
+  border: 3px solid $orange;
+  &:hover {
+    background-color: rgba(203, 91, 67, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonRedColor {
+  color: $red;
+  border: 3px solid $red;
+  &:hover {
+    background-color: rgba(169, 81, 81, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonPinkColor {
+  color: $pink;
+  border: 3px solid $pink;
+  &:hover {
+    background-color: rgba(161, 89, 147, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
+}
+.outlineButtonCyanColor {
+  color: $cyan;
+  border: 3px solid $cyan;
+  &:hover {
+    background-color: rgba(89, 150, 165, 0.3);
+  }
+  &:active {
+    background-color: $orange;
+    color: $white;
+  }
 }
 
 /*** Image Button ***/

@@ -2,11 +2,19 @@ import RegularButton, { RegularButtonProps } from './RegularButton';
 import ImageButton from './ImageButton';
 
 export type ButtonColor =
+  //primary color
   | 'cyanLight'
   | 'cyanDark'
   | 'pinkLight'
   | 'pinkDark'
   | 'greyIcon'
+  //secondary color
+  | 'cyan'
+  | 'green'
+  | 'pink'
+  | 'red'
+  | 'yellow'
+  | 'orange'
   | 'greenLight'
   | 'green'
   | 'yellowLight'
@@ -28,7 +36,7 @@ const Button = ({
   variant = 'regular',
   color = 'cyanDark',
   outline,
-  size = 'normal',
+  size,
   label = 'button',
   src,
   imgType = 'avatar',

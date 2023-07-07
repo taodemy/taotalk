@@ -3,7 +3,7 @@ import styles from './Buttons.module.scss';
 
 export type RegularButtonProps = {
   color?: ButtonColor;
-  size?: 'normal';
+  size?: 'normal' | 'round';
   outline: boolean;
   label?: string;
 } & React.ComponentProps<'button'>;
@@ -21,18 +21,25 @@ export const getButtonClass = (color: ButtonColor, outline: boolean) => {
       return outline ? styles.outlineButtonPinkDarkColor : '';
     case 'greyIcon':
       return outline ? styles.outlineButtonGreyIconColor : '';
+
+    case 'cyan':
+      return outline ? styles.outlineButtonCyanColor : '';
+    case 'green':
+      return outline ? styles.outlineButtonGreenColor : styles.buttonGreenColor;
+    case 'pink':
+      return outline ? styles.outlineButtonPinkColor : '';
+    case 'red':
+      return outline ? styles.outlineButtonRedColor : '';
+    case 'yellow':
+      return outline ? styles.outlineButtonYellowColor : styles.buttonYellowColor;
+    case 'orange':
+      return outline ? styles.outlineButtonOrangeColor : styles.buttonOrangeColor;
     case 'greenLight':
       return outline ? '' : styles.buttonGreenLightColor;
-    case 'green':
-      return outline ? '' : styles.buttonGreenColor;
     case 'yellowLight':
       return outline ? '' : styles.buttonYelloLightColor;
-    case 'yellow':
-      return outline ? '' : styles.buttonYellowColor;
     case 'orangeLight':
       return outline ? '' : styles.buttonOrangeLightColor;
-    case 'orange':
-      return outline ? '' : styles.buttonOrangeColor;
   }
 };
 
@@ -44,7 +51,8 @@ const RegularButton = ({
   ...otherProps
 }: RegularButtonProps) => {
   const buttonSize = {
-    normal: styles.regularButton,
+    normal: styles.normalButton,
+    round: styles.roundButton,
   };
   return (
     <button
