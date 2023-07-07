@@ -190,27 +190,26 @@
         border-top-left-radius: 14px;
         border-bottom-left-radius: 14px;
         height: 100%;
+        width:337px;
+        max-width: none;
         object-fit: cover;
       }
-    }
-    
-    .buttonContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      position: absolute;
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
-      top: 40px;
-      right: 0;
-      bottom:auto;
-      justify-content: flex-end;
-      padding: 8px;
-      background-color: #000000B2;
-      transition: opacity 0.3s ease;
-      color: $white;
+      .buttonContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        top: 40px;
+        right: 0;
+        bottom:auto;
+        justify-content: flex-end;
+        padding: 8px;
+        background-color: #000000B2;
+        transition: opacity 0.3s ease;
+        color: $white;
 
-      
       button{
         display: flex;
         img{
@@ -220,9 +219,12 @@
         }
       }
     }
+    }
+    
+    
 
     .rightDetail{
-      padding: 40px;
+      padding: 40px 33px 40px 40px;
       display: flex;
       flex-direction: column;
       gap:20px;
