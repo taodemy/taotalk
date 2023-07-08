@@ -96,6 +96,8 @@
           border-radius: 14px;
           display: flex;
           padding: 20px;
+          box-shadow: 0px 11.449064254760742px 11.449064254760742px 0px rgba(52, 41, 39, 0.04), 0px 11.449064254760742px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 68.69439697265625px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 91.59251403808594px 91.59251403808594px 0px rgba(52, 41, 39, 0.04), 0px 183.18502807617188px 183.18502807617188px 0px rgba(52, 41, 39, 0.12), 0px 343.4719543457031px 343.4719543457031px 0px rgba(52, 41, 39, 0.08);
+
           ul{
             display: flex;
             flex-direction: column;
@@ -103,40 +105,63 @@
             li{
               display: flex;
               gap:10px;
+
+              .container {
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+              }
+              /* Hide the browser's default checkbox */
+              .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+              
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: $checkBox;
+                border: solid 1px $greyIcon;
+                border-radius: 4px;
+              }
+              /* On mouse-over, add a grey background color */
+              .container:hover input ~ .checkmark {
+                background-color: $greyLight;
+              }
+              
+              .container input:checked ~ .checkmark {
+                background-color: $cyanDark;
+              }
+              
+              .container .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              .container input:checked ~ .checkmark:after {
+                display: block;
+              }
+              
+              .container .checkmark:after {
+                left: 6px;
+                top: 1px;
+                width: 6px;
+                height: 12px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+              
               
             }
 
-            // clear default style
-            input[type="checkbox"] {
-              appearance: none;
-              -webkit-appearance: none;
-              -moz-appearance: none;
-            }
-
-            // custom style
-            input[type="checkbox"] + label {
-              display: inline-flex;
-              align-items: center;
-              cursor: pointer;
-            }
-
-            input[type="checkbox"] + label::before {
-              content: "";
-              display: inline-block;
-              width: 20px;
-              height: 20px;
-              border: 2px solid $greyIcon; 
-              border-radius: 4px;
-              margin-right: 8px;
-              vertical-align: middle;
-              background-color: $greyLight;
-            }
-            
-            input[type="checkbox"]:checked + label::before {
-              content: url("../../../public/tick.svg"); 
-              background-color: $cyanDark; 
-              border:none;
-            }
+          
           }
         }
       }

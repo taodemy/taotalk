@@ -56,15 +56,17 @@ const Heading = (props: HeadingProps) => {
               <div className={Styles.dropdownContainer}>
                 <ul>
                   <li>
-                    <input type="checkbox" id="viewCheck" name="viewCheck" value="true" />
-                    <label className="paragraph--p2" htmlFor="viewCheck">
+                    <label className={`paragraph--p2 ${Styles.container}`} htmlFor="viewCheck">
                       Show words in a list
+                      <input type="checkbox" id="viewCheck" name="viewCheck" value="true" />
+                      <span className={Styles.checkmark}></span>
                     </label>
                   </li>
                   <li>
-                    <input type="checkbox" id="buttonCheck" name="buttonCheck" value="true" />
-                    <label className="paragraph--p2" htmlFor="buttonCheck">
+                    <label className={`paragraph--p2 ${Styles.container}`} htmlFor="buttonCheck">
                       Display the &apos;Add&apos; and &apos;Remove&apos; buttons
+                      <input type="checkbox" id="buttonCheck" name="buttonCheck" value="true" />
+                      <span className={Styles.checkmark}></span>
                     </label>
                   </li>
                 </ul>
