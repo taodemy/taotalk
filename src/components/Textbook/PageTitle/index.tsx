@@ -1,21 +1,19 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-
 import Styles from './PageTitle.module.scss';
 import Button from '../../Shared/Buttons';
 import Setting from '../../../../public/setting.svg';
+import Link from 'next/link';
 
 interface TitleProps {
   handleDropdown: () => void;
   isDropdownOpen: boolean;
 }
 
-const Heading = (props: TitleProps) => {
-  const router = useRouter();
+const PageTitle = (props: TitleProps) => {
   return (
     <div className={Styles.heading}>
       <div className={Styles.icon}>
-        <img src="hat.svg" alt="hat icon" />
+        <img src="hat.svg" alt="textbook icon" />
         <h4 className="heading--h4">Textbook</h4>
       </div>
 
@@ -24,23 +22,17 @@ const Heading = (props: TitleProps) => {
           <div>
             <img src="shoe.svg" alt="sprint icon" />
           </div>
-          <Button
-            outline={false}
-            color="pinkLight"
-            label="Sprint"
-            onClick={() => router.push('/sprint-summary')}
-          />
+          <Link href="/sprint-summary">
+            <Button outline={false} color="pinkLight" label="Sprint" />
+          </Link>
         </div>
         <div className={Styles.audio}>
           <div>
-            <img src="speaker.svg" alt="sprint icon" />
+            <img src="speaker.svg" alt="audio-call icon" />
           </div>
-          <Button
-            outline={false}
-            color="cyanLight"
-            label="Audio-Call"
-            onClick={() => router.push('/audiocall-summary')}
-          />
+          <Link href="/audiocall-summary">
+            <Button outline={false} color="cyanLight" label="Audio-Call" />
+          </Link>
         </div>
         <div
           className={Styles.icon}
@@ -79,4 +71,4 @@ const Heading = (props: TitleProps) => {
   );
 };
 
-export default Heading;
+export default PageTitle;

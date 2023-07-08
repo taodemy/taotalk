@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Styles from './textbook.module.scss';
 import PageTitle from './PageTitle';
 import SubTitle from './SubTitle';
@@ -8,7 +8,7 @@ import Empty from './Empty';
 import PageNumber from './PageNumber';
 
 import dictionaryData from './dictionaryData.json';
-const Dictionary = () => {
+const Textbook = () => {
   interface Word {
     name: string;
     synonyms: string;
@@ -108,4 +108,4 @@ const Dictionary = () => {
   );
 };
 
-export default Dictionary;
+export default Textbook;

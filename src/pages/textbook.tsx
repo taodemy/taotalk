@@ -1,6 +1,6 @@
 import React from 'react';
-import Dictionary from '../components/Textbook';
+import Textbook from '../components/Textbook';
 
-export default function Textbook() {
-  return <Dictionary />;
+export default function TextbookPage() {
+  return <Textbook />;
 }
