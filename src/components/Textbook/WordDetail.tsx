@@ -29,18 +29,18 @@ const WordDetail = (props: wordDetailProps) => {
         <div className={Styles.buttonContainer}>
           <button>
             <img src="flag.svg" alt="encountered icon" />
-            <p>&nbsp;{props.encountered}</p>
-            <p>&nbsp;encountered</p>
+            <p>{props.encountered}</p>
+            <p className={Styles.hidden}>encountered</p>
           </button>
           <button>
             <img src="star.svg" alt="learned icon" />
-            <p>&nbsp;{props.learned}</p>
-            <p>&nbsp;learned</p>
+            <p>{props.learned}</p>
+            <p className={Styles.hidden}>learned</p>
           </button>
           <button>
             <img src="thunder.svg" alt="bestSeries icon" />
-            <p>&nbsp;{props.bestSeries}</p>
-            <p>&nbsp;best series</p>
+            <p>{props.bestSeries}</p>
+            <p className={Styles.hidden}>best series</p>
           </button>
         </div>
       </div>

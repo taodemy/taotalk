@@ -129,7 +129,7 @@
                 border: solid 1px $greyIcon;
                 border-radius: 4px;
               }
-              /* On mouse-over, add a grey background color */
+              /* On mouse-over, add a greyLight background color */
               .container:hover input ~ .checkmark {
                 background-color: $greyLight;
               }
@@ -156,20 +156,13 @@
                 border: solid white;
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg);
-              }
-              
-              
+              }  
             }
-
-          
           }
         }
       }
     }
   }
-
-  
-
 
   // styles for subHeading
 
@@ -237,17 +230,22 @@
 
       button{
         display: flex;
+        gap:8px;
         img{
           width: 16px;
           height: 16px;
           margin-top: 3px;
         }
+        .hidden{
+          display: none;
+        }
+      }
+      &:hover .hidden {
+        display: block;
       }
     }
-    }
+  }
     
-    
-
     .rightDetail{
       padding: 40px 33px 40px 40px;
       display: flex;
