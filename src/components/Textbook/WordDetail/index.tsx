@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Styles from './textbook.module.scss';
-import Button from '../Shared/Buttons';
-import Setting from '../../../public/setting.svg';
-import Play from '../../../public/play.svg';
+import Styles from './wordDetail.module.scss';
+import Button from '../../Shared/Buttons';
+import Play from '../../../../public/play.svg';
 
 interface wordDetailProps {
   name: string;

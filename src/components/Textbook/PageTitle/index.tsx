@@ -1,16 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import Styles from './textbook.module.scss';
-import Button from '../Shared/Buttons';
-import Setting from '../../../public/setting.svg';
+import Styles from './PageTitle.module.scss';
+import Button from '../../Shared/Buttons';
+import Setting from '../../../../public/setting.svg';
 
-interface HeadingProps {
+interface TitleProps {
   handleDropdown: () => void;
   isDropdownOpen: boolean;
 }
 
-const Heading = (props: HeadingProps) => {
+const Heading = (props: TitleProps) => {
   const router = useRouter();
   return (
     <div className={Styles.heading}>

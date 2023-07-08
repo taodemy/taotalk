@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Styles from './textbook.module.scss';
-import Heading from './Heading';
-import Subheading from './Subheading';
+import PageTitle from './PageTitle';
+import SubTitle from './SubTitle';
 import WordDetail from './WordDetail';
 import Empty from './Empty';
 import PageNumber from './PageNumber';
@@ -64,11 +64,11 @@ const Dictionary = () => {
   return (
     <article className={Styles.textbook}>
       <section>
-        <Heading handleDropdown={handleDropdownToggle} isDropdownOpen={isDropdownOpen} />
+        <PageTitle handleDropdown={handleDropdownToggle} isDropdownOpen={isDropdownOpen} />
       </section>
       <section className={Styles.subheading}>
         {Object.keys(dictionaries).map((key) => (
-          <Subheading
+          <SubTitle
             key={key}
             name={key}
             level={dictionaries[key].level}
