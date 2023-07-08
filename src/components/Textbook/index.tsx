@@ -6,6 +6,7 @@ import Button from '../Shared/Buttons';
 import Subheading from './Subheading';
 import WordDetail from './WordDetail';
 import Empty from './Empty';
+import PageNumber from './PageNumber';
 const Dictionary = () => {
   interface Word {
     name: string;
@@ -53,6 +54,20 @@ const Dictionary = () => {
           encountered: 5,
           learned: 1,
           bestSeries: 0,
+        },
+        {
+          name: 'remark',
+          synonyms: 'note',
+          phonetic: '[rimɑ́ːrk]',
+          definition: "To remark is to say something. - Remarquer, c'est dire quelque chose",
+          example:
+            "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+          isLearnt: false,
+          inDictionary: true,
+          imgSrc: 'remark.png',
+          encountered: 1,
+          learned: 1,
+          bestSeries: 2,
         },
       ],
     },
@@ -152,6 +167,9 @@ const Dictionary = () => {
         ) : (
           <Empty />
         )}
+      </section>
+      <section>
+        <PageNumber />
       </section>
     </article>
   );

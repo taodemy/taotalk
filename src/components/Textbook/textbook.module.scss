@@ -333,7 +333,16 @@
         gap:14px;
       }
     }
-
   }
 
+  // style for pageNumber
+  .pageNumber{
+    display: flex;
+    gap:24px;
+    align-items: baseline;
+    p{
+      color: $black;
+    }
+  }
+  
 }
