@@ -21,6 +21,9 @@
       align-items: center;
       padding-bottom: 14px;
       gap:12px;
+      h4{
+        color:$greyDark;
+      }
     }
     .selectedLevel{
       display: flex;
