@@ -101,9 +101,11 @@ const Textbook = () => {
           <Empty />
         )}
       </section>
-      <section>
-        <PageNumber />
-      </section>
+      {dictionaries[selectedLevel].dictionary.length > 0 && (
+        <section>
+          <PageNumber />
+        </section>
+      )}
     </article>
   );
 };
