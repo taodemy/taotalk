@@ -31,3 +31,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ```shell
 $ npm run test
 ```
+
+## Prettier format
+
+Format manually: Shift + Alt + F
+
+Or set Format On Save in VS code settings
