@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './SprintSpeedTask.module.scss';
-import RoundButtonArray from './RoundButtonArray';
 import Label from '../Shared/Label';
 import type { ButtonColor } from '../Shared/Buttons';
 import Image from 'next/image';
@@ -37,7 +36,17 @@ const SprintSpeedTask = () => {
             </div>
             <div className={styles.levels}>
               <p className="paragraph--p3">Choose a level:</p>
-              <RoundButtonArray levels={levels} />
+              <div className="flex gap-[24px]">
+                {levels.map((level, index) => (
+                  <Button
+                    key={index}
+                    color={level.color}
+                    outline={true}
+                    size="round"
+                    label={level.label}
+                  />
+                ))}
+              </div>
             </div>
             <Button color="cyanDark" label="Get started" outline={false} />
           </div>
