@@ -80,10 +80,11 @@
         .dropdownContainer{
           position: absolute;
           width:max-content;
-          top:40px;
+          top:50px;
           right: 0;
           background-color: $white;
           border-radius: 14px;
+          border: 1px solid $greyLight;
           display: flex;
           padding: 20px;
           box-shadow: 0px 11.449064254760742px 11.449064254760742px 0px rgba(52, 41, 39, 0.04), 0px 11.449064254760742px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 68.69439697265625px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 91.59251403808594px 91.59251403808594px 0px rgba(52, 41, 39, 0.04), 0px 183.18502807617188px 183.18502807617188px 0px rgba(52, 41, 39, 0.12), 0px 343.4719543457031px 343.4719543457031px 0px rgba(52, 41, 39, 0.08);
