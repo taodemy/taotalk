@@ -3,15 +3,27 @@ import Styles from './PageTitle.module.scss';
 import Button from '../../Shared/Buttons';
 import Setting from '../../../../public/setting.svg';
 import Link from 'next/link';
+import { useState } from 'react';
 
-interface TitleProps {
-  handleDropdown: () => void;
-  isDropdownOpen: boolean;
+interface PageTitleProps {
+  listViewChecked: boolean;
+  buttonViewChecked: boolean;
+  handleButtonViewChange: () => void;
+  handleListViewChange: () => void;
 }
+const PageTitle = ({
+  listViewChecked,
+  buttonViewChecked,
+  handleButtonViewChange,
+  handleListViewChange,
+}: PageTitleProps) => {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-const PageTitle = (props: TitleProps) => {
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
   return (
-    <div className={Styles.heading}>
+    <section className={Styles.heading}>
       <div className={Styles.icon}>
         <img src="hat.svg" alt="textbook icon" />
         <h4 className="heading--h4">Textbook</h4>
@@ -36,29 +48,45 @@ const PageTitle = (props: TitleProps) => {
         </div>
         <div
           className={Styles.icon}
-          onMouseEnter={props.handleDropdown}
-          onMouseLeave={props.handleDropdown}
+          onMouseEnter={handleDropdownToggle}
+          onMouseLeave={handleDropdownToggle}
         >
           <div className={Styles.setting}>
             <Setting alt="setting icon" />
           </div>
 
-          {props.isDropdownOpen && (
+          {isDropdownOpen && (
             <div className={Styles.dropdownContainer}>
               <ul>
                 <li>
-                  <label className={Styles.container} htmlFor="viewCheck">
-                    <p className="paragraph--p2">Show words in a list</p>
-                    <input type="checkbox" id="viewCheck" name="viewCheck" value="true" />
+                  <label className={Styles.container} htmlFor="listViewCheck">
+                    <p className={`paragraph--p2 ${listViewChecked && Styles.checked}`}>
+                      Show words in a list
+                    </p>
+                    <input
+                      type="checkbox"
+                      id="listViewCheck"
+                      name="listViewCheck"
+                      value="true"
+                      checked={listViewChecked}
+                      onChange={handleListViewChange}
+                    />
                     <span className={Styles.checkmark}></span>
                   </label>
                 </li>
                 <li>
-                  <label className={Styles.container} htmlFor="buttonCheck">
-                    <p className="paragraph--p2">
+                  <label className={Styles.container} htmlFor="buttonViewCheck">
+                    <p className={`paragraph--p2 ${buttonViewChecked && Styles.checked}`}>
                       Display the &apos;Add&apos; and &apos;Remove&apos; buttons
                     </p>
-                    <input type="checkbox" id="buttonCheck" name="buttonCheck" value="true" />
+                    <input
+                      type="checkbox"
+                      id="buttonViewCheck"
+                      name="buttonViewCheck"
+                      value="true"
+                      checked={buttonViewChecked}
+                      onChange={handleButtonViewChange}
+                    />
                     <span className={Styles.checkmark}></span>
                   </label>
                 </li>
@@ -67,7 +95,7 @@ const PageTitle = (props: TitleProps) => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

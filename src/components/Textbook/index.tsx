@@ -27,10 +27,15 @@ const Textbook = () => {
   }>(dictionaryData);
 
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [listViewChecked, setListViewChecked] = useState(false);
+  const [buttonViewChecked, setButtonViewChecked] = useState(false);
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!isDropdownOpen);
+  const handleListViewChange = () => {
+    setListViewChecked(!listViewChecked);
+  };
+
+  const handleButtonViewChange = () => {
+    setButtonViewChecked(!buttonViewChecked);
   };
 
   const handleLevelSelect = (level: string) => {
@@ -63,9 +68,12 @@ const Textbook = () => {
 
   return (
     <article className={Styles.textbook}>
-      <section>
-        <PageTitle handleDropdown={handleDropdownToggle} isDropdownOpen={isDropdownOpen} />
-      </section>
+      <PageTitle
+        listViewChecked={listViewChecked}
+        buttonViewChecked={buttonViewChecked}
+        handleListViewChange={handleListViewChange}
+        handleButtonViewChange={handleButtonViewChange}
+      />
       <section className={Styles.subheading}>
         {Object.keys(dictionaries).map((key) => (
           <SubTitle
