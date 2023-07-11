@@ -19,19 +19,19 @@ const PageTitle = (props: TitleProps) => {
 
       <div className={Styles.buttons}>
         <div className={Styles.sprint}>
-          <div>
-            <img src="shoe.svg" alt="sprint icon" />
-          </div>
           <Link href="/sprint-summary">
-            <Button outline={false} color="pinkLight" label="Sprint" />
+            <button>
+              <img src="shoe.svg" alt="sprint icon" />
+              <p className="paragraph--p2">Sprint</p>
+            </button>
           </Link>
         </div>
         <div className={Styles.audio}>
-          <div>
-            <img src="speaker.svg" alt="audio-call icon" />
-          </div>
           <Link href="/audiocall-summary">
-            <Button outline={false} color="cyanLight" label="Audio-Call" />
+            <button>
+              <img src="speaker.svg" alt="audio-call icon" />
+              <p className="paragraph--p2">Audio-Call</p>
+            </button>
           </Link>
         </div>
         <div
@@ -48,7 +48,7 @@ const PageTitle = (props: TitleProps) => {
               <ul>
                 <li>
                   <label className={Styles.container} htmlFor="viewCheck">
-                    <p className="paragraph--p2 ">Show words in a list</p>
+                    <p className="paragraph--p2">Show words in a list</p>
                     <input type="checkbox" id="viewCheck" name="viewCheck" value="true" />
                     <span className={Styles.checkmark}></span>
                   </label>

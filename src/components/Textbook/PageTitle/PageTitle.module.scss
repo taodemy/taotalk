@@ -8,20 +8,8 @@
     border-radius: 14px;
     border: none;
     padding: 0;
-    height: 44px;
   }
-@mixin btn-area {
-    display: flex;
-      div{
-        position: relative;
-        margin-right: -44px;
-        img{
-          width: 44px;
-          height: 44px;
-        }
-      }
-    
-  }
+
 .heading{
     display: flex;
     justify-content: space-between;
@@ -36,28 +24,48 @@
         padding-right: 12px;
       }
     }
-    .buttons{
+    .buttons {
       display: flex;
       gap:10px;
       .sprint {
-        @include btn-area;
         button{
           @include btn;
-          padding-left: 53px;
-          padding-right: 45px;
-          letter-spacing: -0.64px;
+          background-color: $pinkLight;
+          p {
+            margin-left: 9px;
+            margin-right: 45px;
+            font-weight: 700;
+            color:$pinkDark;
+          }
+          &:hover {
+            p {
+              color: $white;
+              }
+            background-color: $pinkDark;
+          }
         }
       }
       .audio{
-        @include btn-area;
         button{
           @include btn;
-          padding-left: 59px;
-          padding-right: 37px;
-          letter-spacing: -0.64px;
+          background-color: $cyanLight;
+          p {
+            margin-left: 15px;
+            margin-right: 37px;
+            font-weight: 700;
+            color:$cyanDark;
+          }
+          &:hover {
+            p {
+            color: $white;
+            }
+            background-color: $cyanDark;
+          }
         }
       }
       .icon {
+        display: flex;
+        align-items: center;
         position: relative;
         .setting{
           display: flex;
@@ -80,7 +88,7 @@
         .dropdownContainer{
           position: absolute;
           width:max-content;
-          top:50px;
+          top:42px;
           right: 0;
           background-color: $white;
           border-radius: 14px;
@@ -138,7 +146,6 @@
               .container input:checked ~ .checkmark:after {
                 display: block;
               }
-              
               .container .checkmark:after {
                 left: 6px;
                 top: 1px;
