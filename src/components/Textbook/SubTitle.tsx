@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './textbook.module.scss';
 import Button from '../Shared/Buttons';
+
 interface SubTitleProps {
   name: string;
   level: string;
@@ -8,10 +9,11 @@ interface SubTitleProps {
   onLevelSelect: (selectedLevel: string) => void;
 }
 
-const Subheading = (props: SubTitleProps) => {
+const SubTitle = (props: SubTitleProps) => {
   const handleLevelSelection = () => {
     props.onLevelSelect(props.name);
   };
+
   const getColor = () => {
     if (props.selected === props.name) {
       return props.level === 'Easy' ? 'green' : props.level === 'Medium' ? 'yellow' : 'orange';
@@ -24,17 +26,29 @@ const Subheading = (props: SubTitleProps) => {
     }
   };
 
+  const handleContainerClick = () => {
+    handleLevelSelection();
+  };
+
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    handleLevelSelection();
+  };
+
   return (
-    <div className={props.selected === props.name ? Styles.selectedLevel : Styles.level}>
+    <div
+      className={props.selected === props.name ? Styles.selectedLevel : Styles.level}
+      onClick={handleContainerClick}
+    >
       <h4 className="heading--h4">{props.name}</h4>
       <Button
         outline={false}
         color={getColor()}
         label={props.level}
-        onClick={handleLevelSelection}
+        onClick={handleButtonClick}
       ></Button>
     </div>
   );
 };
 
-export default Subheading;
+export default SubTitle;
