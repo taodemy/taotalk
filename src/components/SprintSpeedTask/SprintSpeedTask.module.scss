@@ -1,0 +1,76 @@
+@import '../../styles/color.scss';
+
+:export {
+  cyanDark: $cyanDark;
+  cyanLight: $cyanLight;
+}
+
+.body_section {
+  display: flex;
+  padding: 100px 528px;
+  height: 640px;
+  justify-content: center;
+  /* Primary/Grey Light */
+  background: #F6F5F4;
+}
+
+.sprint_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 10px;
+  max-width: 792px;
+  min-width: 680px;
+  height: 440px;
+  background: #FFFFFF;
+  /* Shadow 2 */
+  box-shadow: 0px 22.8981px 45.7963px -11.4491px rgba(52, 41, 39, 0.08);
+  border-radius: 14px;
+
+  &__display_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    height: 400px;
+    padding: 0px;
+    }
+
+  &__main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  }
+}
+  
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 14px;
+  max-width: 460px;
+
+  &__heading {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  }
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  &__list {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  }
+}
