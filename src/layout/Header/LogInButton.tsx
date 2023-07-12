@@ -1,5 +1,3 @@
-import styles from './Header.module.scss';
-
 export interface LogInButtonProps {
   userName: string;
   isSimplified: boolean;
@@ -7,12 +5,21 @@ export interface LogInButtonProps {
 
 export default function LogInButton({ userName, isSimplified }: LogInButtonProps) {
   return (
-    <div className={styles.account_label}>
-      <div className={styles.account_label__user_name_div}>
-        <div className={styles.account_label__first_letter}>{getFirstCapLetter(userName)}</div>
-        {!isSimplified && <div className={styles.account_label__user_name}> {userName}</div>}
+    <div className="flex h-[40px] items-center gap-[30px]">
+      <div className="flex items-center gap-[10px]">
+        <div className="h-[40px] w-[40px] rounded-full bg-tk_cyanLight text-center font-Montserrat font-bold leading-[40px] text-tk_cyanDark">
+          {getFirstCapLetter(userName)}
+        </div>
+        {!isSimplified && (
+          <div className="font-Montserrat font-semibold leading-[1.4em] tracking-[-0.04em] text-tk_greyDark">
+            {' '}
+            {userName}
+          </div>
+        )}
       </div>
-      {!isSimplified && <div className={styles.account_label__sign_out}>Sign Out →</div>}
+      {!isSimplified && (
+        <div className="font-Montserrat font-bold tracking-[-0.04em]">Sign Out →</div>
+      )}
     </div>
   );
 }

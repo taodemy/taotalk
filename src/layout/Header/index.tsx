@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import styles from './Header.module.scss';
 import LogInButton from './LogInButton';
 import MenuButton from './MenuButton';
 import DropDownMenu from '../../components/DropDownMenu';
-import Image from 'next/image';
 
 const Header = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,15 +21,21 @@ const Header = () => {
 
   return (
     <div>
-      <header className="flex h-[88px] items-center justify-center bg-tk_greyLight shadow-2xl">
+      <header className="flex h-[88px] items-center justify-center bg-tk_greyLight shadow-xl">
         <div className="flex w-full items-center justify-between px-[8px] md:px-[32px] lg:w-[1180px] lg:px-0">
           <nav className="flex items-center gap-[30px]">
-            <h1 className={styles.nav__heading}>TaoTalk</h1>
+            <h1 className="font-Dela_Gothic_One text-[21px] font-normal tracking-[-0.04em]">
+              TaoTalk
+            </h1>
             <div className="hidden md:flex md:gap-[30px]">
-              <div className={styles.nav__divide}>|</div>
-              <ul className={styles.nav__list}>
+              <span className="text-tk_greyMedium">|</span>
+              <ul className="flex list-none items-center pl-0">
                 <li>
-                  <a title="Home" href="#" className={styles.nav__list_item}>
+                  <a
+                    title="Home"
+                    href="#"
+                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-black no-underline"
+                  >
                     Home
                   </a>
                 </li>
@@ -39,9 +43,7 @@ const Header = () => {
                   <a
                     title="Textbook"
                     href="#"
-                    className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(
-                      ' '
-                    )}
+                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
                   >
                     Textbook
                   </a>
@@ -50,9 +52,7 @@ const Header = () => {
                   <a
                     title="Statistics"
                     href="#"
-                    className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(
-                      ' '
-                    )}
+                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
                   >
                     Statistics
                   </a>
@@ -65,9 +65,7 @@ const Header = () => {
                   <a
                     title="Games"
                     href="#"
-                    className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(
-                      ' '
-                    )}
+                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
                   >
                     Games
                     <img src="/down_arrow.svg" alt="down array"></img>
