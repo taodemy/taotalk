@@ -1,0 +1,120 @@
+@import '../../../styles/heading.scss';
+@import '../../../styles/paragraph.scss';
+@import '../../../styles/color.scss';
+
+.wordDetail{
+    display: flex;
+    border-radius: 14px;
+    background-color: $white;
+    margin-bottom: 40px;
+    width: 926px;
+    box-shadow: 0px 22.898128509521484px 45.79625701904297px -11.449064254760742px rgba(52, 41, 39, 0.08);
+    .leftImage {
+      position: relative;
+      .image{
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        height: 100%;
+        width:337px;
+        max-width: none;
+        object-fit: cover;
+      }
+      .buttonContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        top: 40px;
+        right: 0;
+        bottom:auto;
+        justify-content: flex-end;
+        padding: 8px;
+        background-color: #000000B2;
+        transition: opacity 0.3s ease;
+        color: $white;
+
+      button{
+        display: flex;
+        gap:8px;
+        img{
+          width: 16px;
+          height: 16px;
+          margin-top: 3px;
+        }
+        .hidden{
+          display: none;
+        }
+      }
+      &:hover .hidden {
+        display: block;
+      }
+    }
+  }
+    
+    .rightDetail{
+      padding: 40px 33px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+      .word{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+
+        .wordName{
+          display: flex;
+          justify-content: space-between;
+          h3{
+            display: flex;
+            gap:12px;
+          }
+          .synonyms{
+            color:$greyDark;
+          }
+          .play{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: $greyLight;
+            border-radius: 4px;
+            svg {
+              color: $greyIcon;
+              width: 24px;
+              height: 24px;
+            }
+            &:hover {
+              background-color: $cyanDark;
+              svg {
+                color: $white;
+              }
+            }
+          }
+        }
+        p {
+          letter-spacing: 0.04em;
+          color: $black;
+        }
+      }
+      .explain{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+        p{
+          font-weight: 500;
+          line-height: 150%;
+        }
+        .definition{
+          color:$black;
+        }
+      }
+      .buttons{
+        display: flex;
+        gap:20px;
+      }
+      
+    }
+  }

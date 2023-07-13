@@ -14,6 +14,12 @@ export type ButtonColor =
   | 'pink'
   | 'red'
   | 'yellow'
+  | 'orange'
+  | 'greenLight'
+  | 'green'
+  | 'yellowLight'
+  | 'yellow'
+  | 'orangeLight'
   | 'orange';
 
 type ButtonProps = {

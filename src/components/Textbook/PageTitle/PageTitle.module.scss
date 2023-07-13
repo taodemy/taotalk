@@ -1,0 +1,166 @@
+@import '../../../styles/heading.scss';
+@import '../../../styles/paragraph.scss';
+@import '../../../styles/color.scss';
+
+@mixin btn {
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    border: none;
+    padding: 0;
+  }
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1180px;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 14px;;
+    .icon{
+      display: flex;
+      img{
+        padding-right: 12px;
+      }
+    }
+    .buttons {
+      display: flex;
+      gap:10px;
+      .sprint {
+        button{
+          @include btn;
+          background-color: $pinkLight;
+          p {
+            margin-left: 9px;
+            margin-right: 45px;
+            font-weight: 700;
+            color:$pinkDark;
+          }
+          &:hover {
+            p {
+              color: $white;
+              }
+            background-color: $pinkDark;
+          }
+        }
+      }
+      .audio{
+        button{
+          @include btn;
+          background-color: $cyanLight;
+          p {
+            margin-left: 15px;
+            margin-right: 37px;
+            font-weight: 700;
+            color:$cyanDark;
+          }
+          &:hover {
+            p {
+            color: $white;
+            }
+            background-color: $cyanDark;
+          }
+        }
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .setting{
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          background-color: $greyLight;
+          border-radius: 4px;
+          svg {
+            margin: 0 auto; 
+            color: $greyIcon;
+          }
+          &:hover{
+            background-color: $cyanDark;
+            svg{
+              color:$white
+            }
+          } 
+        }
+        .dropdownContainer{
+          position: absolute;
+          width:max-content;
+          top:42px;
+          right: 0;
+          background-color: $white;
+          border-radius: 14px;
+          border: 1px solid $greyLight;
+          display: flex;
+          padding: 20px;
+          box-shadow: 0px 11.449064254760742px 11.449064254760742px 0px rgba(52, 41, 39, 0.04), 0px 11.449064254760742px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 68.69439697265625px 68.69439697265625px 0px rgba(52, 41, 39, 0.04), 0px 91.59251403808594px 91.59251403808594px 0px rgba(52, 41, 39, 0.04), 0px 183.18502807617188px 183.18502807617188px 0px rgba(52, 41, 39, 0.12), 0px 343.4719543457031px 343.4719543457031px 0px rgba(52, 41, 39, 0.08);
+
+          ul{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            li{
+              display: flex;
+              gap:10px;
+
+              .container {
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+              }
+              /* Hide the browser's default checkbox */
+              .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+              }
+              
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: $checkBox;
+                border: solid 1px $greyIcon;
+                border-radius: 4px;
+              }
+              /* On mouse-over, add a greyLight background color */
+              .container:hover input ~ .checkmark {
+                background-color: $greyLight;
+              }
+              
+              .container input:checked ~ .checkmark {
+                background-color: $cyanDark;
+              }
+              
+              .container .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              .container input:checked ~ .checkmark:after {
+                display: block;
+              }
+              .container .checkmark:after {
+                left: 6px;
+                top: 1px;
+                width: 6px;
+                height: 12px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }  
+              .checked{
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+}
