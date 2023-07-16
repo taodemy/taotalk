@@ -31,29 +31,17 @@ const Header = () => {
               <div className={styles.nav__divide}>|</div>
               <ul className={styles.nav__list}>
                 <li>
-                  <a title="Home" href="#" className={styles.nav__list_item}>
+                  <a title="Home" href="/" className="p2 pr-[30px] text-black">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a
-                    title="Textbook"
-                    href="#"
-                    className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(
-                      ' '
-                    )}
-                  >
+                  <a title="Textbook" href="/textbook" className="p2 pr-[30px]">
                     Textbook
                   </a>
                 </li>
                 <li>
-                  <a
-                    title="Statistics"
-                    href="#"
-                    className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(
-                      ' '
-                    )}
-                  >
+                  <a title="Statistics" href="#" className="p2 pr-[30px]">
                     Statistics
                   </a>
                 </li>
@@ -70,7 +58,7 @@ const Header = () => {
                     )}
                   >
                     Games
-                    <img src="/down_arrow.svg" alt="down array"></img>
+                    <img src="/down_arrow.svg" alt="down arrow"></img>
                   </a>
                   {isHovered && (
                     <div className=" absolute top-[46px] w-[215px] rounded-[14px] bg-white shadow-[0_343px_343px_0_rgba(23,64,51,0.08)] ">
