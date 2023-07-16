@@ -29,17 +29,17 @@ const Header = () => {
               <span className="text-tk_greyMedium">|</span>
               <ul className="flex items-center">
                 <li>
-                  <a title="Home" href="/" className="p2 flex pr-[30px] text-black">
+                  <a title="Home" href="/" className="p2 pr-[30px] text-black">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a title="Textbook" href="/textbook" className="p2 flex pr-[30px]">
+                  <a title="Textbook" href="/textbook" className="p2 pr-[30px]">
                     Textbook
                   </a>
                 </li>
                 <li>
-                  <a title="Statistics" href="#" className="p2 flex pr-[30px]">
+                  <a title="Statistics" href="#" className="p2 pr-[30px]">
                     Statistics
                   </a>
                 </li>
@@ -50,7 +50,7 @@ const Header = () => {
                 >
                   <a title="Games" href="#" className="p2 flex pr-[30px]">
                     Games
-                    <img src="/down_arrow.svg" alt="down array"></img>
+                    <img src="/down_arrow.svg" alt="down arrow"></img>
                   </a>
                   {isHovered && (
                     <div className="absolute left-[26px] top-[24px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
