@@ -10,16 +10,9 @@ export default function LogInButton({ userName, isSimplified }: LogInButtonProps
         <div className="h-[40px] w-[40px] rounded-full bg-tk_cyanLight text-center font-Montserrat font-bold leading-[40px] text-tk_cyanDark">
           {getFirstCapLetter(userName)}
         </div>
-        {!isSimplified && (
-          <div className="font-Montserrat font-semibold leading-[1.4em] tracking-[-0.04em] text-tk_greyDark">
-            {' '}
-            {userName}
-          </div>
-        )}
+        {!isSimplified && <div className="p2">{userName}</div>}
       </div>
-      {!isSimplified && (
-        <div className="font-Montserrat font-bold tracking-[-0.04em]">Sign Out →</div>
-      )}
+      {!isSimplified && <div className="p2 font-bold text-black">Sign Out →</div>}
     </div>
   );
 }

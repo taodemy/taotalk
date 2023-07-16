@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import LogInButton from './LogInButton';
-import MenuButton from './MenuButton';
 import DropDownMenu from '../../components/DropDownMenu';
+import Image from 'next/image';
 
 const Header = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -20,40 +20,26 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <header className="flex h-[88px] items-center justify-center bg-tk_greyLight shadow-xl">
+    <>
+      <header className="flex h-[72px] items-center justify-center bg-tk_greyLight shadow-[inset_0_-1px_0_0_rgba(224,224,224,1)] md:h-[88px]">
         <div className="flex w-full items-center justify-between px-[8px] md:px-[32px] lg:w-[1180px] lg:px-0">
           <nav className="flex items-center gap-[30px]">
-            <h1 className="font-Dela_Gothic_One text-[21px] font-normal tracking-[-0.04em]">
-              TaoTalk
-            </h1>
+            <h1 className="text-[21px]">TaoTalk</h1>
             <div className="hidden md:flex md:gap-[30px]">
               <span className="text-tk_greyMedium">|</span>
-              <ul className="flex list-none items-center pl-0">
+              <ul className="flex items-center">
                 <li>
-                  <a
-                    title="Home"
-                    href="#"
-                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-black no-underline"
-                  >
+                  <a title="Home" href="/" className="p2 flex pr-[30px] text-black">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a
-                    title="Textbook"
-                    href="#"
-                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
-                  >
+                  <a title="Textbook" href="/textbook" className="p2 flex pr-[30px]">
                     Textbook
                   </a>
                 </li>
                 <li>
-                  <a
-                    title="Statistics"
-                    href="#"
-                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
-                  >
+                  <a title="Statistics" href="#" className="p2 flex pr-[30px]">
                     Statistics
                   </a>
                 </li>
@@ -62,16 +48,12 @@ const Header = () => {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <a
-                    title="Games"
-                    href="#"
-                    className="flex pl-0 pr-[30px] font-Montserrat leading-[1.4em] tracking-[-0.04em] text-tk_greyDark no-underline"
-                  >
+                  <a title="Games" href="#" className="p2 flex pr-[30px]">
                     Games
                     <img src="/down_arrow.svg" alt="down array"></img>
                   </a>
                   {isHovered && (
-                    <div className=" absolute top-[46px] w-[215px] rounded-[14px] bg-white shadow-[0_343px_343px_0_rgba(23,64,51,0.08)] ">
+                    <div className="absolute left-[26px] top-[24px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
                       <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
                     </div>
                   )}
@@ -79,10 +61,16 @@ const Header = () => {
               </ul>
             </div>
           </nav>
-          <div className="flex gap-8 lg:hidden">
+          <div className="flex gap-2 lg:hidden">
             <LogInButton userName={'Alex'} isSimplified={true} />
             <div className="flex md:hidden">
-              <MenuButton isMenuShown={isMenuShown} onClick={handleMouseClickOnMenuButton} />
+              <Image
+                src={isMenuShown ? '/material-symbols_close.svg' : '/material-symbols_menu.svg'}
+                width={24}
+                height={24}
+                alt={isMenuShown ? 'close' : 'menu'}
+                onClick={handleMouseClickOnMenuButton}
+              />
             </div>
           </div>
           <div className="hidden lg:flex">
@@ -96,13 +84,22 @@ const Header = () => {
             <li className="">Home</li>
             <li className="my-[60px] text-tk_greyDark">Textbook</li>
             <li className="my-[60px] text-tk_greyDark">Statistics</li>
-            <li className="flex justify-center text-tk_greyDark">
+            <li
+              className="flex justify-center text-tk_greyDark"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               Games <img src="/down_arrow.svg" alt="down array"></img>
+              {isHovered && (
+                <div className="absolute left-[250px] top-[480px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
+                  <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
+                </div>
+              )}
             </li>
           </ul>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
