@@ -37,7 +37,7 @@ const Header = () => {
             <li>
               <a
                 title="Statistics"
-                href="#"
+                href="/statistics-content"
                 className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
               >
                 Statistics
