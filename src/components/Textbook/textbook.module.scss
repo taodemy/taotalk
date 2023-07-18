@@ -74,5 +74,13 @@
       color: $black;
     }
   }
+
+  // style for grid view
+  .wordDetailGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 每行三列
+    grid-gap: 20px; // 设置网格之间的间距
+  }
+  
   
 }

@@ -15,6 +15,7 @@ interface WordDetailProps {
   encountered: number;
   learned: number;
   bestSeries: number;
+  listViewChecked: boolean;
   buttonViewChecked: boolean;
   handleLearnedToggle: (wordName: string) => void;
   handleDictionaryToggle: (wordName: string) => void;
@@ -32,12 +33,13 @@ const WordDetail = ({
   encountered,
   learned,
   bestSeries,
+  listViewChecked,
   buttonViewChecked,
   handleLearnedToggle,
   handleDictionaryToggle,
 }: WordDetailProps) => {
   return (
-    <div className={Styles.wordDetail}>
+    <div className={listViewChecked ? Styles.wordDetail : Styles.wordDetailGrid}>
       <div className={Styles.leftImage}>
         <img className={Styles.image} src={imgSrc} alt={`${name} image`} />
         <div className={Styles.buttonContainer}>
@@ -64,12 +66,14 @@ const WordDetail = ({
           <div className={Styles.wordName}>
             <h3 className="heading--h3">
               {name}
-              <span>/</span>
+              {listViewChecked && <span>/</span>}
               <span className={Styles.synonyms}>{synonyms}</span>
             </h3>
-            <div className={Styles.play}>
-              <Play viewBox="0 0 40 40" alt="play icon" />
-            </div>
+            {listViewChecked && (
+              <div className={Styles.play}>
+                <Play viewBox="0 0 40 40" alt="play icon" />
+              </div>
+            )}
           </div>
           <div>
             <p className="paragraph--p2">{phonetic}</p>

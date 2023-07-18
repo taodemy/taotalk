@@ -27,8 +27,8 @@ const Textbook = () => {
   }>(dictionaryData);
 
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
-  const [listViewChecked, setListViewChecked] = useState(false);
-  const [buttonViewChecked, setButtonViewChecked] = useState(false);
+  const [listViewChecked, setListViewChecked] = useState(true);
+  const [buttonViewChecked, setButtonViewChecked] = useState(true);
 
   const handleListViewChange = () => {
     setListViewChecked(!listViewChecked);
@@ -85,7 +85,7 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section>
+      <section className={listViewChecked ? Styles.wordDetailList : Styles.wordDetailGrid}>
         {dictionaries[selectedLevel].dictionary.length > 0 ? (
           dictionaries[selectedLevel].dictionary.map((word, index) => (
             <WordDetail
@@ -104,6 +104,7 @@ const Textbook = () => {
               handleLearnedToggle={handleLearnedToggle}
               handleDictionaryToggle={handleDictionaryToggle}
               buttonViewChecked={buttonViewChecked}
+              listViewChecked={listViewChecked}
             />
           ))
         ) : (
