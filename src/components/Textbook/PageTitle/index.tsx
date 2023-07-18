@@ -6,14 +6,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 interface PageTitleProps {
-  listViewChecked: boolean;
-  buttonViewChecked: boolean;
+  isListView: boolean;
+  isButtonShow: boolean;
   handleButtonViewChange: () => void;
   handleListViewChange: () => void;
 }
 const PageTitle = ({
-  listViewChecked,
-  buttonViewChecked,
+  isListView,
+  isButtonShow,
   handleButtonViewChange,
   handleListViewChange,
 }: PageTitleProps) => {
@@ -60,7 +60,7 @@ const PageTitle = ({
               <ul>
                 <li>
                   <label className={Styles.container} htmlFor="listViewCheck">
-                    <p className={`paragraph--p2 ${listViewChecked && Styles.checked}`}>
+                    <p className={`paragraph--p2 ${isListView && Styles.checked}`}>
                       Show words in a list
                     </p>
                     <input
@@ -68,7 +68,7 @@ const PageTitle = ({
                       id="listViewCheck"
                       name="listViewCheck"
                       value="true"
-                      checked={listViewChecked}
+                      checked={isListView}
                       onChange={handleListViewChange}
                     />
                     <span className={Styles.checkmark}></span>
@@ -76,7 +76,7 @@ const PageTitle = ({
                 </li>
                 <li>
                   <label className={Styles.container} htmlFor="buttonViewCheck">
-                    <p className={`paragraph--p2 ${buttonViewChecked && Styles.checked}`}>
+                    <p className={`paragraph--p2 ${isButtonShow && Styles.checked}`}>
                       Display the &apos;Add&apos; and &apos;Remove&apos; buttons
                     </p>
                     <input
@@ -84,7 +84,7 @@ const PageTitle = ({
                       id="buttonViewCheck"
                       name="buttonViewCheck"
                       value="true"
-                      checked={buttonViewChecked}
+                      checked={isButtonShow}
                       onChange={handleButtonViewChange}
                     />
                     <span className={Styles.checkmark}></span>

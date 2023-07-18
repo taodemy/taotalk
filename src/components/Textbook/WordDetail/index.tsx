@@ -15,8 +15,8 @@ interface WordDetailProps {
   encountered: number;
   learned: number;
   bestSeries: number;
-  listViewChecked: boolean;
-  buttonViewChecked: boolean;
+  isListView: boolean;
+  isButtonShow: boolean;
   handleLearnedToggle: (wordName: string) => void;
   handleDictionaryToggle: (wordName: string) => void;
 }
@@ -33,13 +33,13 @@ const WordDetail = ({
   encountered,
   learned,
   bestSeries,
-  listViewChecked,
-  buttonViewChecked,
+  isListView,
+  isButtonShow,
   handleLearnedToggle,
   handleDictionaryToggle,
 }: WordDetailProps) => {
   return (
-    <div className={listViewChecked ? Styles.wordDetail : Styles.wordDetailGrid}>
+    <div className={isListView ? Styles.wordDetail : Styles.wordDetailGrid}>
       <div className={Styles.leftImage}>
         <img className={Styles.image} src={imgSrc} alt={`${name} image`} />
         <div className={Styles.buttonContainer}>
@@ -66,10 +66,10 @@ const WordDetail = ({
           <div className={Styles.wordName}>
             <h3 className="heading--h3">
               {name}
-              {listViewChecked && <span>/</span>}
+              {isListView && <span>/</span>}
               <span className={Styles.synonyms}>{synonyms}</span>
             </h3>
-            {listViewChecked && (
+            {isListView && (
               <div className={Styles.play}>
                 <Play viewBox="0 0 40 40" alt="play icon" />
               </div>
@@ -85,7 +85,7 @@ const WordDetail = ({
           <hr />
           <p className="paragraph--p2">{example}</p>
         </div>
-        {buttonViewChecked && (
+        {isButtonShow && (
           <div className={Styles.buttons}>
             <Button
               outline={false}

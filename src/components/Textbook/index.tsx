@@ -8,6 +8,7 @@ import Empty from './Empty';
 import PageNumber from './PageNumber';
 
 import dictionaryData from './dictionaryData.json';
+import Button from '../Shared/Buttons';
 const Textbook = () => {
   interface Word {
     name: string;
@@ -27,28 +28,28 @@ const Textbook = () => {
   }>(dictionaryData);
 
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
-  const [listViewChecked, setListViewChecked] = useState(true);
-  const [buttonViewChecked, setButtonViewChecked] = useState(true);
+  const [isListView, setisListView] = useState(true);
+  const [isButtonShow, setisButtonShow] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const wordsPerPage = listViewChecked ? 3 : 8;
+  const wordsPerPage = isListView ? 3 : 8;
   const startIndex = (currentPage - 1) * wordsPerPage;
   const endIndex = startIndex + wordsPerPage;
 
   useEffect(() => {
-    if (!listViewChecked) {
+    if (!isListView) {
       if (currentPage > Math.ceil(dictionaries[selectedLevel].dictionary.length / wordsPerPage)) {
         const totalPages = Math.ceil(dictionaries[selectedLevel].dictionary.length / wordsPerPage);
         setCurrentPage(totalPages > 0 ? totalPages : 1);
       }
     }
-  }, [listViewChecked, currentPage, dictionaries, selectedLevel, wordsPerPage]);
+  }, [isListView, currentPage, dictionaries, selectedLevel, wordsPerPage]);
 
   const handleListViewChange = () => {
-    setListViewChecked(!listViewChecked);
+    setisListView(!isListView);
   };
 
   const handleButtonViewChange = () => {
-    setButtonViewChecked(!buttonViewChecked);
+    setisButtonShow(!isButtonShow);
   };
 
   const handleLevelSelect = (level: string) => {
@@ -82,8 +83,8 @@ const Textbook = () => {
   return (
     <article className={Styles.textbook}>
       <PageTitle
-        listViewChecked={listViewChecked}
-        buttonViewChecked={buttonViewChecked}
+        isListView={isListView}
+        isButtonShow={isButtonShow}
         handleListViewChange={handleListViewChange}
         handleButtonViewChange={handleButtonViewChange}
       />
@@ -98,7 +99,7 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={listViewChecked ? '' : Styles.wordDetailGrid}>
+      <section className={isListView ? '' : Styles.wordDetailGrid}>
         {dictionaries[selectedLevel].dictionary.length > 0 &&
           dictionaries[selectedLevel].dictionary
             .slice(startIndex, endIndex)
@@ -118,10 +119,17 @@ const Textbook = () => {
                 bestSeries={word.bestSeries}
                 handleLearnedToggle={handleLearnedToggle}
                 handleDictionaryToggle={handleDictionaryToggle}
-                buttonViewChecked={buttonViewChecked}
-                listViewChecked={listViewChecked}
+                isButtonShow={isButtonShow}
+                isListView={isListView}
               />
             ))}
+        {!isListView && endIndex + 1 < dictionaries[selectedLevel].dictionary.length && (
+          <div className={Styles.nextPage}>
+            <button onClick={() => setCurrentPage(currentPage + 1)}>
+              <p className="paragraph--p2">Next page →</p>
+            </button>
+          </div>
+        )}
       </section>
       {dictionaries[selectedLevel].dictionary.length < 1 && (
         <section>
