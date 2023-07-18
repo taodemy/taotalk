@@ -103,6 +103,7 @@ const Textbook = () => {
               bestSeries={word.bestSeries}
               handleLearnedToggle={handleLearnedToggle}
               handleDictionaryToggle={handleDictionaryToggle}
+              buttonViewChecked={buttonViewChecked}
             />
           ))
         ) : (

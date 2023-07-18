@@ -15,6 +15,7 @@ interface WordDetailProps {
   encountered: number;
   learned: number;
   bestSeries: number;
+  buttonViewChecked: boolean;
   handleLearnedToggle: (wordName: string) => void;
   handleDictionaryToggle: (wordName: string) => void;
 }
@@ -31,6 +32,7 @@ const WordDetail = ({
   encountered,
   learned,
   bestSeries,
+  buttonViewChecked,
   handleLearnedToggle,
   handleDictionaryToggle,
 }: WordDetailProps) => {
@@ -79,21 +81,22 @@ const WordDetail = ({
           <hr />
           <p className="paragraph--p2">{example}</p>
         </div>
-
-        <div className={Styles.buttons}>
-          <Button
-            outline={false}
-            color={isLearnt ? 'greenLight' : 'green'}
-            label={isLearnt ? 'Remove from learned' : 'Add to learned'}
-            onClick={() => handleLearnedToggle(name)}
-          />
-          <Button
-            outline={false}
-            color={inDictionary ? 'orangeLight' : 'orange'}
-            label={inDictionary ? 'Remove from dictionary' : 'Add to dictionary'}
-            onClick={() => handleDictionaryToggle(name)}
-          />
-        </div>
+        {buttonViewChecked && (
+          <div className={Styles.buttons}>
+            <Button
+              outline={false}
+              color={isLearnt ? 'greenLight' : 'green'}
+              label={isLearnt ? 'Remove from learned' : 'Add to learned'}
+              onClick={() => handleLearnedToggle(name)}
+            />
+            <Button
+              outline={false}
+              color={inDictionary ? 'orangeLight' : 'orange'}
+              label={inDictionary ? 'Remove from dictionary' : 'Add to dictionary'}
+              onClick={() => handleDictionaryToggle(name)}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
