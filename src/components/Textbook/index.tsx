@@ -43,6 +43,9 @@ const Textbook = () => {
       }
     }
   }, [isListView, currentPage, dictionaries, selectedLevel, wordsPerPage]);
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedLevel]);
 
   const handleListViewChange = () => {
     setisListView(!isListView);
@@ -123,7 +126,7 @@ const Textbook = () => {
                 isListView={isListView}
               />
             ))}
-        {!isListView && endIndex + 1 < dictionaries[selectedLevel].dictionary.length && (
+        {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
           <div className={Styles.nextPage}>
             <button onClick={() => setCurrentPage(currentPage + 1)}>
               <p className="paragraph--p2">Next page →</p>
