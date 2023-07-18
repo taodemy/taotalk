@@ -102,7 +102,7 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={isListView ? '' : Styles.wordDetailGrid}>
+      <section className={isListView ? Styles.wordDetailList : Styles.wordDetailGrid}>
         {dictionaries[selectedLevel].dictionary.length > 0 &&
           dictionaries[selectedLevel].dictionary
             .slice(startIndex, endIndex)

@@ -6,14 +6,13 @@
 .textbook {
   display: flex;
   flex-direction: column;
+  gap: 40px;
   justify-content: center; 
   align-items: center;
   background-color: $greyLight;
 
   // styles for SubTitle
   .subheading{
-    margin-top: 40px;
-    margin-bottom: 40px;
     display: flex;
     gap:40px;
     .level{
@@ -75,7 +74,15 @@
     }
   }
 
-  // style for grid view
+  // style for list view
+  .wordDetailList{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    
+  }
+
+  // style for card view
   .wordDetailGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
