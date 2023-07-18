@@ -1,18 +1,51 @@
 import React from 'react';
 import Button from '../Shared/Buttons';
 import Styles from './textbook.module.scss';
-const PageNumber = () => {
+interface PageNumberProps {
+  totalWords: number;
+  wordsPerPage: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
+}
+
+const PageNumber = ({ totalWords, wordsPerPage, currentPage, onPageChange }: PageNumberProps) => {
+  const totalPages = Math.ceil(totalWords / wordsPerPage);
+
+  const handlePageChange = (page: number) => {
+    onPageChange(page);
+  };
   return (
     <div className={Styles.pageNumber}>
-      <Button outline={true} color={'cyan'} label="←" size="round" />
-      <Button outline={true} color={'cyan'} label="1" size="round" />
-      <Button outline={false} color={'cyanDark'} label="2" size="round" />
-      <Button outline={true} color={'cyan'} label="3" size="round" />
-      <p className="paragrahp--p1">...</p>
-      <Button outline={true} color={'cyan'} label="27" size="round" />
-      <Button outline={true} color={'cyan'} label="28" size="round" />
-      <Button outline={true} color={'cyan'} label="29" size="round" />
-      <Button outline={true} color={'cyan'} label="→" size="round" />
+      {currentPage > 1 && (
+        <Button
+          outline={true}
+          color="cyan"
+          label="←"
+          size="round"
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        />
+      )}
+      {Array.from({ length: totalPages }, (_, index) => (
+        <Button
+          outline={currentPage === index + 1 ? false : true}
+          color={currentPage === index + 1 ? 'cyanDark' : 'cyan'}
+          key={index}
+          onClick={() => handlePageChange(index + 1)}
+          label={(index + 1).toString()}
+          size="round"
+        />
+      ))}
+      {currentPage < totalPages && (
+        <Button
+          outline={true}
+          color="cyan"
+          label="→"
+          size="round"
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        />
+      )}
     </div>
   );
 };

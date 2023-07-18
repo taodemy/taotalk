@@ -78,9 +78,7 @@
   // style for grid view
   .wordDetailGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // 每行三列
-    grid-gap: 20px; // 设置网格之间的间距
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
   }
-  
-  
 }

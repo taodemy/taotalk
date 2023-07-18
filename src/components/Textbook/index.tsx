@@ -29,9 +29,19 @@ const Textbook = () => {
   const [selectedLevel, setSelectedLevel] = useState<string>('A1');
   const [listViewChecked, setListViewChecked] = useState(true);
   const [buttonViewChecked, setButtonViewChecked] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const wordsPerPage = listViewChecked ? 3 : 8;
+  const startIndex = (currentPage - 1) * wordsPerPage;
+  const endIndex = startIndex + wordsPerPage;
 
   const handleListViewChange = () => {
     setListViewChecked(!listViewChecked);
+    if (
+      !listViewChecked &&
+      currentPage > Math.ceil(dictionaries[selectedLevel].dictionary.length / 8)
+    ) {
+      setCurrentPage(1);
+    }
   };
 
   const handleButtonViewChange = () => {
@@ -85,35 +95,44 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={listViewChecked ? Styles.wordDetailList : Styles.wordDetailGrid}>
-        {dictionaries[selectedLevel].dictionary.length > 0 ? (
-          dictionaries[selectedLevel].dictionary.map((word, index) => (
-            <WordDetail
-              key={index}
-              name={word.name}
-              synonyms={word.synonyms}
-              phonetic={word.phonetic}
-              definition={word.definition}
-              example={word.example}
-              isLearnt={word.isLearnt}
-              inDictionary={word.inDictionary}
-              imgSrc={word.imgSrc}
-              encountered={word.encountered}
-              learned={word.learned}
-              bestSeries={word.bestSeries}
-              handleLearnedToggle={handleLearnedToggle}
-              handleDictionaryToggle={handleDictionaryToggle}
-              buttonViewChecked={buttonViewChecked}
-              listViewChecked={listViewChecked}
-            />
-          ))
-        ) : (
-          <Empty />
-        )}
+      <section className={listViewChecked ? '' : Styles.wordDetailGrid}>
+        {dictionaries[selectedLevel].dictionary.length > 0 &&
+          dictionaries[selectedLevel].dictionary
+            .slice(startIndex, endIndex)
+            .map((word, index) => (
+              <WordDetail
+                key={index}
+                name={word.name}
+                synonyms={word.synonyms}
+                phonetic={word.phonetic}
+                definition={word.definition}
+                example={word.example}
+                isLearnt={word.isLearnt}
+                inDictionary={word.inDictionary}
+                imgSrc={word.imgSrc}
+                encountered={word.encountered}
+                learned={word.learned}
+                bestSeries={word.bestSeries}
+                handleLearnedToggle={handleLearnedToggle}
+                handleDictionaryToggle={handleDictionaryToggle}
+                buttonViewChecked={buttonViewChecked}
+                listViewChecked={listViewChecked}
+              />
+            ))}
       </section>
+      {dictionaries[selectedLevel].dictionary.length < 1 && (
+        <section>
+          <Empty />
+        </section>
+      )}
       {dictionaries[selectedLevel].dictionary.length > 0 && (
         <section>
-          <PageNumber />
+          <PageNumber
+            totalWords={dictionaries[selectedLevel].dictionary.length}
+            wordsPerPage={wordsPerPage}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
         </section>
       )}
     </article>

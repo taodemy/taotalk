@@ -51,8 +51,8 @@
           "inDictionary": true,
           "imgSrc": "remark.png",
           "encountered": 0,
-          "learned": 0,
-          "bestSeries": 0
+          "learned": 1,
+          "bestSeries": 2
         },
         {
           "name": "aw",
@@ -63,9 +63,9 @@
           "isLearnt": true,
           "inDictionary": false,
           "imgSrc": "awful.png",
-          "encountered": 5,
-          "learned": 1,
-          "bestSeries": 0
+          "encountered": 4,
+          "learned": 3,
+          "bestSeries": 2
         },
         {
           "name": "rema",
@@ -76,9 +76,9 @@
           "isLearnt": false,
           "inDictionary": true,
           "imgSrc": "remark.png",
-          "encountered": 0,
-          "learned": 0,
-          "bestSeries": 0
+          "encountered": 1,
+          "learned": 2,
+          "bestSeries": 3
         },
         {
           "name": "awf",
@@ -89,7 +89,7 @@
           "isLearnt": true,
           "inDictionary": false,
           "imgSrc": "awful.png",
-          "encountered": 5,
+          "encountered": 0,
           "learned": 1,
           "bestSeries": 0
         },
@@ -103,8 +103,8 @@
           "inDictionary": true,
           "imgSrc": "remark.png",
           "encountered": 0,
-          "learned": 0,
-          "bestSeries": 0
+          "learned": 1,
+          "bestSeries": 4
         },
         {
           "name": "awfu",
@@ -117,7 +117,7 @@
           "imgSrc": "awful.png",
           "encountered": 5,
           "learned": 1,
-          "bestSeries": 0
+          "bestSeries": 4
         },
         {
           "name": "reee",
@@ -128,9 +128,9 @@
           "isLearnt": false,
           "inDictionary": true,
           "imgSrc": "remark.png",
-          "encountered": 0,
-          "learned": 0,
-          "bestSeries": 0
+          "encountered": 7,
+          "learned": 2,
+          "bestSeries": 4
         },
         {
           "name": "aww",
@@ -143,7 +143,7 @@
           "imgSrc": "awful.png",
           "encountered": 5,
           "learned": 1,
-          "bestSeries": 0
+          "bestSeries": 9
         }
       ]
     },
