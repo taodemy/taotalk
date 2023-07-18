@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Styles from './textbook.module.scss';
 import PageTitle from './PageTitle';
 import SubTitle from './SubTitle';
@@ -34,14 +34,17 @@ const Textbook = () => {
   const startIndex = (currentPage - 1) * wordsPerPage;
   const endIndex = startIndex + wordsPerPage;
 
+  useEffect(() => {
+    if (!listViewChecked) {
+      if (currentPage > Math.ceil(dictionaries[selectedLevel].dictionary.length / wordsPerPage)) {
+        const totalPages = Math.ceil(dictionaries[selectedLevel].dictionary.length / wordsPerPage);
+        setCurrentPage(totalPages > 0 ? totalPages : 1);
+      }
+    }
+  }, [listViewChecked, currentPage, dictionaries, selectedLevel, wordsPerPage]);
+
   const handleListViewChange = () => {
     setListViewChecked(!listViewChecked);
-    if (
-      !listViewChecked &&
-      currentPage > Math.ceil(dictionaries[selectedLevel].dictionary.length / 8)
-    ) {
-      setCurrentPage(1);
-    }
   };
 
   const handleButtonViewChange = () => {
