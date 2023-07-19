@@ -6,25 +6,41 @@ import styles from './OtherSections.module.scss';
 const OtherSections = () => {
   return (
     <>
-      <section className={styles.languageSectionContainer}>
-        <img src="/language.svg" alt="Language" className={styles.imgContainerfull} />
-        <div>
+      <section className="mx-auto grid px-[8px] py-[16px] lg:max-w-[1180px] lg:grid-cols-2 lg:gap-[120px] lg:py-[78px]">
+        <img
+          src="/language.svg"
+          alt="Language"
+          className="hidden md:visible md:mx-auto md:block md:h-[500px] lg:my-auto lg:h-[445px]"
+        />
+        <div className="flex flex-col items-center py-[60px] md:order-first md:py-[115px] lg:order-last lg:my-auto lg:items-start">
           <HeadingDescription
             headingContent="Learn a language in a playful way"
             descriptionContent="Make learning words more fun with mini-games"
           />
-          <div className={styles.languageButtonsGap}>
-            <div>
+          <div className="flex min-h-[150px] gap-[20px] lg:gap-[21px]">
+            <div className="flex flex-col">
+              <img
+                className="z-10 h-[112px] w-[134px] hover:translate-y-[-3px] lg:z-10 lg:h-[106px]"
+                src="/sprint.svg"
+                alt="sprint"
+              />
               <div>
-                <img className={styles.sprintImage} src="/sprint.svg" alt="sprint" />
+                <span className="p2 rounded-[14px] bg-tk_pinkLight px-[34px] pb-[14px] pt-[82px] font-bold text-tk_pinkDark">
+                  Sprint →
+                </span>
               </div>
-              <Button outline={false} color="pinkLight" label="Sprint →" />
             </div>
-            <div>
+            <div className="flex flex-col items-center">
+              <img
+                className="z-10 h-[112px] w-[112px] hover:translate-y-[-3px] lg:h-[106px]"
+                src="/audio-call.svg"
+                alt="video call"
+              />
               <div>
-                <img className={styles.audioCallImage} src="/audio-call.svg" alt="video call" />
+                <span className="p2 rounded-[14px] bg-tk_cyanLight px-[18px] pb-[14px] pt-[82px] font-bold text-tk_cyanDark lg:px-[34px] lg:pb-[14px] lg:pt-[82px]">
+                  Audio-call →
+                </span>
               </div>
-              <Button outline={false} color="cyanLight" label="Audio-call →" />
             </div>
           </div>
         </div>
