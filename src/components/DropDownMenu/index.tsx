@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface DropDownMenuProps {
   menuContent: string[];
@@ -9,9 +10,9 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ menuContent }) => {
       {menuContent.map((item, index) => (
         <li key={index} className="p2 pb-5 text-[#828282] hover:text-[#333]">
           {item === 'Sprint →' ? (
-            <a href="/sprint-summary">{item}</a>
+            <Link href="/sprint-summary">{item}</Link>
           ) : (
-            <a href="/audiocall-summary">{item}</a>
+            <Link href="/audiocall-summary">{item}</Link>
           )}
         </li>
       ))}
