@@ -6,14 +6,13 @@
 .textbook {
   display: flex;
   flex-direction: column;
+  gap: 40px;
   justify-content: center; 
   align-items: center;
   background-color: $greyLight;
 
   // styles for SubTitle
   .subheading{
-    margin-top: 40px;
-    margin-bottom: 40px;
     display: flex;
     gap:40px;
     .level{
@@ -74,5 +73,34 @@
       color: $black;
     }
   }
-  
+
+  // style for list view
+  .wordDetailList{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    
+  }
+
+  // style for card view
+  .wordDetailGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+  }
+
+  // style for next page div
+  .nextPage{
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    box-shadow: 0px 22.898128509521484px 45.79625701904297px -11.449064254760742px rgba(52, 41, 39, 0.08);
+    p{
+      color:$black;
+      font-weight: 700;
+      line-height: 100%;
+    }
+  }
 }
