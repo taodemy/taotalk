@@ -40,11 +40,19 @@ const Button = ({
   label = 'button',
   src,
   imgType = 'avatar',
+  onClick,
   ...otherProps
 }: ButtonProps) => {
   return {
     regular: (
-      <RegularButton color={color} outline={outline} label={label} size={size} {...otherProps} />
+      <RegularButton
+        color={color}
+        outline={outline}
+        label={label}
+        size={size}
+        onClick={onClick}
+        {...otherProps}
+      />
     ),
     image: src ? <ImageButton src={src} imgType={imgType} /> : <span>invalid img url</span>,
   }[variant];

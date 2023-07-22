@@ -4,8 +4,9 @@ import Head from 'next/head';
 import Layout from '../layout';
 import '../styles/global.scss';
 import '../styles/globals.css';
+import { SessionProvider } from 'next-auth/react';
 
-const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
+const TaoTalkApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
   return (
     <>
       <Head>
@@ -14,9 +15,11 @@ const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
         <meta name="description" content="TaoTalk" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <SessionProvider session={session} refetchInterval={5 * 60}> */}
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      {/* </SessionProvider> */}
     </>
   );
 };
