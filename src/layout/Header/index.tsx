@@ -71,16 +71,6 @@ const Header = ({ session }: { session: Session | null }) => {
             </div>
           </nav>
           <div className="flex gap-2 lg:hidden">
-            {/* <LogInButton userName={'Alex'} isSimplified={true} />
-            <div className="flex md:hidden">
-              <Image
-                src={isMenuShown ? '/material-symbols_close.svg' : '/material-symbols_menu.svg'}
-                width={24}
-                height={24}
-                alt={isMenuShown ? 'close' : 'menu'}
-                onClick={handleMouseClickOnMenuButton}
-              />
-            </div> */}
             {session !== null && session !== undefined ? (
               <LogInButton
                 userName={(session.user?.name ?? '').split(' ')[0]}
@@ -93,28 +83,28 @@ const Header = ({ session }: { session: Session | null }) => {
             )}
           </div>
         </div>
+        {isMenuShown && (
+          <div className="absolute top-[88px] z-10 flex h-[640px] w-full items-center justify-center bg-white md:hidden">
+            <ul className="text-center font-Dela_Gothic_One text-tk32 leading-8">
+              <li className="">Home</li>
+              <li className="my-[60px] text-tk_greyDark">Textbook</li>
+              <li className="my-[60px] text-tk_greyDark">Statistics</li>
+              <li
+                className="flex justify-center text-tk_greyDark"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                Games <img src="/down_arrow.svg" alt="down array"></img>
+                {isHovered && (
+                  <div className="absolute left-[250px] top-[480px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
+                    <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
+                  </div>
+                )}
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
-      {isMenuShown && (
-        <div className="absolute top-[88px] z-10 flex h-[640px] w-full items-center justify-center bg-white md:hidden">
-          <ul className="text-center font-Dela_Gothic_One text-tk32 leading-8">
-            <li className="">Home</li>
-            <li className="my-[60px] text-tk_greyDark">Textbook</li>
-            <li className="my-[60px] text-tk_greyDark">Statistics</li>
-            <li
-              className="flex justify-center text-tk_greyDark"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              Games <img src="/down_arrow.svg" alt="down array"></img>
-              {isHovered && (
-                <div className="absolute left-[250px] top-[480px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
-                  <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
-                </div>
-              )}
-            </li>
-          </ul>
-        </div>
-      )}
     </>
   );
 };
