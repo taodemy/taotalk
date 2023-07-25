@@ -5,10 +5,10 @@ import DropDownMenu from '../../components/DropDownMenu';
 import Button from '../../components/Shared/Buttons';
 import { signIn, signOut } from 'next-auth/react';
 import { useSession } from 'next-auth/react';
+import { Session } from 'next-auth';
 
-const Header = () => {
+const Header = ({ session }: { session: Session | null }) => {
   const [isHovered, setIsHovered] = useState(false);
-  // const { data: session } = useSession();
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -68,7 +68,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        {/* {session !== null && session !== undefined ? (
+        {session !== null && session !== undefined ? (
           <LogInButton
             userName={(session.user?.name ?? '').split(' ')[0]}
             onClick={() => signOut()}
@@ -77,7 +77,7 @@ const Header = () => {
           <div onClick={() => signIn()}>
             <Button outline={false} color="cyanDark" label="Sign in" />
           </div>
-        )} */}
+        )}
       </div>
     </header>
   );

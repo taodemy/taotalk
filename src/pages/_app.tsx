@@ -6,7 +6,7 @@ import '../styles/global.scss';
 import '../styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
 
-const TaoTalkApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps) => {
+const TaoTalkApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
@@ -15,11 +15,11 @@ const TaoTalkApp = ({ Component, pageProps: { session, ...pageProps } }: AppProp
         <meta name="description" content="TaoTalk" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <SessionProvider session={session} refetchInterval={5 * 60}> */}
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      {/* </SessionProvider> */}
+      <SessionProvider refetchInterval={5 * 60}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SessionProvider>
     </>
   );
 };
