@@ -2,9 +2,9 @@ import { useState } from 'react';
 import LogInButton from './LogInButton';
 import MenuButton from './MenuButton';
 import DropDownMenu from '../../components/DropDownMenu';
-import Image from 'next/image';
+import { Session } from 'next-auth';
 
-const Header = () => {
+const Header = ({ session }: { session: Session | null }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMenuShown, setIsMenuShown] = useState(false);
 
@@ -69,10 +69,8 @@ const Header = () => {
           <div className="flex gap-2 lg:hidden">
             <LogInButton userName={'Alex'} isSimplified={true} />
             <div className="flex md:hidden">
-              <Image
+              <img
                 src={isMenuShown ? '/material-symbols_close.svg' : '/material-symbols_menu.svg'}
-                width={24}
-                height={24}
                 alt={isMenuShown ? 'close' : 'menu'}
                 onClick={handleMouseClickOnMenuButton}
               />
