@@ -94,6 +94,7 @@ const Header = ({ session }: { session: Session | null }) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
+<<<<<<< HEAD
                 Games <img src="/down_arrow.svg" alt="down array"></img>
                 {isHovered && (
                   <div className="absolute left-[250px] top-[480px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
@@ -106,6 +107,53 @@ const Header = ({ session }: { session: Session | null }) => {
         )}
       </header>
     </>
+=======
+                Textbook
+              </Link>
+            </li>
+            <li>
+              <Link
+                title="Statistics"
+                href="#"
+                className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
+              >
+                Statistics
+              </Link>
+            </li>
+            <li
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link
+                title="Games"
+                href="#"
+                className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
+              >
+                Games
+                <img src="/down_arrow.svg" alt="down array"></img>
+              </Link>
+              {isHovered && (
+                <div className=" absolute top-[46px] w-[215px] rounded-[14px] bg-white shadow-[0_343px_343px_0_rgba(23,64,51,0.08)] ">
+                  <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
+                </div>
+              )}
+            </li>
+          </ul>
+        </nav>
+        {session !== null && session !== undefined ? (
+          <LogInButton
+            userName={(session.user?.name ?? '').split(' ')[0]}
+            onClick={() => signOut()}
+          />
+        ) : (
+          <div onClick={() => signIn()}>
+            <Button outline={false} color="cyanDark" label="Sign in" />
+          </div>
+        )}
+      </div>
+    </header>
+>>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
   );
 };
 
