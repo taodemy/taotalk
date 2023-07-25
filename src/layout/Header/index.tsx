@@ -7,7 +7,10 @@ import DropDownMenu from '../../components/DropDownMenu';
 import Link from 'next/link';
 import Button from '../../components/Shared/Buttons';
 import { signIn, signOut } from 'next-auth/react';
+<<<<<<< HEAD
 >>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
+=======
+>>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
 import { Session } from 'next-auth';
 
 const Header = ({ session }: { session: Session | null }) => {

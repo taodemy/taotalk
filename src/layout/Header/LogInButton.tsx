@@ -5,10 +5,13 @@ export interface LogInButtonProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LogInButton({ userName, isSimplified }: LogInButtonProps) {
 =======
 =======
 >>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
+=======
+>>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
 export default function LogInButton({
   userName,
   onClick,
@@ -17,9 +20,12 @@ export default function LogInButton({
   onClick: () => void;
 }) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 247fdcd (feat: implement sign in and signout using next auth)
 =======
 >>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
+=======
+>>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
   return (
     <div className="flex h-[40px] items-center gap-[30px]">
       <div className="flex items-center gap-[10px]">
@@ -28,6 +34,7 @@ export default function LogInButton({
         </div>
         {!isSimplified && <div className="p2">{userName}</div>}
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {!isSimplified && <div className="p2 font-bold text-black">Sign Out →</div>}
@@ -41,6 +48,11 @@ export default function LogInButton({
         Sign Out →
       </div>
 >>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
+=======
+      <div className={styles.account_label__sign_out} onClick={onClick}>
+        Sign Out →
+      </div>
+>>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
     </div>
   );
 }
