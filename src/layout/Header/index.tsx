@@ -2,6 +2,12 @@ import { useState } from 'react';
 import LogInButton from './LogInButton';
 import MenuButton from './MenuButton';
 import DropDownMenu from '../../components/DropDownMenu';
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+import Button from '../../components/Shared/Buttons';
+import { signIn, signOut } from 'next-auth/react';
+>>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
 import { Session } from 'next-auth';
 
 const Header = ({ session }: { session: Session | null }) => {
@@ -97,9 +103,25 @@ const Header = ({ session }: { session: Session | null }) => {
               )}
             </li>
           </ul>
+<<<<<<< HEAD
         </div>
       )}
     </>
+=======
+        </nav>
+        {session !== null && session !== undefined ? (
+          <LogInButton
+            userName={(session.user?.name ?? '').split(' ')[0]}
+            onClick={() => signOut()}
+          />
+        ) : (
+          <div onClick={() => signIn()}>
+            <Button outline={false} color="cyanDark" label="Sign in" />
+          </div>
+        )}
+      </div>
+    </header>
+>>>>>>> e5a5b3f (feat: implement sign in and signout using next auth)
   );
 };
 
