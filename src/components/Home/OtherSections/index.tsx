@@ -18,8 +18,6 @@ const OtherSections: React.FC<IIndexSectionsProps> = ({ data }) => {
         />
         <div className="flex flex-col items-center py-[60px] md:order-first md:py-[115px] lg:order-last lg:my-auto lg:items-start">
           <HeadingDescription
-            // headingContent="Learn a language in a playful way"
-            // descriptionContent="Make learning words more fun with mini-games"
             headingContent={language.heading}
             descriptionContent={language.description}
           />
@@ -55,8 +53,6 @@ const OtherSections: React.FC<IIndexSectionsProps> = ({ data }) => {
         <div className="mx-auto grid px-2 py-4 md:px-8 md:py-10 lg:max-w-[1180px] lg:grid-cols-2 lg:px-0 lg:pb-0 lg:pt-[26px]">
           <div className="mx-0 ml-0 flex flex-col py-4 md:py-[60px] lg:my-auto lg:ml-[100px] lg:block">
             <HeadingDescription
-              // headingContent="Increase your vocabulary"
-              // descriptionContent="Traditional and new effective approaches to word study"
               headingContent={vocabulary.heading}
               descriptionContent={vocabulary.description}
             />
@@ -78,8 +74,6 @@ const OtherSections: React.FC<IIndexSectionsProps> = ({ data }) => {
         />
         <div className="mx-0 flex flex-col pb-[60px] md:pb-[120px] md:pt-[60px] lg:my-auto lg:ml-auto lg:block lg:py-0 xl:max-w-[475px]">
           <HeadingDescription
-            // headingContent="Watch your progress every day"
-            // descriptionContent="Save statistics on your achievements, words learned, and mistakes"
             headingContent={progress.heading}
             descriptionContent={progress.description}
           />

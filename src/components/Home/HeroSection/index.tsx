@@ -12,15 +12,12 @@ const HeroSection: React.FC<IIndexSectionsProps> = ({ data }) => {
         <div className="grid overflow-hidden lg:grid-cols-[531px_minmax(900px,auto)]">
           <div className="mx-auto flex flex-col md:w-full lg:block lg:pt-[95px]">
             <p className="p2 pb-[24px] pt-[40px] text-center text-[12px] text-tk_cyanDark md:pt-[97px] lg:pb-[24px] lg:pt-0 lg:text-left lg:font-bold lg:uppercase lg:leading-[1rem] lg:tracking-[0.14em]">
-              {/* AI-powered chatting PLATFORM */}
               {hero.introduction}
             </p>
             <h1 className="mx-auto text-center text-[32px] md:max-w-[480px] md:text-[56px] lg:ml-0 lg:text-left">
-              {/* Learning and teaching online, made easy. */}
               {hero.heading}
             </h1>
             <p className="p1 mx-auto w-[304px] pb-[32px] pt-[30px] text-center text-[14px] md:w-[528px] md:text-[18px] lg:ml-0 lg:w-[397px] lg:text-left">
-              {/* Practice your English and learn new things with the platform. */}
               {hero.description}
             </p>
             <Button outline={false} color="cyanLight" label="About Platform" />
