@@ -9,7 +9,7 @@ export default function AudioCallCategoryPage() {
       <div className="shadow-[0_23px_46px_-12px_rgba(52, 41, 39, 0.08)] mx-auto max-w-[737px] rounded-[14px] bg-white">
         <div className="flex gap-[10px] py-[20px] pl-[50px]">
           <div className="hidden min-w-[250px] md:block">
-            <AudioGame />
+            <AudioGame alt="singing" />
           </div>
           <div className="mx-auto pr-[51px] sm:my-[63px] md:my-auto">
             <div className="flex gap-[10px] pb-[14px]">
