@@ -10,7 +10,7 @@ interface TitleListProps {
   labelColor: string;
   labelBgColor: string;
 }
-const TitleList: React.FC<TitleListProps> = ({
+export const TitleList: React.FC<TitleListProps> = ({
   titleName,
   labelName,
   labelColor,
@@ -34,7 +34,7 @@ interface SummaryFrameProps {
   children: ReactNode;
 }
 
-const SummaryFrame: React.FC<SummaryFrameProps> = ({ summaryHeader, children }) => {
+export const SummaryFrame: React.FC<SummaryFrameProps> = ({ summaryHeader, children }) => {
   return (
     <section className={styles.sprintSummaryContainer}>
       <div>

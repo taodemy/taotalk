@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import AudioCallQuizPage from '../../../src/pages/audiocall-quiz';
 import '@testing-library/jest-dom';
 
-describe('AudioCallPracticePage', () => {
+describe('AudioCallQuizPage', () => {
   beforeEach(() => {
     render(<AudioCallQuizPage />);
   });
@@ -34,6 +34,11 @@ describe('AudioCallPracticePage', () => {
 
   it('renders a Next button', () => {
     const button = screen.getByRole('button', { name: /Next/i });
+    expect(button).toBeInTheDocument();
+  });
+
+  it('renders a food profileCover button', () => {
+    const button = screen.getByRole('button', { name: /profile cover/i });
     expect(button).toBeInTheDocument();
   });
 });
