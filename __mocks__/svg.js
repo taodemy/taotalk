@@ -1,5 +1,3 @@
-// export default 'SvgrURL';
-// export const ReactComponent = 'div';
 import React from 'react';
 
 const svgMock = (...props) => {
