@@ -3,7 +3,7 @@ import styles from './Buttons.module.scss';
 
 export type RegularButtonProps = {
   color?: ButtonColor;
-  size?: 'normal' | 'round';
+  size?: 'normal' | 'round' | 'rectangle';
   outline: boolean;
   label?: string;
 } & React.ComponentProps<'button'>;
@@ -52,6 +52,7 @@ const RegularButton = ({
   const buttonSize = {
     normal: styles.normalButton,
     round: styles.roundButton,
+    rectangle: styles.rectangleButton,
   };
   return (
     <button

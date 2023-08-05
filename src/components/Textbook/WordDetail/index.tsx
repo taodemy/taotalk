@@ -2,6 +2,7 @@ import React from 'react';
 import Styles from './wordDetail.module.scss';
 import Button from '../../Shared/Buttons';
 import Play from '../../../../public/play.svg';
+import { log } from 'console';
 
 interface WordDetailProps {
   name: string;

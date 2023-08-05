@@ -6,18 +6,17 @@
   } @else if $size == 'round' {
     width: 44px;
     height: 44px;
+  } @else if $size == 'rectangle' {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.48px;
+    border-radius: 4px;
+    padding: 4px 8px;
   } @else {
     // Default case
     padding: 14px 22px;
   }
-}
-
-.normalButton {
-  @include setButtonSize('normal');
-}
-
-.roundButton {
-  @include setButtonSize('round');
 }
 
 .button {
@@ -30,6 +29,16 @@
   letter-spacing: -0.04em;
 }
 
+.normalButton {
+  @include setButtonSize('normal');
+}
+
+.roundButton {
+  @include setButtonSize('round');
+}
+.rectangleButton {
+  @include setButtonSize('rectangle');
+}
 /*** Normal Button ***/
 .buttonCyanLightColor {
   background: $cyanDark;

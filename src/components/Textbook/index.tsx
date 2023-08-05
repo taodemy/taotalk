@@ -84,14 +84,14 @@ const Textbook = () => {
   };
 
   return (
-    <article className={Styles.textbook}>
+    <article className="flex flex-col items-center justify-center gap-10 bg-tk_greyLight">
       <PageTitle
         isListView={isListView}
         isButtonShow={isButtonShow}
         handleListViewChange={handleListViewChange}
         handleButtonViewChange={handleButtonViewChange}
       />
-      <section className={Styles.subheading}>
+      <section className="flex gap-10">
         {Object.keys(dictionaries).map((key) => (
           <SubTitle
             key={key}
