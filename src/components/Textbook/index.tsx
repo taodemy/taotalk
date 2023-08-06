@@ -135,7 +135,7 @@ const Textbook = () => {
         )}
       </section>
       {dictionaries[selectedLevel].dictionary.length < 1 && (
-        <section>
+        <section className="w-[800px]">
           <Empty />
         </section>
       )}
