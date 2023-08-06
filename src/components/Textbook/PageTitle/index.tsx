@@ -61,7 +61,7 @@ const PageTitle = ({
           </div>
 
           {isDropdownOpen && (
-            <div className="shadow-checkbox absolute right-0 top-[42px] flex w-max rounded-[14px] border border-tk_greyLight bg-white p-5">
+            <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] absolute right-0 top-[42px] flex w-max rounded-[14px] border border-tk_greyLight bg-white p-5">
               <ul className="flex flex-col gap-5">
                 <li className="group flex gap-[10px]">
                   <label className="relative cursor-pointer pl-[30px]" htmlFor="listViewCheck">

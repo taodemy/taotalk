@@ -3,7 +3,7 @@ import Button from '../Shared/Buttons';
 
 const Empty = () => {
   return (
-    <div className="flex gap-[30px] rounded-[14px] bg-white p-10 shadow-lg">
+    <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex gap-[30px] rounded-[14px] bg-white p-10">
       <img className="w-200 h-200" src="empty.svg" alt="empty image" />
       <div className="flex flex-col justify-center gap-10">
         <div className="flex flex-col gap-3.5">

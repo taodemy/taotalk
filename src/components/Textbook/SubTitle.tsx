@@ -1,5 +1,4 @@
 import React from 'react';
-import Styles from './textbook.module.scss';
 import Button from '../Shared/Buttons';
 
 interface SubTitleProps {

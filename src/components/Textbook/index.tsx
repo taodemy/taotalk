@@ -102,7 +102,7 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={isListView ? Styles.wordDetailList : Styles.wordDetailGrid}>
+      <section className={isListView ? 'flex flex-col gap-10' : 'grid grid-cols-3 gap-5'}>
         {dictionaries[selectedLevel].dictionary.length > 0 &&
           dictionaries[selectedLevel].dictionary
             .slice(startIndex, endIndex)
@@ -127,9 +127,9 @@ const Textbook = () => {
               />
             ))}
         {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
-          <div className={Styles.nextPage}>
+          <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex items-center justify-center rounded-[14px] bg-white">
             <button onClick={() => setCurrentPage(currentPage + 1)}>
-              <p className="paragraph--p2">Next page →</p>
+              <p className="paragraph--p2 font-bold leading-normal text-black">Next page →</p>
             </button>
           </div>
         )}
