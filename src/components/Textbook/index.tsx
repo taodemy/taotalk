@@ -100,38 +100,41 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={isListView ? 'flex flex-col gap-10' : 'grid grid-cols-3 gap-5'}>
-        {dictionaries[selectedLevel].dictionary.length > 0 &&
-          dictionaries[selectedLevel].dictionary
-            .slice(startIndex, endIndex)
-            .map((word, index) => (
-              <WordDetail
-                key={index}
-                name={word.name}
-                synonyms={word.synonyms}
-                phonetic={word.phonetic}
-                definition={word.definition}
-                example={word.example}
-                isLearnt={word.isLearnt}
-                inDictionary={word.inDictionary}
-                imgSrc={word.imgSrc}
-                encountered={word.encountered}
-                learned={word.learned}
-                bestSeries={word.bestSeries}
-                handleLearnedToggle={handleLearnedToggle}
-                handleDictionaryToggle={handleDictionaryToggle}
-                isButtonShow={isButtonShow}
-                isListView={isListView}
-              />
-            ))}
-        {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
-          <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex items-center justify-center rounded-[14px] bg-white">
-            <button onClick={() => setCurrentPage(currentPage + 1)}>
-              <p className="paragraph--p2 font-bold leading-normal text-black">Next page →</p>
-            </button>
-          </div>
-        )}
-      </section>
+      {dictionaries[selectedLevel].dictionary.length > 0 && (
+        <section className={isListView ? 'flex flex-col gap-10' : 'grid grid-cols-3 gap-5'}>
+          {dictionaries[selectedLevel].dictionary.length > 0 &&
+            dictionaries[selectedLevel].dictionary
+              .slice(startIndex, endIndex)
+              .map((word, index) => (
+                <WordDetail
+                  key={index}
+                  name={word.name}
+                  synonyms={word.synonyms}
+                  phonetic={word.phonetic}
+                  definition={word.definition}
+                  example={word.example}
+                  isLearnt={word.isLearnt}
+                  inDictionary={word.inDictionary}
+                  imgSrc={word.imgSrc}
+                  encountered={word.encountered}
+                  learned={word.learned}
+                  bestSeries={word.bestSeries}
+                  handleLearnedToggle={handleLearnedToggle}
+                  handleDictionaryToggle={handleDictionaryToggle}
+                  isButtonShow={isButtonShow}
+                  isListView={isListView}
+                />
+              ))}
+          {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
+            <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex items-center justify-center rounded-[14px] bg-white">
+              <button onClick={() => setCurrentPage(currentPage + 1)}>
+                <p className="paragraph--p2 font-bold leading-normal text-black">Next page →</p>
+              </button>
+            </div>
+          )}
+        </section>
+      )}
+
       {dictionaries[selectedLevel].dictionary.length < 1 && (
         <section className="w-[800px]">
           <Empty />
