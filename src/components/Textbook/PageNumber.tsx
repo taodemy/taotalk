@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Shared/Buttons';
-import Styles from './textbook.module.scss';
+
 interface PageNumberProps {
   totalWords: number;
   wordsPerPage: number;
@@ -15,7 +15,7 @@ const PageNumber = ({ totalWords, wordsPerPage, currentPage, onPageChange }: Pag
     onPageChange(page);
   };
   return (
-    <div className={Styles.pageNumber}>
+    <div className="flex items-end gap-[24px]">
       {currentPage > 1 && (
         <Button
           outline={true}

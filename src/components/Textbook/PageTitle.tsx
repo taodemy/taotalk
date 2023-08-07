@@ -1,5 +1,5 @@
 import React from 'react';
-import Setting from '../../../../public/setting.svg';
+import Setting from '../../../public/setting.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 
