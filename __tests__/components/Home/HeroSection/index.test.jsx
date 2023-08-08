@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react';
-import Home from '../../../src/pages/index';
+import HeroSection from '../../../../src/components/Home/HeroSection';
 import '@testing-library/jest-dom';
+import { indexMockData } from '../../../../mockData/IndexMockData';
 
-describe('Home', () => {
+describe('HeroSection', () => {
   beforeEach(() => {
-    render(<Home />);
+    render(<HeroSection data={indexMockData} />);
   });
   // Tests for Hero section
   it('renders a hero subheading', () => {
-    const subheading = screen.getByText('AI-powered chatting PLATFORM');
+    const subheading = screen.getByText('AI-POWERED CHATTING PLATFORM');
     expect(subheading).toBeInTheDocument();
   });
 
