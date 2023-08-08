@@ -8,7 +8,7 @@ export interface DashProps {
   maxValue?: number;
 }
 
-const SummaryDash: React.FC<DashProps> = ({ progressValue, maxValue }) => {
+export const SummaryDash: React.FC<DashProps> = ({ progressValue, maxValue }) => {
   return (
     <div className={styles.summaryDash}>
       <p className="paragraph--p3">{maxValue ? `${maxValue}/` : 'retrieved'}</p>
