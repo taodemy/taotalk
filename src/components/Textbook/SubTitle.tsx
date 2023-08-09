@@ -1,5 +1,4 @@
 import React from 'react';
-import Styles from './textbook.module.scss';
 import Button from '../Shared/Buttons';
 
 interface SubTitleProps {
@@ -37,15 +36,18 @@ const SubTitle = (props: SubTitleProps) => {
 
   return (
     <div
-      className={props.selected === props.name ? Styles.selectedLevel : Styles.level}
+      className={`flex items-center gap-3 pb-3 ${
+        props.selected === props.name && 'border-b-2 border-black'
+      }`}
       onClick={handleContainerClick}
     >
-      <h4 className="heading--h4">{props.name}</h4>
+      <h4 className={`${props.selected !== props.name && 'text-tk_greyDark'}`}>{props.name}</h4>
       <Button
         outline={false}
         color={getColor()}
         label={props.level}
         onClick={handleButtonClick}
+        size="rectangle"
       ></Button>
     </div>
   );

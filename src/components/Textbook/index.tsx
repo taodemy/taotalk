@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Styles from './textbook.module.scss';
 import PageTitle from './PageTitle';
 import SubTitle from './SubTitle';
 import WordDetail from './WordDetail';
@@ -8,7 +7,6 @@ import Empty from './Empty';
 import PageNumber from './PageNumber';
 
 import dictionaryData from './dictionaryData.json';
-import Button from '../Shared/Buttons';
 const Textbook = () => {
   interface Word {
     name: string;
@@ -84,14 +82,14 @@ const Textbook = () => {
   };
 
   return (
-    <article className={Styles.textbook}>
+    <article className="flex flex-col items-center justify-center gap-10 bg-tk_greyLight">
       <PageTitle
         isListView={isListView}
         isButtonShow={isButtonShow}
         handleListViewChange={handleListViewChange}
         handleButtonViewChange={handleButtonViewChange}
       />
-      <section className={Styles.subheading}>
+      <section className="flex gap-10">
         {Object.keys(dictionaries).map((key) => (
           <SubTitle
             key={key}
@@ -102,40 +100,43 @@ const Textbook = () => {
           />
         ))}
       </section>
-      <section className={isListView ? Styles.wordDetailList : Styles.wordDetailGrid}>
-        {dictionaries[selectedLevel].dictionary.length > 0 &&
-          dictionaries[selectedLevel].dictionary
-            .slice(startIndex, endIndex)
-            .map((word, index) => (
-              <WordDetail
-                key={index}
-                name={word.name}
-                synonyms={word.synonyms}
-                phonetic={word.phonetic}
-                definition={word.definition}
-                example={word.example}
-                isLearnt={word.isLearnt}
-                inDictionary={word.inDictionary}
-                imgSrc={word.imgSrc}
-                encountered={word.encountered}
-                learned={word.learned}
-                bestSeries={word.bestSeries}
-                handleLearnedToggle={handleLearnedToggle}
-                handleDictionaryToggle={handleDictionaryToggle}
-                isButtonShow={isButtonShow}
-                isListView={isListView}
-              />
-            ))}
-        {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
-          <div className={Styles.nextPage}>
-            <button onClick={() => setCurrentPage(currentPage + 1)}>
-              <p className="paragraph--p2">Next page →</p>
-            </button>
-          </div>
-        )}
-      </section>
+      {dictionaries[selectedLevel].dictionary.length > 0 && (
+        <section className={isListView ? 'flex flex-col gap-10' : 'grid grid-cols-3 gap-5'}>
+          {dictionaries[selectedLevel].dictionary.length > 0 &&
+            dictionaries[selectedLevel].dictionary
+              .slice(startIndex, endIndex)
+              .map((word, index) => (
+                <WordDetail
+                  key={index}
+                  name={word.name}
+                  synonyms={word.synonyms}
+                  phonetic={word.phonetic}
+                  definition={word.definition}
+                  example={word.example}
+                  isLearnt={word.isLearnt}
+                  inDictionary={word.inDictionary}
+                  imgSrc={word.imgSrc}
+                  encountered={word.encountered}
+                  learned={word.learned}
+                  bestSeries={word.bestSeries}
+                  handleLearnedToggle={handleLearnedToggle}
+                  handleDictionaryToggle={handleDictionaryToggle}
+                  isButtonShow={isButtonShow}
+                  isListView={isListView}
+                />
+              ))}
+          {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
+            <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex items-center justify-center rounded-[14px] bg-white">
+              <button onClick={() => setCurrentPage(currentPage + 1)}>
+                <p className="p2 font-bold leading-normal text-black">Next page →</p>
+              </button>
+            </div>
+          )}
+        </section>
+      )}
+
       {dictionaries[selectedLevel].dictionary.length < 1 && (
-        <section>
+        <section className="w-[800px]">
           <Empty />
         </section>
       )}

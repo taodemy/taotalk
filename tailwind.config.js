@@ -22,6 +22,7 @@ module.exports = {
       xl: '1920px',
       // => @media (min-width: 1920px) { ... }
     },
+
     extend: {
       fontFamily: {
         Dela_Gothic_One: 'Dela Gothic One',
@@ -56,6 +57,7 @@ module.exports = {
         tk_red: '#a95151',
         tk_yellow: '#c4a24c',
         tk_orange: '#cb5b43',
+        tk_check: '#F8FAFB;',
       },
     },
   },
