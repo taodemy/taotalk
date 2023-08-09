@@ -7,8 +7,8 @@ const Empty = () => {
       <img className="w-200 h-200" src="empty.svg" alt="empty image" />
       <div className="flex flex-col justify-center gap-10">
         <div className="flex flex-col gap-3.5">
-          <h3 className="heading--h3">No words in this section yet</h3>
-          <p className="paragraph--p2">
+          <h3>No words in this section yet</h3>
+          <p className="p2">
             To save difficult words for further study, go to the textbook and select &apos;add to
             dictionary &apos;
           </p>

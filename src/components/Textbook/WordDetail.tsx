@@ -81,7 +81,7 @@ const WordDetail = ({
       >
         <div className={`flex flex-col ${isListView ? 'gap-[12px]' : 'gap-[16px]'}`}>
           <div className={`${isListView && 'flex justify-between'}`}>
-            <h3 className={`heading--h3 flex ${isListView ? 'gap-[12px]' : 'flex-col gap-[8px]'}`}>
+            <h3 className={`flex ${isListView ? 'gap-[12px]' : 'flex-col gap-[8px]'}`}>
               {name}
               {isListView && <span>/</span>}
               <span className="text-tk_greyDark">{synonyms}</span>
@@ -97,13 +97,13 @@ const WordDetail = ({
             )}
           </div>
 
-          <p className="paragraph--p2 tracking-[0.04rem] text-black">{phonetic}</p>
+          <p className="p2 tracking-[0.04rem] text-black">{phonetic}</p>
         </div>
 
         <div className="flex flex-col gap-[12px]">
-          <p className={`paragraph--p2 font-medium leading-normal text-black`}>{definition}</p>
+          <p className={`p2 font-medium leading-normal text-black`}>{definition}</p>
           <hr />
-          <p className="paragraph--p2 font-medium leading-normal">{example}</p>
+          <p className="p2 font-medium leading-normal">{example}</p>
         </div>
         {isButtonShow && (
           <div className={`flex ${isListView ? 'gap-[20px]' : 'flex-col gap-[10px]'}`}>

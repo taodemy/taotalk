@@ -41,9 +41,7 @@ const SubTitle = (props: SubTitleProps) => {
       }`}
       onClick={handleContainerClick}
     >
-      <h4 className={`heading--h4 ${props.selected !== props.name && 'text-tk_greyDark'}`}>
-        {props.name}
-      </h4>
+      <h4 className={`${props.selected !== props.name && 'text-tk_greyDark'}`}>{props.name}</h4>
       <Button
         outline={false}
         color={getColor()}

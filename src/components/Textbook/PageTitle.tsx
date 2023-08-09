@@ -24,7 +24,7 @@ const PageTitle = ({
     <section className="flex w-[1180px] items-center justify-between rounded-[14px] bg-white p-5">
       <div className="flex gap-[10px]">
         <img src="hat.svg" alt="textbook icon" />
-        <h4 className="heading--h4">Textbook</h4>
+        <h4>Textbook</h4>
       </div>
 
       <div className="flex gap-[10px]">
@@ -32,7 +32,7 @@ const PageTitle = ({
           <Link href="/sprint-summary">
             <button className="flex items-center rounded-[14px] bg-tk_pinkLight group-hover:bg-tk_pinkDark">
               <img src="shoe.svg" alt="sprint icon" />
-              <p className="paragraph--p2 ml-[9px] mr-[45px] font-bold text-tk_pinkDark group-hover:text-white">
+              <p className=" ml-[9px] mr-[45px] font-bold text-tk_pinkDark group-hover:text-white">
                 Sprint
               </p>
             </button>
@@ -42,7 +42,7 @@ const PageTitle = ({
           <Link href="/audiocall-summary">
             <button className="flex items-center rounded-[14px] bg-tk_cyanLight group-hover:bg-tk_cyanDark">
               <img src="speaker.svg" alt="audio-call icon" />
-              <p className="paragraph--p2 ml-[15px] mr-[37px] font-bold text-tk_cyanDark group-hover:text-white">
+              <p className="p2 ml-[15px] mr-[37px] font-bold text-tk_cyanDark group-hover:text-white">
                 Audio-Call
               </p>
             </button>
@@ -65,9 +65,7 @@ const PageTitle = ({
               <ul className="flex flex-col gap-5">
                 <li className="group flex gap-[10px]">
                   <label className="relative cursor-pointer pl-[30px]" htmlFor="listViewCheck">
-                    <p className={`paragraph--p2 ${isListView && 'text-black'}`}>
-                      Show words in a list
-                    </p>
+                    <p className={`p2 ${isListView && 'text-black'}`}>Show words in a list</p>
                     <input
                       className="absolute cursor-pointer opacity-0"
                       type="checkbox"
@@ -78,9 +76,10 @@ const PageTitle = ({
                       onChange={handleListViewChange}
                     />
                     <span
-                      className={`absolute left-0 top-0 h-[20px] w-[20px] rounded-[4px] border border-tk_greyIcon bg-tk_check${
+                      className={`absolute left-0 top-0 h-[20px] w-[20px] rounded-[4px] border border-tk_greyIcon bg-tk_check ${
                         !isListView && 'group-hover:bg-tk_greyLight'
-                      } ${
+                      } ${isListView && 'border border-white bg-tk_cyanDark'}
+                      ${
                         isListView &&
                         'after:contents-[] border-white bg-tk_cyanDark after:ml-[2px] after:mt-1 after:block after:h-[6px] after:w-[12px] after:rotate-[135deg] after:transform after:border-0 after:border-r-[2px] after:border-t-[2px] after:border-white'
                       }`}
@@ -89,7 +88,7 @@ const PageTitle = ({
                 </li>
                 <li className="group flex gap-[10px]">
                   <label className="relative cursor-pointer pl-[30px]" htmlFor="buttonViewCheck">
-                    <p className={`paragraph--p2 ${isButtonShow && 'text-black'}`}>
+                    <p className={`p2 ${isButtonShow && 'text-black'}`}>
                       Display the &apos;Add&apos; and &apos;Remove&apos; buttons
                     </p>
                     <input

@@ -128,7 +128,7 @@ const Textbook = () => {
           {!isListView && endIndex < dictionaries[selectedLevel].dictionary.length && (
             <div className="shadow-[0_23px_46px_-11px_rgba(52, 41, 39, 0.08)] flex items-center justify-center rounded-[14px] bg-white">
               <button onClick={() => setCurrentPage(currentPage + 1)}>
-                <p className="paragraph--p2 font-bold leading-normal text-black">Next page →</p>
+                <p className="p2 font-bold leading-normal text-black">Next page →</p>
               </button>
             </div>
           )}
