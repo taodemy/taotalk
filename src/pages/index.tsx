@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_API_URL}/indexPage`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_WEBSITE_SERVER_URL}/indexPage`);
         if (res.ok) {
           const data = await res.json();
           setData(data);
