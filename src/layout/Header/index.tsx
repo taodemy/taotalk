@@ -30,17 +30,21 @@ const Header = () => {
               <span className="text-tk_greyMedium">|</span>
               <ul className="flex items-center">
                 <li>
-                  <a title="Home" href="/" className="p2 pr-[30px] text-black">
+                  <a title="Home" href="/" className="p2 pr-[30px] hover:text-black">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a title="Textbook" href="/textbook" className="p2 pr-[30px]">
+                  <a title="Textbook" href="/textbook" className="p2 pr-[30px] hover:text-black">
                     Textbook
                   </a>
                 </li>
                 <li>
-                  <a title="Statistics" href="#" className="p2 pr-[30px]">
+                  <a
+                    title="Statistics"
+                    href="/statistics-content"
+                    className="p2 pr-[30px] hover:text-black"
+                  >
                     Statistics
                   </a>
                 </li>
@@ -49,7 +53,7 @@ const Header = () => {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <a title="Games" href="#" className="p2 flex pr-[30px]">
+                  <a title="Games" href="#" className="p2 flex pr-[30px] hover:text-black">
                     Games
                     <img src="/down_arrow.svg" alt="down arrow"></img>
                   </a>
