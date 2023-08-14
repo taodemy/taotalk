@@ -93,15 +93,15 @@
 }
 
 .buttonGreenColor {
-  @include colorSwapBack($green, $greenLight)
+  @include colorSwapBack($green, $greenLight);
 }
 
 .buttonYellowColor {
-  @include colorSwapBack($yellow, $yellowLight)
+  @include colorSwapBack($yellow, $yellowLight);
 }
 
 .buttonOrangeColor {
-  @include colorSwapBack($orange, $orangeLight)
+  @include colorSwapBack($orange, $orangeLight);
 }
 /*** BouncingImageButton ***/
 .buttonPopup {
