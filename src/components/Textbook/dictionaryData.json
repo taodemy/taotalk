@@ -1,155 +1,8 @@
 {
-    "A1": {
-      "level": "Easy",
-      "dictionary": [
-        {
-          "name": "remark",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 0,
-          "learned": 0,
-          "bestSeries": 0
-        },
-        {
-          "name": "awful",
-          "synonyms": "terrible",
-          "phonetic": "[ɔ́ːfəl]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": true,
-          "inDictionary": false,
-          "imgSrc": "awful.png",
-          "encountered": 5,
-          "learned": 1,
-          "bestSeries": 0
-        },
-        {
-          "name": "re",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 1,
-          "learned": 1,
-          "bestSeries": 2
-        },
-        {
-          "name": "rem",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 0,
-          "learned": 1,
-          "bestSeries": 2
-        },
-        {
-          "name": "aw",
-          "synonyms": "terrible",
-          "phonetic": "[ɔ́ːfəl]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": true,
-          "inDictionary": false,
-          "imgSrc": "awful.png",
-          "encountered": 4,
-          "learned": 3,
-          "bestSeries": 2
-        },
-        {
-          "name": "rema",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 1,
-          "learned": 2,
-          "bestSeries": 3
-        },
-        {
-          "name": "awf",
-          "synonyms": "terrible",
-          "phonetic": "[ɔ́ːfəl]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": true,
-          "inDictionary": false,
-          "imgSrc": "awful.png",
-          "encountered": 0,
-          "learned": 1,
-          "bestSeries": 0
-        },
-        {
-          "name": "remar",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 0,
-          "learned": 1,
-          "bestSeries": 4
-        },
-        {
-          "name": "awfu",
-          "synonyms": "terrible",
-          "phonetic": "[ɔ́ːfəl]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": true,
-          "inDictionary": false,
-          "imgSrc": "awful.png",
-          "encountered": 5,
-          "learned": 1,
-          "bestSeries": 4
-        },
-        {
-          "name": "reee",
-          "synonyms": "note",
-          "phonetic": "[rimɑ́ːrk]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": false,
-          "inDictionary": true,
-          "imgSrc": "remark.png",
-          "encountered": 7,
-          "learned": 2,
-          "bestSeries": 4
-        },
-        {
-          "name": "aww",
-          "synonyms": "terrible",
-          "phonetic": "[ɔ́ːfəl]",
-          "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
-          "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
-          "isLearnt": true,
-          "inDictionary": false,
-          "imgSrc": "awful.png",
-          "encountered": 5,
-          "learned": 1,
-          "bestSeries": 9
-        }
-      ]
-    },
-    "A2": {
-      "level": "Easy",
-      "dictionary": [{
+  "A1": {
+    "level": "Easy",
+    "dictionary": [
+      {
         "name": "remark",
         "synonyms": "note",
         "phonetic": "[rimɑ́ːrk]",
@@ -278,11 +131,26 @@
         "encountered": 7,
         "learned": 2,
         "bestSeries": 4
-      }]
-    },
-    "B1": {
-      "level": "Medium",
-      "dictionary": [{
+      },
+      {
+        "name": "aww",
+        "synonyms": "terrible",
+        "phonetic": "[ɔ́ːfəl]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": true,
+        "inDictionary": false,
+        "imgSrc": "awful.png",
+        "encountered": 5,
+        "learned": 1,
+        "bestSeries": 9
+      }
+    ]
+  },
+  "A2": {
+    "level": "Easy",
+    "dictionary": [
+      {
         "name": "remark",
         "synonyms": "note",
         "phonetic": "[rimɑ́ːrk]",
@@ -398,19 +266,154 @@
         "encountered": 5,
         "learned": 1,
         "bestSeries": 4
-      }]
-    },
-    "B2": {
-      "level": "Medium",
-      "dictionary": []
-    },
-    "C1": {
-      "level": "Hard",
-      "dictionary": []
-    },
-    "C2": {
-      "level": "Hard",
-      "dictionary": []
-    }
+      },
+      {
+        "name": "reee",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 7,
+        "learned": 2,
+        "bestSeries": 4
+      }
+    ]
+  },
+  "B1": {
+    "level": "Medium",
+    "dictionary": [
+      {
+        "name": "remark",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 0,
+        "learned": 0,
+        "bestSeries": 0
+      },
+      {
+        "name": "awful",
+        "synonyms": "terrible",
+        "phonetic": "[ɔ́ːfəl]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": true,
+        "inDictionary": false,
+        "imgSrc": "awful.png",
+        "encountered": 5,
+        "learned": 1,
+        "bestSeries": 0
+      },
+      {
+        "name": "re",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 1,
+        "learned": 1,
+        "bestSeries": 2
+      },
+      {
+        "name": "rem",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 0,
+        "learned": 1,
+        "bestSeries": 2
+      },
+      {
+        "name": "aw",
+        "synonyms": "terrible",
+        "phonetic": "[ɔ́ːfəl]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": true,
+        "inDictionary": false,
+        "imgSrc": "awful.png",
+        "encountered": 4,
+        "learned": 3,
+        "bestSeries": 2
+      },
+      {
+        "name": "rema",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 1,
+        "learned": 2,
+        "bestSeries": 3
+      },
+      {
+        "name": "awf",
+        "synonyms": "terrible",
+        "phonetic": "[ɔ́ːfəl]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": true,
+        "inDictionary": false,
+        "imgSrc": "awful.png",
+        "encountered": 0,
+        "learned": 1,
+        "bestSeries": 0
+      },
+      {
+        "name": "remar",
+        "synonyms": "note",
+        "phonetic": "[rimɑ́ːrk]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": false,
+        "inDictionary": true,
+        "imgSrc": "remark.png",
+        "encountered": 0,
+        "learned": 1,
+        "bestSeries": 4
+      },
+      {
+        "name": "awfu",
+        "synonyms": "terrible",
+        "phonetic": "[ɔ́ːfəl]",
+        "definition": "To remark is to say something. - Remarquer, c'est dire quelque chose",
+        "example": "The teacher remarked on how quickly the students were learning. L'enseignant a noté la rapidité avec laquelle les élèves apprenaient.",
+        "isLearnt": true,
+        "inDictionary": false,
+        "imgSrc": "awful.png",
+        "encountered": 5,
+        "learned": 1,
+        "bestSeries": 4
+      }
+    ]
+  },
+  "B2": {
+    "level": "Medium",
+    "dictionary": []
+  },
+  "C1": {
+    "level": "Hard",
+    "dictionary": []
+  },
+  "C2": {
+    "level": "Hard",
+    "dictionary": []
   }
-  
+}
