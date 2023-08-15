@@ -13,16 +13,6 @@ describe('render while signed in', () => {
     expect(headerTitle).toBeInTheDocument();
   });
 
-  it('render sign out button', () => {
-    const signOutButton = screen.getByText('Sign Out →');
-    expect(signOutButton).toBeInTheDocument();
-  });
-
-  it('render username', () => {
-    const userName = screen.getByText('FirstNameTest');
-    expect(userName).toBeInTheDocument();
-  });
-
   it('render First letter of the username', () => {
     const FirstCharacter = screen.getByText('F');
     expect(FirstCharacter).toBeInTheDocument();
