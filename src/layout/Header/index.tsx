@@ -2,8 +2,6 @@ import { useState } from 'react';
 import LogInButton from './LogInButton';
 import MenuButton from './MenuButton';
 import DropDownMenu from '../../components/DropDownMenu';
-import Image from 'next/image';
-import Link from 'next/link';
 import Button from '../../components/Shared/Buttons';
 import { signIn, signOut } from 'next-auth/react';
 import { Session } from 'next-auth';
@@ -70,31 +68,46 @@ const Header = ({ session }: { session: Session | null }) => {
               </ul>
             </div>
           </nav>
-          <div className="flex gap-2 lg:hidden">
+          <div className="flex gap-2">
             {session !== null && session !== undefined ? (
-              <LogInButton
-                userName={(session.user?.name ?? '').split(' ')[0]}
-                onClick={() => signOut()}
-              />
+              <>
+                <LogInButton
+                  userName={(session.user?.name ?? '').split(' ')[0]}
+                  onClick={() => signOut()}
+                />
+                <div className="my-auto md:hidden">
+                  <MenuButton isMenuShown={isMenuShown} onClick={handleMouseClickOnMenuButton} />
+                </div>
+              </>
             ) : (
-              <div onClick={() => signIn()}>
-                <Button outline={false} color="cyanDark" label="Sign in" />
-              </div>
+              <>
+                <div onClick={() => signIn()}>
+                  <Button outline={false} color="cyanDark" label="Sign in" />
+                </div>
+                <div className="my-auto md:hidden">
+                  <MenuButton isMenuShown={isMenuShown} onClick={handleMouseClickOnMenuButton} />
+                </div>
+              </>
             )}
           </div>
         </div>
         {isMenuShown && (
           <div className="absolute top-[88px] z-10 flex h-[640px] w-full items-center justify-center bg-white md:hidden">
             <ul className="text-center font-Dela_Gothic_One text-tk32 leading-8">
-              <li className="">Home</li>
-              <li className="my-[60px] text-tk_greyDark">Textbook</li>
-              <li className="my-[60px] text-tk_greyDark">Statistics</li>
+              <li className="">
+                <a href="/">Home</a>
+              </li>
+              <li className="my-[60px] text-tk_greyDark">
+                <a href="/textbook">Textbook</a>
+              </li>
+              <li className="my-[60px] text-tk_greyDark">
+                <a href="/statistics-content">Statistics</a>
+              </li>
               <li
                 className="flex justify-center text-tk_greyDark"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-<<<<<<< HEAD
                 Games <img src="/down_arrow.svg" alt="down array"></img>
                 {isHovered && (
                   <div className="absolute left-[250px] top-[480px] w-[215px] rounded-[14px] bg-white shadow-[0_11px_11px_0_rgba(52,41,39,0.04)] ">
@@ -107,53 +120,6 @@ const Header = ({ session }: { session: Session | null }) => {
         )}
       </header>
     </>
-=======
-                Textbook
-              </Link>
-            </li>
-            <li>
-              <Link
-                title="Statistics"
-                href="#"
-                className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
-              >
-                Statistics
-              </Link>
-            </li>
-            <li
-              className="relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <Link
-                title="Games"
-                href="#"
-                className={[styles.nav__list_item, styles['nav__list_item--inactive']].join(' ')}
-              >
-                Games
-                <img src="/down_arrow.svg" alt="down array"></img>
-              </Link>
-              {isHovered && (
-                <div className=" absolute top-[46px] w-[215px] rounded-[14px] bg-white shadow-[0_343px_343px_0_rgba(23,64,51,0.08)] ">
-                  <DropDownMenu menuContent={['Sprint →', 'Audio-call →']} />
-                </div>
-              )}
-            </li>
-          </ul>
-        </nav>
-        {session !== null && session !== undefined ? (
-          <LogInButton
-            userName={(session.user?.name ?? '').split(' ')[0]}
-            onClick={() => signOut()}
-          />
-        ) : (
-          <div onClick={() => signIn()}>
-            <Button outline={false} color="cyanDark" label="Sign in" />
-          </div>
-        )}
-      </div>
-    </header>
->>>>>>> ac751a1 (feat: implement sign in and signout using next auth)
   );
 };
 
