@@ -61,9 +61,15 @@ const Footer = () => {
       </div>
       <div className="mx-auto flex max-w-[1180px] flex-col border-t-[1.2px] border-tk_greyMedium lg:mx-auto lg:flex-row lg:pb-[41px] lg:pt-[21px]">
         <div className="mx-auto mt-[36px] flex gap-[30px] lg:mx-0 lg:mt-0">
-          <img src="./github.svg" />
-          <img src="./GT.svg" />
-          <img src="./youtube.svg" />
+          <a href="https://github.com/taodemy/taotalk">
+            <img src="./github.svg" alt="github" />
+          </a>
+          <a href="#">
+            <img src="./GT.svg" alt="GT" />
+          </a>
+          <a href="#">
+            <img src="./youtube.svg" alt="youtube" />
+          </a>
         </div>
         <span className="p4 mx-auto py-4 lg:ml-auto lg:mr-0 lg:py-0">{FooterCopyright}</span>
       </div>
