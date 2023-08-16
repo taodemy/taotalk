@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Header from './Header';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 import { useSession } from 'next-auth/react';
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
